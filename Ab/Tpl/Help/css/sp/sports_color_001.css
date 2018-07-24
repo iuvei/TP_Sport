@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+.light{ color:#949494 !important}
+
+/*ASIDE */
+.nav1 li.title a.title { background: none;}
+.nav1 li ul li.item {
+border-top: 1px solid #4a4a4a;
+border-bottom: 1px solid #292929;
+}
+.nav1 li ul li a { color: #999999;}
+
+/*game menu icons*/
+.nav1 a.nav-title,
+.leftmenu a:before{ 
+background-image: url(../../images/sports_menu_001.png?0813);
+background-repeat: no-repeat; 
+background-size: auto 52px; 
+}
+.leaguemenu a:before { 
+background-image: url(../../images/leaguemenu_001.png?0814);
+background-repeat: no-repeat; 
+background-size: auto 33px;
+display: none;
+}
+.leaguemenu .active a:before { 
+background-image: url(../../images/sports_menu_001.png?0813);
+background-repeat: no-repeat; 
+background-size: auto 33px;
+display: none;
+}
+
+.nav1.inplay a.nav-title{ background-image: url(../../images/sports_menu_inplay_001.png)}
+.nav1.inplay .title-active a { background-color: #E6E6E6 !important;}
+.nav1.inplay a.nav-title{background-color: #fff}
+.nav1.inplay .title-active a.nav-title{ background-image:url(../../images/sports_menu_inplay_001.png)}
+.nav1 .title-active ,.nav1.inplay .title-active ,.nav1.inplay .title-active a:hover{ background-color: #E6E6E6 !important; border-radius:4px;}
+
+.nav1 a.nav-title-inplay{ background-position: -7px top;} /*inplay*/
+.nav1 a.icon-00000{ background-position: -76px top;} /*future game*/
+.nav1 a.icon-00001{ background-position: -131px top;} 
+.nav1 a.icon-00002{ background-position: -193px top}
+.nav1 a.icon-00003{ background-position: -388px top;} 
+.nav1 a.icon-00004{ background-position: -322px top;}
+.nav1 a.icon-00005{ background-position: -258px top;} 
+.nav1 a.icon-00006{ background-position: -450px top;}
+.nav1 a.icon-00007{ background-position: -515px top;}
+.nav1 a.icon-00009{ background-position: -581px top;}
+.nav1 a.icon-00011{ background-position: -646px top;}
+.nav1 a.icon-00012{ background-position: -711px top;}
+.nav1 a.icon-00013{ background-position: -779px top;}
+.nav1 a.icon-00014{ background-position: -843px top;}
+.nav1 a.icon-00015{ background-position: -909px top;}
+.nav1 a.icon-00016{ background-position: -973px top;}
+.nav1 a.icon-00017{ background-position: -1040px top;}
+.nav1 a.icon-00019{ background-position: -1105px top;}
+.nav1 a.icon-00020{ background-position: -1172px top;}
+.nav1 a.icon-00021{ background-position: -1238px top;}
+.nav1 a.icon-00022{ background-position: -1307px top;}
+.nav1 a.icon-00023{ background-position: -1376px top;}
+.nav1 a.icon-00024{ background-position: -1967px top;}
+.nav1 a.icon-00026{ background-position: -1440px top;}
+.nav1 a.icon-00028{ background-position: -1506px top;}
+.nav1 a.icon-00029{ background-position: -1574px top;}
+.nav1 a.icon-00031{ background-position: -1638px top}
+.nav1 a.icon-00032{ background-position: -1704px top;}
+.nav1 a.icon-00034{ background-position: -1768px top;}
+.nav1 a.icon-00060{ background-position: -1901px top;}
+.nav1 a.icon-00061{ background-position: -1835px top;}
+
+/* for sports-index game amount & live game icon */
+.list-wrap { border:1px solid #d2d2d2}
+.nav1 .nav-title-inplay div { background-color:#AF233B; border-color:#AF233B;} /*inplay*/
+.nav1 li .icon-00000 div { background-color: #a33e3a; border-color: #a33e3a;} 
+.nav1 li .icon-00001 div, .bg-00001 .icon-n ,.category-icon00001 ,.title2 .icon-00001{ background-color: #BC433B; border-color: #B93C3A;}
+.nav1 li .icon-00002 div, .category-icon00002 ,.title2 .icon-00002{ background-color: #cb823f; border-color: #a26832;}
+.nav1 li .icon-00003 div, .category-icon00003 ,.title2 .icon-00003{ background-color: #C55B3E; border-color: #C04E3C;}
+.nav1 li .icon-00004 div, .category-icon00004 ,.title2 .icon-00004{ background-color: #33B1CD; border-color: #2C8FA5;}
+.nav1 li .icon-00005 div, .category-icon00005 ,.title2 .icon-00005{ background-color: #D17B41; border-color: #CB6B40;}
+.nav1 li .icon-00006 div, .category-icon00006 ,.title2 .icon-00006{ background-color: #DD9A45; border-color: #D88D43;}
+.nav1 li .icon-00007 div, .category-icon00007 ,.title2 .icon-00007{ background-color: #3496D5; border-color: #1C6B97;}
+.nav1 li .icon-00009 div, .category-icon00009 ,.title2 .icon-00009{ background-color: #5178AF; border-color: #385D94;}
+.nav1 li .icon-00011 div, .category-icon00011 ,.title2 .icon-00011{ background-color: #E7435A; border-color: #B43546;}
+.nav1 li .icon-00012 div, .category-icon00012 ,.title2 .icon-00012{ background-color: #E5B047; border-color: #E1A546}
+.nav1 li .icon-00013 div, .category-icon00013 ,.title2 .icon-00013{ background-color: #EB8820; border-color: #B36105;}
+.nav1 li .icon-00014 div, .category-icon00014 ,.title2 .icon-00014{ background-color: #1DB8BF; border-color: #258E8B;}
+.nav1 li .icon-00015 div, .category-icon00015 ,.title2 .icon-00015{ background-color: #E2506C; border-color: #BE2449;}
+.nav1 li .icon-00016 div, .category-icon00016 ,.title2 .icon-00016{ background-color: #725550; border-color: #5D4037;}
+.nav1 li .icon-00017 div, .category-icon00017 ,.title2 .icon-00017{ background-color: #3988E1; border-color: #005691;}
+.nav1 li .icon-00019 div, .category-icon00019 ,.title2 .icon-00019{ background-color: #D84315; border-color: #BF360C;}
+.nav1 li .icon-00020 div, .category-icon00020 ,.title2 .icon-00020{ background-color: #136FAF; border-color: #0f598b;}
+.nav1 li .icon-00021 div, .category-icon00021 ,.title2 .icon-00021{ background-color: #FE625C; border-color: #CF504C;}
+.nav1 li .icon-00022 div, .category-icon00022 ,.title2 .icon-00022{ background-color: #E6433C; border-color: #BE1F25;}
+.nav1 li .icon-00023 div, .category-icon00023 ,.title2 .icon-00023{ background-color: #25B193; border-color: #1e8e76;}
+.nav1 li .icon-00024 div, .category-icon00024 ,.title2 .icon-00024{ background-color: #EEC94A; border-color: #E9BB48;}
+.nav1 li .icon-00026 div, .category-icon00026 ,.title2 .icon-00026{ background-color: #42B6DF; border-color: #3491B1;}
+.nav1 li .icon-00028 div, .category-icon00028 ,.title2 .icon-00028{ background-color: #4F9BE9; border-color: #4180BE;}
+.nav1 li .icon-00029 div, .category-icon00029 ,.title2 .icon-00029{ background-color: #3367A3; border-color: #1D4770;}
+.nav1 li .icon-00031 div, .category-icon00031 ,.title2 .icon-00031{ background-color: #2A98CB; border-color: #267DA4;}
+.nav1 li .icon-00032 div, .category-icon00032 ,.title2 .icon-00032{ background-color: #8589B9; border-color: #4B517A;}
+.nav1 li .icon-00034 div, .category-icon00034 ,.title2 .icon-00034{ background-color: #A79070; border-color: #6E5638;}
+.nav1 li .icon-00060 div, .category-icon00060 ,.title2 .icon-00060{ background-color: #D49D65; border-color: #A56F40;}
+.nav1 li .icon-00061 div, .category-icon00061 ,.title2 .icon-00061{ background-color: #D88858; border-color: #B0613A;}
+
+.list-wrap.outright .title-wrap time { background-color: transparent!important}
+
+/*.bg-00001 .icon-live ,.bg-00001.list-wrap .time{ color:#4cb848}
+.bg-00002 .icon-live ,.bg-00002.list-wrap .time{ color:#CB823F}
+.bg-00005 .icon-live ,.bg-00005.list-wrap .time{ color:#6FAA2B}
+.bg-00004 .icon-live ,.bg-00004.list-wrap .time{ color:#33B1CD}
+.bg-00003 .icon-live ,.bg-00003.list-wrap .time{ color:#DEA42A}
+.bg-00006 .icon-live ,.bg-00006.list-wrap .time{ color:#66CBE2}
+.bg-00007 .icon-live ,.bg-00007.list-wrap .time{ color:#3697D5}
+.bg-00009 .icon-live ,.bg-00009.list-wrap .time{ color:#5279B0}
+.bg-00011 .icon-live ,.bg-00011.list-wrap .time{ color:#E63D55}
+.bg-00012 .icon-live ,.bg-00012.list-wrap .time{ color:#ABA327}
+.bg-00013 .icon-live ,.bg-00013.list-wrap .time{ color:#EB8820}
+.bg-00014 .icon-live ,.bg-00014.list-wrap .time{ color:#1DB8BF}
+.bg-00015 .icon-live ,.bg-00015.list-wrap .time{ color:#E54878}
+.bg-00016 .icon-live ,.bg-00016.list-wrap .time{ color:#8FB141}
+.bg-00017 .icon-live ,.bg-00017.list-wrap .time{ color:#3C89DE}
+.bg-00019 .icon-live ,.bg-00019.list-wrap .time{ color:#559A23}
+.bg-00020 .icon-live ,.bg-00020.list-wrap .time{ color:#136FAF}
+.bg-00021 .icon-live ,.bg-00021.list-wrap .time{ color:#EA605B}
+.bg-00022 .icon-live ,.bg-00022.list-wrap .time{ color:#DD4942}
+.bg-00023 .icon-live ,.bg-00023.list-wrap .time{ color:#26B294}
+.bg-00024 .icon-live ,.bg-00024.list-wrap .time{ color:#77AB53}
+.bg-00026 .icon-live ,.bg-00026.list-wrap .time{ color:#41B5DE}
+.bg-00028 .icon-live ,.bg-00028.list-wrap .time{ color:#509CE9}
+.bg-00029 .icon-live ,.bg-00029.list-wrap .time{ color:#3569A4}
+.bg-00031 .icon-live ,.bg-00031.list-wrap .time{ color:#2A98CB}
+.bg-00032 .icon-live ,.bg-00032.list-wrap .time{ color:#8589B9}
+.bg-00034 .icon-live ,.bg-00034.list-wrap .time{ color:#A89171}
+.bg-00060 .icon-live ,.bg-00060.list-wrap .time{ color:#D59F68}
+.bg-00061 .icon-live ,.bg-00061.list-wrap .time{ color:#D78757}*/
+
+/*game menu icons*/
+.inplay .bg-00001{ border-color: #4CB848!important;} 
+.inplay .bg-00002{ border-color: #CB823F!important;}
+.inplay .bg-00005{ border-color: #6FAA2B!important;} 
+.inplay .bg-00004{ border-color: #33B1CD!important;}
+.inplay .bg-00003{ border-color: #DEA42A!important;} 
+.inplay .bg-00006{ border-color: #66CBE2!important;}
+.inplay .bg-00007{ border-color: #3697D5!important;}
+.inplay .bg-00009{ border-color: #5279B0!important;}
+.inplay .bg-00011{ border-color: #E63D55!important;}
+.inplay .bg-00012{ border-color: #ABA327!important;}
+.inplay .bg-00013{ border-color: #EB8820!important;}
+.inplay .bg-00014{ border-color: #1DB8BF!important;}
+.inplay .bg-00015{ border-color: #E54878!important;}
+.inplay .bg-00016{ border-color: #8FB141!important;}
+.inplay .bg-00017{ border-color: #3C89DE!important;}
+.inplay .bg-00019{ border-color: #559A23!important;}
+.inplay .bg-00020{ border-color: #136FAF!important;}
+.inplay .bg-00021{ border-color: #EA605B!important;}
+.inplay .bg-00022{ border-color: #DD4942!important;}
+.inplay .bg-00023{ border-color: #26B294!important;}
+.inplay .bg-00024{ border-color: #77AB53!important;}
+.inplay .bg-00026{ border-color: #41B5DE!important;}
+.inplay .bg-00028{ border-color: #509CE9!important;}
+.inplay .bg-00029{ border-color: #3569A4!important;}
+.inplay .bg-00031{ border-color: #2A98CB!important;}
+.inplay .bg-00032{ border-color: #8589B9!important;}
+.inplay .bg-00034{ border-color: #A89171!important;}
+.inplay .bg-00060{ border-color: #D59F68!important;}
+.inplay .bg-00061{ border-color: #D78757!important;}
+
+/*nav*/
+.nav-tab ul li{ border-bottom-color:#FFFFFF;}
+.nav-tab ul li a{ color:#666666;}
+.nav-tab ul li:active { border-bottom-color:#98171a;}
+.nav-tab ul li:active a { color:#98171a;}
+.nav-tab ul li.active{ border-bottom-color:#98171a;}
+.nav-tab ul li.active a{ color:#98171a;}
+
+/* league-menu */
+.leftmenu a:before{ background-size: auto 33px;}
+.icon-home a:before { background-position: -45px -2px;}
+.icon-inplay a:before { background-position: -5px -2px;}
+.icon-00001 a:before { background-position: -84px -2px;}
+.icon-00002 a:before { background-position: -123px -2px;}
+.icon-00005 a:before { background-position: -164px -2px;}
+.icon-00004 a:before { background-position: -205px -2px;}
+.icon-00003 a:before { background-position: -246px -2px;}
+.icon-00006 a:before { background-position: -286px -2px;}
+.icon-00007 a:before { background-position: -327px -2px;}
+.icon-00009 a:before { background-position: -369px -2px;}
+.icon-00011 a:before { background-position: -410px -2px;}
+.icon-00012 a:before { background-position: -452px -2px;}
+.icon-00013 a:before { background-position: -495px -2px;}
+.icon-00014 a:before { background-position: -536px -2px;}
+.icon-00015 a:before { background-position: -577px -2px;}
+.icon-00016 a:before { background-position: -618px -2px;}
+.icon-00017 a:before { background-position: -660px -2px;}
+.icon-00019 a:before { background-position: -701px -2px;}
+.icon-00020 a:before { background-position: -744px -2px;}
+.icon-00021 a:before { background-position: -786px -2px;}
+.icon-00022 a:before { background-position: -829px -2px;}
+.icon-00023 a:before { background-position: -873px -2px;}
+.icon-00024 a:before { background-position: -1249px -2px;}
+.icon-00026 a:before { background-position: -915px -2px;}
+.icon-00028 a:before { background-position: -956px -2px;}
+.icon-00029 a:before { background-position: -999px -2px;}
+.icon-00031 a:before { background-position: -1040px -2px;}
+.icon-00032 a:before { background-position: -1082px -2px;}
+.icon-00034 a:before { background-position: -1123px -2px;}
+.icon-00060 a:before { background-position: -1207px -2px;}
+.icon-00061 a:before { background-position: -1165px -2px;}
+
+.menu-bottom-btn { background:#cccccc; color:#FFFFFF;}
+.menu-bottom-btn:active { color:#FFFFFF;}
+
+/*.menu-toggle*/
+ul.menu-toggle li.menu-title a.title{ color:#333333; border-color:#d6d6d6 !important;}
+ul.menu-toggle li.menu-title a.title:active { background:#e2e2e2;}
+ul.menu-toggle li.menu-title li.item{ border-color:#d6d6d6 !important;}
+ul.menu-toggle li.menu-title a.title span{ background:none;}
+ul.menu-toggle li.menu-title a.title span.icon{ color:#CCCCCC;}
+.menu-title-cell2, .menu-title-cell3{ color:#666666;}
+/*game-inplay*/
+.title-game-type { color: #DFDFDF;}
+
+/*Live*/
+table tr td.highlight { background: #575757;}
+
+/*Mobile*/
+.square-highlight { background: #F1BA00;}
+.square-gray { background: #6D6D6D;}
+
+/*menu-inplay*/
+.menu-inplay .topic .title2:first-child { border-top: none;}
+
+/*table use div*/
+.category-icon ,.title2 dd { color: #fff;}
+.td4, .td3, .td2 { color:#666;}
+.td4-2 .redcard { color: #fff}
+.td4-4, .td3-3, .td2-2{ color:#cccccc;}
+.redcard { background:#CC4D48;}
+
+.category-wrap .table-wrap:last-child{ border-bottom-color:#C7C6C6!important}
+
+.dot-off, .dot-on, .icon-live-1, .icon-live-2, .icon-live-3, .icon-live-6, .game-status .game:before {
+background-image: url(../../images/sports_icon_001.png); 
+background-repeat: no-repeat; 
+background-size: auto 50px;
+}
+.dot-off{ background-position: 10px -37px;}
+.dot-on{ background-position: 10px -24px;}
+.stage .dot-on { background-position: -15px -29px;}
+.stage .dot-off { background: none;}
+
+/*list-wrap & market*/
+.prematch .title-wrap { border-color: #fff;}
+.list-wrap .toggle-icon, 
+.pre-match-wrap .toggle-icon, .pre-match-wrap-h .toggle-icon, .list-wrap .fa-angle-right, .list-wrap .content-wrap .more span:after, .prematch-menu .arrow { 
+background: url(../../images/uni_icon_001.png?20150807001) 14px 11px no-repeat;
+background-size: auto 125px;
+}
+
+.list-wrap .toggle-icon, 
+.pre-match-wrap .toggle-icon, .pre-match-wrap-h .toggle-icon { 
+background-position: 14px 11px;
+}
+.list-wrap.open .toggle-icon,
+.pre-match-wrap.open .toggle-icon, .pre-match-wrap-h.open .toggle-icon { 
+background-position: 14px -19px;
+}
+.list-wrap .content-wrap .more span:after { background-position: -379px 2px}
+.list-wrap .title-wrap .fa-angle-right { background-position: -379px 2px}
+.list-wrap-dropdown > li > a {
+background: url(../../images/sports_dropdown_001.png) right -60px no-repeat;
+background-size: 36px auto;
+}
+.list-wrap-dropdown > li:hover > a, .list-wrap-dropdown > li:active > a { background-position: right -3px}
+.three-column.style5 .list-wrap-dropdown > li > a { background-position: right -175px;}
+.three-column.style5 .list-wrap-dropdown > li:hover > a, .three-column.style5 .list-wrap-dropdown > li:active > a { background-position: right -118px;}
+
+.prematch-menu { border-color: #B9B9B9;}
+.prematch-menu a { color: #333; border-color:#D6D3D3!important}
+.prematch-menu li { border-color: #E6E2E2;}
+.prematch-menu li.active { border-top-color: #98171a!important; border-bottom-color: #98171a!important;}
+.prematch-menu .arrow { background-position: -5px -64px;}
+
+/*color*/
+/*sports main border-color*/
+.pre-match-wrap, .pre-match-wrap-h,
+.pre-match-wrap li, .pre-match-wrap-h ul li,
+.pre-match-wrap li.small-word, .pre-match-wrap-h ul li.small-word,
+.pre-match-wrap.style4 .two-column .click-wrap,
+.list-wrap ul li, .list-wrap .content-wrap,
+.header-date, .list-wrap-dropdown ul,
+.list-wrap.one-column.style1 .list-wrap-dropdown, .list-wrap .btn-like,
+.list-wrap.three-column.style2 div.one, .list-wrap.two-column div.one {
+border-color: #D2D2D2!important;
+}
+.header-date { border-color: #ce9e61!important;}
+.bg-00002 .header-date { border-color: #CB823F!important}
+.bg-00005 .header-date { border-color: #CB6B40!important;}
+.bg-00004 .header-date { border-color: #33B1CD!important}
+.bg-00003 .header-date { border-color: #C04E3C!important;}
+.bg-00006 .header-date { border-color: #D88D43!important;}
+.bg-00007 .header-date { border-color: #3496D5!important}
+.bg-00009 .header-date { border-color: #5178AF!important}
+.bg-00011 .header-date { border-color: #E0495E!important}
+.bg-00012 .header-date { border-color: #E1A546!important;}
+.bg-00013 .header-date { border-color: #EB8820!important}
+.bg-00014 .header-date { border-color: #1DB8BF!important}
+.bg-00015 .header-date { border-color: #E54677!important}
+.bg-00016 .header-date { border-color: #5D4037!important;}
+.bg-00017 .header-date { border-color: #4588D5!important}
+.bg-00019 .header-date { border-color: #BF360C!important;}
+.bg-00020 .header-date { border-color: #2D7EB6!important}
+.bg-00021 .header-date { border-color: #EB615C!important}
+.bg-00022 .header-date { border-color: #D2524C!important}
+.bg-00023 .header-date { border-color: #26B294!important}
+.bg-00024 .header-date { border-color: #E9BB48!important;}
+.bg-00026 .header-date { border-color: #3CAFD7!important}
+.bg-00028 .header-date { border-color: #4F9BE9!important}
+.bg-00029 .header-date { border-color: #3F6EA5!important}
+.bg-00031 .header-date { border-color: #2A98CB!important}
+.bg-00032 .header-date { border-color: #868ABA!important}
+.bg-00034 .header-date { border-color: #A89170!important}
+.bg-00060 .header-date { border-color: #D49D65!important}
+.bg-00061 .header-date { border-color: #D88858!important}
+
+/*sports light background color*/
+.list-wrap .title-wrap ,.list-wrap .title-wrap time,
+.pre-match-wrap .small-word, .pre-match-wrap-h .small-word {
+color: #fff;
+background: #BC433B;}
+.bg-00001 .title-wrap, .bg-00001 .small-word, .list-wrap.bg-00001 .title-wrap time{ background: #BC433B;}
+.bg-00002 .title-wrap, .bg-00002 .small-word, .list-wrap.bg-00002 .title-wrap time{ background: #D9AB82;}
+.bg-00005 .title-wrap, .bg-00005 .small-word, .list-wrap.bg-00005 .title-wrap time{ background: #D17B41;}
+.bg-00004 .title-wrap, .bg-00004 .small-word, .list-wrap.bg-00004 .title-wrap time{ background: #7BC9DA;}
+.bg-00003 .title-wrap, .bg-00003 .small-word, .list-wrap.bg-00003 .title-wrap time{ background: #C55B3E;}
+.bg-00006 .title-wrap, .bg-00006 .small-word, .list-wrap.bg-00006 .title-wrap time{ background: #DD9A45;}
+.bg-00007 .title-wrap, .bg-00007 .small-word, .list-wrap.bg-00007 .title-wrap time{ background: #7BB8DF;}
+.bg-00009 .title-wrap, .bg-00009 .small-word, .list-wrap.bg-00009 .title-wrap time{ background: #8DA5C7;}
+.bg-00011 .title-wrap, .bg-00011 .small-word, .list-wrap.bg-00011 .title-wrap time{ background: #E98392;}
+.bg-00012 .title-wrap, .bg-00012 .small-word, .list-wrap.bg-00012 .title-wrap time{ background: #E5B047;}
+.bg-00013 .title-wrap, .bg-00013 .small-word, .list-wrap.bg-00013 .title-wrap time{ background: #ECAE6E;}
+.bg-00014 .title-wrap, .bg-00014 .small-word, .list-wrap.bg-00014 .title-wrap time{ background: #6DCDD1;}
+.bg-00015 .title-wrap, .bg-00015 .small-word, .list-wrap.bg-00015 .title-wrap time{ background: #E986A5;}
+.bg-00016 .title-wrap, .bg-00016 .small-word, .list-wrap.bg-00016 .title-wrap time{ background: #6D4C41;}
+.bg-00017 .title-wrap, .bg-00017 .small-word, .list-wrap.bg-00017 .title-wrap time{ background: #7EAEE4;}
+.bg-00019 .title-wrap, .bg-00019 .small-word, .list-wrap.bg-00019 .title-wrap time{ background: #D84315;}
+.bg-00020 .title-wrap, .bg-00020 .small-word, .list-wrap.bg-00020 .title-wrap time{ background: #67A0C7;}
+.bg-00021 .title-wrap, .bg-00021 .small-word, .list-wrap.bg-00021 .title-wrap time{ background: #ED9794;}
+.bg-00022 .title-wrap, .bg-00022 .small-word, .list-wrap.bg-00022 .title-wrap time{ background: #E48681;}
+.bg-00023 .title-wrap, .bg-00023 .small-word, .list-wrap.bg-00023 .title-wrap time{ background: #72C9B7;}
+.bg-00024 .title-wrap, .bg-00024 .small-word, .list-wrap.bg-00024 .title-wrap time{ background: #EEC94A;}
+.bg-00026 .title-wrap, .bg-00026 .small-word, .list-wrap.bg-00026 .title-wrap time{ background: #84CCE5;}
+.bg-00028 .title-wrap, .bg-00028 .small-word, .list-wrap.bg-00028 .title-wrap time{ background: #8CBBEB;}
+.bg-00029 .title-wrap, .bg-00029 .small-word, .list-wrap.bg-00029 .title-wrap time{ background: #6C90B8;}
+.bg-00031 .title-wrap, .bg-00031 .small-word, .list-wrap.bg-00031 .title-wrap time{ background: #75B8D8;}
+.bg-00032 .title-wrap, .bg-00032 .small-word, .list-wrap.bg-00032 .title-wrap time{ background: #ACAFCD;}
+.bg-00034 .title-wrap, .bg-00034 .small-word, .list-wrap.bg-00034 .title-wrap time{ background: #C2B49F;}
+.bg-00060 .title-wrap, .bg-00060 .small-word, .list-wrap.bg-00060 .title-wrap time{ background: #DEBC99;}
+.bg-00061 .title-wrap, .bg-00061 .small-word, .list-wrap.bg-00061 .title-wrap time{ background: #E0AE90;}
+
+.pre-match-wrap, .pre-match-wrap-h,
+.pre-match-wrap .click, .pre-match-wrap-h .click,
+.select-wrap a,.list-wrap,.list-wrap-date, .list-wrap a.click-odds,
+.list-wrap-dropdown a , .list-wrap a.click-odds span { color: #9E9E9E}
+.prematch-menu a, .list-wrap-dropdown ul { background: #FFFFFF}
+.list-wrap .time-wrap, .list-wrap .more { color: #999}
+.list-wrap .title-wrap .more { color: #888}
+.select-wrap a {
+border-color: #9A9A9A;
+background: #E0E0E0;
+color: #6B5E5E;
+}
+.select-wrap .active a {
+border-color: #BBB4B4;
+background: #FFFFFF;
+color: #6B5E5E;
+}
+
+.game-status {
+background-color: rgba(255, 255, 255, 0.72);
+border-color: rgba(255, 255, 255, 0.32);
+}
+.game-status .icon-live, .game-status .icon-n {
+background: rgba(0, 0, 0, 0.6);
+color: #FFFFFF;
+}
+
+.list-wrap-date li a { 
+color:#666;
+border-radius: 6px;
+}
+list-wrap-date li.active a, .list-wrap-date li a:active {
+    color: #98171A;
+    background-color: #F9F9F9;
+    border-radius: 20px;
+}
+.list-wrap .btn-like { background-color: #eee;}
+.icon-n, .row-wrap .icon {
+background-position: -352px -1px;
+background-color: #d6d6d6;
+color: #fff
+}
+.list-wrap .icon-n{
+border-radius: 14px;
+color: #fff;
+line-height: 12px;
+}
+
+/*live point*/
+.live-point:before { background: rgba(0,0,0,.25)}
+.live-point ul li { border-color: rgba(0,0,0,.25)!important}
+.live-wrap { background-color: #000000}
+.live-score {
+background-color: rgba(255,255,255,.8);
+color: #98171A;
+box-shadow: 0 0 0 3px rgba(0,0,0,.4);
+border-radius: 30px;
+}
+.score-mid {
+background-color: #353535;
+color: #fff;
+border-radius: 3px;	
+}
+.score-mid .icon-live {
+background-color: #1e1e1e;
+color: #f0c055;
+border-radius: 2px;
+}
+.live-main-wrap .gamename {
+background: rgba(255,255,255,.8);
+border-radius: 3px;
+}
+.live-point { 
+color: #FDFDFD; 
+/*background-image: url(../../images/sports_point.png);
+background-position: center 4px;
+background-repeat: repeat-x;
+background-size: auto 16px*/
+}
+.live-wrap .stage { 
+background: url(../../images/bg_00000.jpg) center top no-repeat;
+background-size: auto 174px!important;
+}
+.bg-00001 .stage { background: url(../../images/bg_00001.jpg) center top no-repeat;}
+.bg-00002 .stage { background: url(../../images/bg_00002.jpg) center top no-repeat;}
+.bg-00003 .stage { background: url(../../images/bg_00003.jpg) center top no-repeat;}
+.bg-00004 .stage { background: url(../../images/bg_00004.jpg) center top no-repeat;}
+.bg-00005 .stage { background: url(../../images/bg_00005.jpg) center top no-repeat;}
+.bg-00006 .stage { background: url(../../images/bg_00006.jpg) center top no-repeat;}
+.bg-00012 .stage { background: url(../../images/bg_00012.jpg) center top no-repeat;}
+.bg-00016 .stage { background: url(../../images/bg_00016.jpg) center top no-repeat;}
+.bg-00019 .stage { background: url(../../images/bg_00019.jpg) center top no-repeat;}
+.bg-00020 .stage { background: url(../../images/bg_00020.jpg) center top no-repeat;}
+.bg-00022 .stage { background: url(../../images/bg_00022.jpg) center top no-repeat;}
+.bg-00023 .stage { background: url(../../images/bg_00023.jpg) center top no-repeat;}
+.bg-00029 .stage { background: url(../../images/bg_00029.jpg) center top no-repeat;}
+.bg-00031 .stage { background: url(../../images/bg_00031.jpg) center top no-repeat;}
+.bg-00034 .stage { background: url(../../images/bg_00034.jpg) center top no-repeat;}
+.no-score .live-wrap .stage { background: url(../../images/bg_00000_1.jpg) center top no-repeat}
+.bg-00003.no-score .stage { background: url(../../images/bg_00003_1.jpg) center top no-repeat;}
+.bg-00006.no-score .stage { background: url(../../images/bg_00006_1.jpg) center top no-repeat;}
+.bg-00031.no-score .stage { background: url(../../images/bg_00031_1.jpg) center top no-repeat;}
+.icon-live-1 { background-position: 3px -1px;}
+.icon-live-2 { background-position: -10px 1px;}  
+.icon-live-3 { background-position: -23px 1px;}
+.icon-live-6 { background-position: -64px 0;}
+.game-status .game:before { background-position: -81px 1px;}
+.list-title div{ border-bottom: 1px solid #d2d2d2; background-color: #FFF;}
+.content-wrap .active del ,.content-wrap .active span ,.content-wrap .active ,.pre-match-wrap .active del ,.pre-match-wrap .active span ,.pre-match-wrap .active,
+.pre-match-wrap-h .active del ,.pre-match-wrap-h .active span ,.pre-match-wrap-h .active { 
+background: #7D7C7C;
+color: #fff !important;
+}
+.noevents {
+color: #666;
+background-color: #fff;
+border: 1px solid #E2E2E2;
+}
+/*score-wrap*/
+.team-logo {
+background-color: rgba(255, 255, 255, 0.7);
+border-color: transparent;
+}
+@media screen and (max-device-width : 667px) {
+.live-wrap .stage { background: url(../../images/bg_00000_pad.jpg) center center no-repeat; background-size: auto 100%!important;}
+.bg-00001 .stage { background: url(../../images/bg_00001_pad.jpg) center top no-repeat}
+.bg-00002 .stage { background: url(../../images/bg_00002_pad.jpg) center top no-repeat}
+.bg-00003 .stage { background: url(../../images/bg_00003_pad.jpg) center top no-repeat}
+.bg-00005 .stage { background: url(../../images/bg_00005_pad.jpg) center top no-repeat}
+.bg-00006 .stage { background: url(../../images/bg_00006_pad.jpg) center top no-repeat}
+.bg-00012 .stage { background: url(../../images/bg_00012_pad.jpg) center top no-repeat}
+.bg-00016 .stage { background: url(../../images/bg_00016_pad.jpg) center top no-repeat}
+.bg-00019 .stage { background: url(../../images/bg_00019_pad.jpg) center top no-repeat}
+.bg-00020 .stage { background: url(../../images/bg_00020_pad.jpg) center top no-repeat}
+.bg-00022 .stage { background: url(../../images/bg_00022_pad.jpg) center top no-repeat}
+.bg-00023 .stage { background: url(../../images/bg_00023_pad.jpg) center top no-repeat}
+.bg-00029 .stage { background: url(../../images/bg_00029_pad.jpg) center top no-repeat}
+.bg-00031 .stage { background: url(../../images/bg_00031_pad.jpg) center top no-repeat}
+.bg-00034 .stage { background: url(../../images/bg_00034_pad.jpg) center top no-repeat}
+.live-wrap.no-score .stage { background: url(../../images/bg_00000_1_pad.jpg) center center no-repeat;}
+.bg-00003.no-score .stage { background: url(../../images/bg_00003_1_pad.jpg) center top no-repeat;}
+.bg-00006.no-score .stage { background: url(../../images/bg_00006_1_pad.jpg) center top no-repeat;}
+.bg-00031.no-score .stage { background: url(../../images/bg_00031_1_pad.jpg) center top no-repeat;}
+}
+
+@media screen and (min-device-width : 768px) {
+.live-wrap .stage { background: url(../../images/bg_00000_pad.jpg) center center no-repeat; background-size: auto 100%!important;}
+.bg-00001 .stage { background: url(../../images/bg_00001_pad.jpg) center top no-repeat}
+.bg-00002 .stage { background: url(../../images/bg_00002_pad.jpg) center top no-repeat}
+.bg-00003 .stage { background: url(../../images/bg_00003_pad.jpg) center top no-repeat}
+.bg-00005 .stage { background: url(../../images/bg_00005_pad.jpg) center top no-repeat}
+.bg-00006 .stage { background: url(../../images/bg_00006_pad.jpg) center top no-repeat}
+.bg-00012 .stage { background: url(../../images/bg_00012_pad.jpg) center top no-repeat}
+.bg-00016 .stage { background: url(../../images/bg_00016_pad.jpg) center top no-repeat}
+.bg-00019 .stage { background: url(../../images/bg_00019_pad.jpg) center top no-repeat}
+.bg-00020 .stage { background: url(../../images/bg_00020_pad.jpg) center top no-repeat}
+.bg-00022 .stage { background: url(../../images/bg_00022_pad.jpg) center top no-repeat}
+.bg-00023 .stage { background: url(../../images/bg_00023_pad.jpg) center top no-repeat}
+.bg-00029 .stage { background: url(../../images/bg_00029_pad.jpg) center top no-repeat}
+.bg-00031 .stage { background: url(../../images/bg_00031_pad.jpg) center top no-repeat}
+.bg-00034 .stage { background: url(../../images/bg_00034_pad.jpg) center top no-repeat}
+.live-wrap.no-score .stage { background: url(../../images/bg_00000_1_pad.jpg) center center no-repeat;}
+.bg-00003.no-score .stage { background: url(../../images/bg_00003_1_pad.jpg) center top no-repeat;}
+.bg-00006.no-score .stage { background: url(../../images/bg_00006_1_pad.jpg) center top no-repeat;}
+.bg-00031.no-score .stage { background: url(../../images/bg_00031_1_pad.jpg) center top no-repeat;}
+}
+
+@media screen and (min-device-width : 512px) and (-webkit-device-pixel-ratio: 3) {
+.live-wrap .stage { background: url(../../images/bg_00000_pad.jpg) center center no-repeat; background-size: auto 100%!important;}
+.bg-00001 .stage { background: url(../../images/bg_00001_pad.jpg) center top no-repeat}
+.bg-00002 .stage { background: url(../../images/bg_00002_pad.jpg) center top no-repeat}
+.bg-00003 .stage { background: url(../../images/bg_00003_pad.jpg) center top no-repeat}
+.bg-00005 .stage { background: url(../../images/bg_00005_pad.jpg) center top no-repeat}
+.bg-00006 .stage { background: url(../../images/bg_00006_pad.jpg) center top no-repeat}
+.bg-00012 .stage { background: url(../../images/bg_00012_pad.jpg) center top no-repeat}
+.bg-00016 .stage { background: url(../../images/bg_00016_pad.jpg) center top no-repeat}
+.bg-00019 .stage { background: url(../../images/bg_00019_pad.jpg) center top no-repeat}
+.bg-00020 .stage { background: url(../../images/bg_00020_pad.jpg) center top no-repeat}
+.bg-00022 .stage { background: url(../../images/bg_00022_pad.jpg) center top no-repeat}
+.bg-00023 .stage { background: url(../../images/bg_00023_pad.jpg) center top no-repeat}
+.bg-00029 .stage { background: url(../../images/bg_00029_pad.jpg) center top no-repeat}
+.bg-00031 .stage { background: url(../../images/bg_00031_pad.jpg) center top no-repeat}
+.bg-00034 .stage { background: url(../../images/bg_00034_pad.jpg) center top no-repeat}
+.live-wrap.no-score .stage { background: url(../../images/bg_00000_1_pad.jpg) center center no-repeat;}
+.bg-00003.no-score .stage { background: url(../../images/bg_00003_1_pad.jpg) center top no-repeat;}
+.bg-00006.no-score .stage { background: url(../../images/bg_00006_1_pad.jpg) center top no-repeat;}
+.bg-00031.no-score .stage { background: url(../../images/bg_00031_1_pad.jpg) center top no-repeat;}
+}

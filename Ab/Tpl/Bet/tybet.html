@@ -1,0 +1,114 @@
+<div id="orderWin">
+    <div id="winTit"><em id="Countdown">10</em><dl><dt>交易单</dt><dd>目前余额:</dd></dl><span onclick='hide();'>×</span></div>
+    <form name="orderForm" id="orderForm" method="post" action="">
+        <div class="order-info">
+            <h2></h2>
+            <br /> <strong></strong>
+            <br /> @ <strong></strong>
+        </div>
+        <div class="bet-info">
+            <dl>
+                <dt><input type="number" value="" placeholder="投注额" /></dt>
+                <dd>可赢金额:<br /><strong>0</strong></dd>
+            </dl>
+            <div>单注最高: <strong></strong></div>
+            <div><div class="left">单注最低: <strong></strong></div><label class="right">自动接受较佳赔率<input type="checkbox" value="" class="order" checked /></label></div>
+        </div>
+        <input type="button" value="确认交易" name="betBtn" id="betBtn" class="bet-btn" />
+    </form>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var colHeader = $(".header-date");
+        colHeader.click(function () {
+            $(this).next().toggle().parent().toggleClass("open");
+        });
+    });
+    var odtimeout;
+    var moneytmp;
+    var tentime;
+    var intime = false;
+    function hide() {
+        var orderWin = $("#orderWin");
+        orderWin.slideUp(200);
+        clearTimeout(odtimeout);
+        clearTimeout(tentime);
+        intime = false;
+    }
+    //交易单
+    function getOrderhtml(u) {
+        clearTimeout(odtimeout);
+        clearTimeout(tentime);
+        intime = false;
+        moneytmp = getmoney();
+        var orderWin = $("#orderWin");
+        $.ajax({
+            url: u,
+            dataType: 'html',
+            success: function (ret) {
+                orderWin.html(ret);
+                $('#orderForm').find('div.bet-info').find('dd').find('strong').html(get_val(moneytmp));
+                $('#placeholder').val(moneytmp).keyup(function () {
+                    $('#orderForm').find('div.bet-info').find('dd').find('strong').html(get_val($('#placeholder').val()));
+                });
+                orderWin.slideDown(100);
+                if (!intime) {
+                    tentime = gettentime();
+                }
+            }
+        });
+        odtimeout = setTimeout("getOrderhtml('" + u + "')", 10000);
+    }
+
+    function get_val(m) {
+        var m_rate = $('#ioradio_r_h').val();
+        var line = $('#orderForm').find("input[name='line_type']").val();
+        if (line == 1 || line == 5 || line == 11 || line == 21 || line == 31) {
+            m_rate = m_rate - 1;
+        }
+        var can_win = m * m_rate;
+        return can_win.toFixed(1);
+    }
+    function gettentime() {
+        intime = true;
+        tentime = setTimeout("gettentime()", 1000);
+        var tmp = $('#Countdown');
+        if (!tmp) {
+            return;
+        }
+        var str = $('#Countdown').html();
+        var int = parseInt(str);
+        int--;
+        $('#Countdown').html(int);
+    }
+    function getmoney() {
+        if ($('#placeholder').val()) {
+            return $('#placeholder').val();
+        }
+        return '';
+    }
+    function showOrderWin(u) {
+        var orderWin = $("#orderWin");
+        var closeBtn = orderWin.children().first().children().last();
+        getOrderhtml(u);
+        closeBtn.click(function () {
+            orderWin.slideUp(200);
+            clearTimeout(odtimeout);
+            clearTimeout(tentime);
+            intime = false;
+        });
+    }
+
+    function bet() {
+        // var zdje = parseInt($("#placeholder").val());
+        // var ylje = parseInt($("#dqje").html());
+        // var syje = ylje-zdje;
+        // $("#dqje").html(syje);
+        // // console.log(syje);
+        clearTimeout(odtimeout);
+        clearTimeout(tentime);
+        intime = false;
+        $('#orderForm').submit();
+
+    }
+</script>

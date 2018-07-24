@@ -1,0 +1,155 @@
+<html>
+<head>
+	<title>选择联盟</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1, width=device-width, user-scalable=no, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="YES">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="/Public/css/boilerplate.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/in-play.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/body_tw.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/home_2.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/SpryAccordion.css" rel="stylesheet" type="text/css">
+	<script id="/Public/js/ft_early_league_r.js" src="/js/ft_early_league_r.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body style="height: 519px; " onLoad="document.body.style.height=document.documentElement.clientHeight+'px';init();"><input id="topInput" style="display: none; "><div class="FT">
+<div id="loading_league" class="loading_start" style="display: none; ">
+    <table class="load_table"><tbody><tr><td valign="middle" align="center">
+        <div id="loading_movie">
+            <div class="load_star_01" style="display: none; "></div><div class="load_star_02" style="display: none; "></div>
+            <div class="load_star_03" style="display: none; "></div><div class="load_star_04" style="display: none; "></div>
+            <div class="load_star_05" style="display: none; "></div><div class="load_star_06" style="display: none; "></div>
+            <div class="load_star_07" style="display: none; "></div><div class="load_star_08" style="display: none; "></div>
+            <div class="load_star_09" style="display: none; "></div><div class="load_star_10" style="display: none; "></div>
+            <div class="load_star_11" style="display: none; "></div><div class="load_star_12" style="display: none; "></div>
+        </div>
+    </td></tr></tbody></table>
+</div>
+
+<div id="topTag" name="topTag"></div>
+<div class="gridContainer clearfix">
+
+<!---------------- header ---------------->
+  
+  <div id="LayoutDiv1" class="LayoutDiv1">
+				<div class="header">
+					<div class="wel">您好<br></div>
+					<div id="acc_username" name="acc_username" class="user">{$money.UserName}</div>
+				</div>
+				<div class="curr_box">
+					<div id="acc_currency" name="acc_currency" class="curr_value">RMB</div> 
+					<div id="acc_credit" name="acc_credit" class="curr_amount">{$money.Money}</div>
+				</div>
+    </div>
+<!-- inplay title -->
+  
+  <div class="LayoutDiv1_title">
+  	<div id="title_gtype" name="title_gtype" class="game_title"><switch name="_sel_gt">
+    <case value="Ft">足球</case> <case value="Bk">篮球</case> </switch></div>
+    <!--<div id="refresh" class="refresh">
+    	<span id="re_second" class="refresh_btn">74</span>
+    </div> -->
+  </div>
+ 
+ 
+<!------------------------ change wtype -------------------->
+<!-- 
+<div class="hdp_header">
+
+	
+				<table border="0" cellspacing="0" cellpadding="0" class="tool_table">
+					<tbody><tr>
+						<td id="change_r" name="change_r" class="h_r hdp_up"><strong>让球 &amp; 大小</strong></td>
+						<td id="change_p" name="change_p" class="h_p"><strong>综合过关</strong></td>
+						<td id="change_fs" name="change_fs" class="h_fs"><strong>冠军</strong></td>
+					</tr>
+				</tbody></table>
+   
+   
+</div>
+
+-->
+<!------------------------ change wtype ------------------------>
+
+<!-- Sort Bar Start -->
+<!--            <div class="selection_wrap" style="border-top: 0px; border-bottom: 0px; ">
+				<div class="selection_wrap_bg">
+                <select name="" class="sportsdropdown_half_wrap" id="sel_date" style="border-radius: 0px">
+                	 
+                <option value="all">全部日期</option><option value="2015-03-10">3月10日</option><option value="2015-03-11">3月11日</option><option value="2015-03-12">3月12日</option><option value="2015-03-13">3月13日</option><option value="2015-03-14">3月14日</option><option value="2015-03-15">3月15日</option><option value="2015-03-16">3月16日</option><option value="2015-03-17">3月17日</option><option value="2015-03-18">3月18日</option><option value="2015-03-19">3月19日</option><option value="2015-03-20">3月20日</option><option value="2015-03-21">3月21日</option><option value="2015-03-22">3月22日</option><option value="2015-03-23">3月23日</option></select>
+                </div>
+            </div>
+ -->
+
+<!--             
+            <div class="selection_wrap" style="border-top: 0px; border-bottom: 0px">
+				<div class="selection_wrap_bg">
+                <select name="" class="sportsdropdown_half_wrap" id="sel_sort">
+                  <option value="league">联盟排序</option>
+                  <option value="time">时间排序</option>
+                </select>
+                </div>
+            </div>
+            -->
+    <!-- Sort Bar End -->
+
+<!------------------------ no data ------------------------>  	
+<empty  name="legs">
+    <div id="div_nodata" name="div_nodata" class="NoEvent_game" style="display: none; ">无赛程</div>
+<else/>
+
+<!--<volist name="legs" id="leg"> -->
+    <div id="div_show" name="div_show">
+		<a href="/index.php/{$_sel_gt}/team/g/{$leg.M_League|rawurlencode}">
+		  <div  class="inneraccordion">
+		  
+		      <div class="game_name"><span>{$leg.M_League}<br/><br/></span></div>
+		      <div class="more_right">
+		      	<div class="list_num">({$leg.teamnum})</div>
+		          <!--<div class="list_arr"> </div> -->
+		   </div> 
+	</div></a>
+<!--</volist> -->
+</empty>
+
+
+		  
+	</div>
+	
+	
+  <!------------------------ game model ------------------------>  
+	<div id="div_model" name="div_model" style="display:none;">
+		  <div id="*LEAGUE_ID*" name="*LEAGUE_ID*" class="inneraccordion">
+		      <div class="game_name"><span>*LEAGUE_NAME*</span></div>
+		      <div class="more_right">
+		      	<div class="list_num">*GAME_COUNT*</div>
+		          <div class="list_arr"> </div>
+		      </div> 
+		  </div>
+	</div>
+	
+  <!------------------------ game model ------------------------>  
+
+
+
+<!-- border -->
+	<div class="foot_line"></div>
+
+
+<!-- all sports button -->
+<!-- back to top button -->
+<div id="bottom_top" name="bottom_top" class="LayoutDiv5" style=""><a href="/index.php/User">回到首页</a></div>
+  
+  
+
+
+<div id="select_p_bet" name="select_p_bet" class="pop-up" style="display:none;">
+  <div class="popBox">
+    <div class="popScroll">
+      <strong>提交过关投注:</strong><span id="select_p_count" name="select_p_count">3</span> 个选项 <div class="list_arr_cen"> </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div></body></html>

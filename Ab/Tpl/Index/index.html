@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+<input data-val="true" data-val-required="The bLogin field is required." id="bLogin" name="bLogin" type="hidden" value="False" />
+        <input id="strControllerName" name="strControllerName" type="hidden" value="" />
+        <div data-role="page">
+            <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/Public/css/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="javascript:void(0)" onclick="history.go(-1)"></a>
+                <h1 class="h3">登录</h1>
+            </div>
+            <script src="/Public/js/login/AccountBase.js"></script>
+            <script src="/Public/js/login/AccountIndex.js"></script>
+            <script src="/Public/js/popup.js"></script>
+            <link href="/Public/css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+            <form action="" method="post" id="LoginForm">
+                <div data-role="content" role="main">
+                    <div class="category-icon">
+                        <span class="icon65 icon-common-5"></span>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <span class="icon34 icon-common2-1"></span>
+                        <input class="input-a" data-theme="d" data-val="true" data-val-required="必填" id="strAccount" name="strAccount" placeholder="会员账号" type="text" value="" />
+                    </div>
+                    <span class="field-validation-valid" data-valmsg-for="strAccount" data-valmsg-replace="true"></span>
+                    <div data-role="fieldcontain">
+                        <span class="icon34 icon-common2-2"></span>
+                        <input class="input-a" data-theme="d" data-val="true" data-val-required="必填" id="strPassword" name="strPassword" placeholder="密码" type="password" />
+                        <a href="#" class="eye eye_close">
+                            <span class="input_icon"></span>
+                        </a>
+                    </div>
+                    <div class="clear mgbt20"></div>
+                    <span class="field-validation-valid" data-valmsg-for="strPassword" data-valmsg-replace="true"></span>
+                    <span class="field-validation-valid" data-valmsg-for="TempMsg" data-valmsg-replace="true"></span>
+                    <div class="clear mgbt20"></div>
+                    <div class="ui-block-b mgrt20">
+                     <input type="checkbox"   name="checkbox" id="checkbox_0" class="custom" data-theme="a" style="display:block;"/>
+                  <span id="checkbox_login" style="margin-left: 41px;margin-top:-10px;float: left;font-size: 15px;color: brown;" >记住帐号</span>
+                       
+                        <input data-val="true" data-val-required="The bCheckButton field is required." id="bCheckButton" name="bCheckButton" type="hidden" value="False" />
+                    </div>
+                    <a href="RetrievePassword.html" data-ajax="false" class="pull-right h5" data-theme="a"></a>
+                    <div class="clear mgbt20"></div>
+                    <input type="button" id="sumbit" class="mgbt20" onclick="do_login();" data-ajax="false" data-role="button" data-theme="b" value='登录'>
+                    <div class="clear mgbt20"></div>
+                    <a href="/index.php/Index/reg" data-ajax=" false" data-role="button" data-theme="c">免费加入</a>
+                    <div class="clear mgbt40"></div>
+                    <div class="align-center">
+                        <p class="call-list">
+                            <a href="javascript:void(0)" onClick="location.href='/index.php/Index/kefu'">在线客服</a><a href="tel:0063-9155777333">热线电话：0063-9155777333</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <include file="./Ab/Tpl/Layout/footer.html" />
+            <div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+                <div role="main" class="ui-content">
+                    <p class="sz18">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $("#strAccount").val(localStorage.nextname);
+        console.log($("#strAccount").val(localStorage.nextname));
+            $("#checkbox_0").click(function(){
+           if(this.checked){
+                localStorage.nextname=$("#strAccount").val();
+            }else{
+               document.cookie="name = ";
+            }
+        })
+    //登陆账号密码错误弹窗  xw 2017-03-01
+    function do_login(){
+        var username=$("#strAccount").val();
+        var passwd=$("#strPassword").val();
+
+        if (username == "" ) {
+            var $title = '账号不能为空！';
+            popup($title);
+            return false;
+        } else if ( passwd == "") {
+            var $title = '密码不能为空！';
+            popup($title);
+            return false;
+        }
+
+        $("#sumbit").val("提交中...");
+
+        $.ajax({
+            type: 'post',
+            url: '__APP__/Login/ajax_login',
+            data: {'username': username, 'password': passwd},
+            async: true,
+            success: function(data){
+                console.log(data);
+                var obj = jQuery.parseJSON(data);
+                if(obj.code==0){
+                    document.getElementById("LoginForm").action='__APP__/Login/login_check';
+                    document.getElementById("LoginForm").submit();
+                }else if (obj.code == 10)
+                {
+                    alert(obj.msg);
+                    location.href="__APP__/Index/upwd";
+                }else{
+                    popup(obj.msg);
+                }
+                
+                $("#sumbit").val("登入");
+            },
+            error: function(){
+                console.log('服务端异常');
+            }
+
+        })
+        
+        
+    }
+
+    </script>
+</html>

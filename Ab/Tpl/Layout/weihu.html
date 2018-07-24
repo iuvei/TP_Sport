@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=320, initial-scale=1.0" /> 
+<title>System Maintenance</title>
+<style type="text/css">
+html,body { margin:0; padding:0; text-align:center; font-family:Arial, Helvetica, sans-serif;}
+#box {text-align:center;}
+.info {height:160px; padding-top:17px; color:#FFF; text-align:center; background:url(/Public/fix_bg.gif) repeat-x;}
+img{ margin:31px 0 0;}
+h1{ font-size:16px; margin:0; padding:0;color:#8fff00}
+p { margin:15px auto; padding:0; font-size:15px;width:90%;}
+button{
+  position:absolute;
+  left:5px;
+  top:5px;
+  padding: 5px 10px;
+  border:none;
+  border-radius:5px; 
+  background:#ac2e0e;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+    <button onclick="history.go(-1)">返回</button>  
+    <img src="/Public/fix_1.gif" width="233" height="144" border="0">
+</div>
+    <div class="info">
+      <h1 class="h1">本站{$type}正在进行系统维护...</h1>
+      <p class="p1">{$msg}</p> 
+    </div>
+</body>
+</html>

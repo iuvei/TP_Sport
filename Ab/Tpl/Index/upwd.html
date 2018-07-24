@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+<input data-val="true" data-val-required="The bLogin field is required." id="bLogin" name="bLogin" type="hidden" value="False" />
+        <input id="strControllerName" name="strControllerName" type="hidden" value="" />
+        <div data-role="page">
+            <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/Public/css/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="javascript:void(0)" onclick="history.go(-1)"></a>
+                <h1 class="h3">更新密码</h1>
+            </div>
+            <script src="/Public/js/login/AccountBase.js"></script>
+            <script src="/Public/js/login/AccountIndex.js"></script>
+            <script src="/Public/js/popup.js"></script>
+            <link href="/Public/css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+            <form action="" method="post" id="LoginForm">
+                <div data-role="content" role="main">
+                    <div class="category-icon">
+                        <span class="icon65 icon-common-5"></span>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <span class="icon34 icon-common2-1"></span>
+                        <input class="input-a" data-theme="d" data-val="true" data-val-required="必填" id="strAccount" name="strAccount" placeholder="会员账号" type="text" value="" />
+                    </div>
+                    <span class="field-validation-valid" data-valmsg-for="strAccount" data-valmsg-replace="true"></span>
+                    <div data-role="fieldcontain">
+                        <span class="icon34 icon-common2-2"></span>
+                        <input class="input-a" data-theme="d" data-val="true" data-val-required="必填" id="strPassword" name="strPassword" placeholder="原始密码" type="text" />
+                        <a href="#" class="eye eye_close">
+                            <span class="input_icon"></span>
+                        </a>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <span class="icon34 icon-common2-2"></span>
+                        <input class="input-a" data-theme="d" data-val="true" data-val-required="必填" id="strPassword2" name="strPassword2" placeholder="新密码" type="password" />
+                        <a href="#" class="eye eye_close">
+                            <span class="input_icon"></span>
+                        </a>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <span class="icon34 icon-common2-2"></span>
+                        <input class="input-a" data-theme="d" data-val="true" data-val-required="必填" id="strPassword3" name="strPassword3" placeholder="重复密码" type="password" />
+                        <a href="#" class="eye eye_close">
+                            <span class="input_icon"></span>
+                        </a>
+                    </div>
+                    <div class="clear mgbt20"></div>
+                    <span class="field-validation-valid" data-valmsg-for="strPassword" data-valmsg-replace="true"></span>
+                    <span class="field-validation-valid" data-valmsg-for="TempMsg" data-valmsg-replace="true"></span>
+                    <div class="clear mgbt20"></div>
+                    <div class="ui-block-b mgrt20">
+                       
+                        <input data-val="true" data-val-required="The bCheckButton field is required." id="bCheckButton" name="bCheckButton" type="hidden" value="False" />
+                    </div>
+                    <a href="RetrievePassword.html" data-ajax="false" class="pull-right h5" data-theme="a"></a>
+                    <div class="clear mgbt20"></div>
+                    <input type="button" id="sumbit" class="mgbt20" onclick="do_login();" data-ajax="false" data-role="button" data-theme="b" value='修改密码'>
+                    <div class="clear mgbt20"></div>
+                    <div class="clear mgbt40"></div>
+                    <div class="align-center">
+                        <p class="call-list">
+                            <a href="javascript:void(0)" onClick="location.href='/index.php/Index/kefu'">在线客服</a><a href="tel:0063-9162856666">热线电话：0063-9155777333</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <include file="./Ab/Tpl/Layout/footer.html" />
+            <div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+                <div role="main" class="ui-content">
+                    <p class="sz18">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+<script type="text/javascript">
+    function do_login(){
+        var username = $("#strAccount").val();
+        if(username==''){
+                alert('会员账号不能为空！');
+                $("#strAccount").focus();
+                return false;
+        }
+
+        var olpwd = $("#strPassword").val();
+            if(olpwd==''){
+                alert('原始密码不能为空！');
+                $("#strPassword").focus();
+                return false;
+            }
+            var password = $("#strPassword2").val();
+            if(password==''){
+                alert('请输入密码！');
+                $("#strPassword2").focus();
+                return false;
+            }
+            var pattern = /^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{6,15}$/;
+            if(!pattern.test(password)){
+                alert('密码格式不正确！');
+               $("#strPassword2").focus();
+               return false;
+            }
+            var password2 = $("#strPassword3").val();
+            if(password2!=password){
+                alert('两次秘密不一致！');
+                $("#strPassword3").focus();
+                return false;
+            }
+
+            $.ajax({
+                url:"__APP__/Index/ajax_repasswd",
+                data:{
+                    username:username,
+                    oldpasswd:olpwd,
+                    password:password,
+                    passwd:password2,
+                },
+                dataType:'json',
+                type:'post',
+                success:function(res){
+                    if(res.code=='1001'){
+                        alert(res.msg);
+                        window.location.href="__APP__/Index/index";
+                    }else{
+                        alert(res.msg);
+                        return false;
+                    }
+          
+                }
+            });
+
+    }
+</script>
+</html>

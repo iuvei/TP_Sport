@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<include file="./Ab/Tpl/Help/header.html" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="/Public/js/jquery-1.8.2.min.js"></script>
+	<title>最新优惠</title>
+	<style>
+		.btn_new{
+			text-align:center;
+		}
+		.btn img{
+			width:160px;
+			height:40px;
+			margin-left:20px;
+		}
+		.now,.num{
+			width:160px;
+			height:40px;
+			margin-left:20px;
+		}
+		.promo-tab thead td{
+			background:#a5140c;
+		}
+		.out{
+			position: fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:rgba(0,0,0,0.4);
+			z-index: 1;
+			display:none;
+			line-height: 155px;
+			text-align: center;
+		}
+		.img_t{
+			background:url(/Public/images/2018newyear/alert.png);
+			width:298px;
+			height:155px;
+			margin:150px auto;
+			position: relative;
+		}
+		.close{
+			background:url(/Public/images/2018newyear/close.png) no-repeat;
+			background-size:70%;
+			width:30px;
+			height:30px;
+			display:inline-block;
+			position: absolute;
+			top:8px;
+			right:10px;
+		}
+		.text{
+			display:inline-block;
+			width:200px;
+			margin-left:60px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header" data-theme="b">
+			<div class="pageMasker" style="display:none">
+				<div style="text-align:center; margin-top:50%">
+					<img src="/CSS/images/ajax-loader.gif" />
+				</div>
+				<p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+			</div>
+			<a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="promotion.html"></a>
+			<h1 class="h3">最新优惠</h1>
+			<div class="header-right-user"></div>
+		</div>
+
+
+		<div data-role="content" role="main" class="promo-content">
+			<h4 style="text-align:center">元宵瓜分百万奖金。活动乐不停</h4>
+			<p>
+				活动时间：2018年03月02号至03月04（美东时间为准）<br />
+				注册时间：2018年02月28号后注册无法参加
+			</p>
+			<h4>活动内容</h4>
+			<table class="promo-tab" width="100%">
+				<thead>
+					<tr>
+	                  <td class="promotb_t">活动时间</td>
+	                  <td class="promotb_t">元宵奖金</td>
+	                  <td class="promotb_t">存款累计</td>
+	                </tr>
+				</thead>
+				<tbody>
+	                <tr>
+	                  <td>03月02号</td>
+	                  <td>20万</td>
+	                  <td>2000以</td>
+	                </tr>
+	                <tr>
+	                  <td>03月03号</td>
+	                  <td>30万</td>
+	                  <td>5000以上</td>
+	                </tr>
+	                <tr>
+	                  <td>03月04号</td>
+	                  <td>50万</td>
+	                  <td>10000以上</td>
+	                </tr>
+				</tbody>
+			</table>
+			<p>注：按照当天累计存款总金额瓜分元宵奖金，所得奖金需经过1倍有效投注即可提款、</p>
+			<h4>活动规则</h4>
+			<p>1.03月01号活动当天二十人达到累计存款即可瓜分200000奖金，每个人可获取10000奖金、所瓜分的奖金在第二天17:00进行派发、</p>
+			<p>2.在活动第一阶段结束所累计的存款将自动清零，需重新累计、按照每一个阶段的限制参与此活动、</p>
+			<p>3.无效申请参加此活动，你只需活动当天进行存款，系统将自动纳入活动当中、</p>
+			<p>4.玩家不可以使用多账户参加本次活动，凡同一IP地址、同一姓名、同一银行账户，同一联系方式，同一邮箱、同一电脑均视为同一账户，“皇冠8868”在会员重复申请会员账号时，保留取消、收回会员相关优惠 ；</p>
+			<p>5.本活动最终解释权归属“皇冠8868”所有，并保留修改以上条款的最终权利。</p>
+			<p></p>
+		</div>
+
+		<div data-role="footer" data-theme="a" class="tcolor-4">
+			<div class="clear mgbt10"><a href="/" data-ajax="false"><span class="head-logo-1" style="float:none"></span></a></div>
+			<p>&#169; 2013-2017 hg8868.com</p>
+			<p>由皇冠8868有限公司版权所有</p>
+			<div class="clear mgbt10"></div>
+		</div>
+	</div>
+</body>
+<script>
+	function now(){
+		$.ajax({
+			url:"__APP__/Help/ajax_newYear",
+			type:'post',
+			dataType:'json',
+			data:{
+				type:'type_red',
+			},
+			success:function(res){
+				if(res.code!='0'){
+					$("#msg").html(res.msg);
+					$(".out").show();
+				}
+			}
+		});
+
+	};
+	function num(){
+		$.ajax({
+			url:"__APP__/Help/ajax_newYear",
+			type:'post',
+			dataType:'json',
+			data:{
+				type:'type_ctime',
+			},
+			success:function(res){
+				if(res.code!='0'){
+					$("#msg").html(res.msg);
+					$(".out").show();
+				}
+			}
+		});
+	};
+	$(".close").click(function(){
+		$(".out").hide();
+	});
+</script>
+</html>

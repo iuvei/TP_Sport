@@ -1,0 +1,73 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  font-size: 14px;
+}
+
+
+.error-box{
+  width: 100%;
+  height: 100%;
+  background-color: #d2d5d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box
+}
+
+.error-main{
+  margin-top: -200px;
+}
+
+.error-main img{
+  width:100%
+}
+
+.error-text{
+  text-align: center;
+  color: #333333;
+  font-size: 1.2rem;
+  margin-top: -12%
+}
+
+@media screen and (max-width: 320px){
+  html{
+    font-size: 10px
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 375px){
+  html{
+    font-size: 12px
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px){
+  html{
+    font-size: 14px
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px){
+  html{
+    font-size: 16px
+  }
+}
+
+
+@media screen and (min-width: 1280px){
+  html{
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width: 414px){
+   .error-text{
+    margin-top: -14%
+  }
+}
+ 

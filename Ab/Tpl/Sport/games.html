@@ -1,0 +1,14 @@
+{$header}
+<div style=" line-height: 33px;padding-left: 10px;">{$ttyy}</div>
+<div class="list1"><ul style=" list-style-type: decimal;">
+    <volist name="teams" id="team">
+        <li>
+            <a style="
+margin-top: -30px;
+line-height: 80px;
+height: 80px;
+vertical-align: middle;font-size: 22px;">{$i}.</a> <a href="/index.php/{$_sel_gt}/team/tid/{$team.MID}">{$team.MB_Team} <br/> {$team.TG_Team}</a>
+        </li>
+    </volist>
+</ul>
+</div>

@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family:futura_mdcn_btmedium;
+    src:url(http://waptest.lebole2.com/Public/fonts/futuramc-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/futuramc-webfont.woff) format("woff"), url(../fonts/futuramc-webfont.ttf) format("truetype"), url(http://waptest.lebole2.com/Public/fonts/futuramc-webfont.svg#futura_mdcn_btmedium) format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:futura_bdcn_btbold;
+    src:url(http://waptest.lebole2.com/Public/fonts/futurabc-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/futurabc-webfont.woff) format("woff"), url(../fonts/futurabc-webfont.ttf) format("truetype"), url(http://waptest.lebole2.com/Public/fonts/futurabc-webfont.svg#futura_bdcn_btbold) format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+html{overflow-x:hidden;margin:0;padding:0;background:#e6e6d8;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,blockquote,th,td,label,button,p{margin:0;padding:0;color:#666666;font-family:"futura_mdcn_btmedium", "Myriad Pro Cond", '微软雅黑',Lato, sans-serif;}
+body{overflow-x:hidden;font-size:12px;}
+a{outline:none;border:0;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#666;text-decoration:none;}
+a:hover{color:#e30000;text-decoration:none;}
+table{ border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+ul,ol{list-style:none;}
+em,i{margin:0;padding:0;font-style:normal;}
+
+/*内容颜色*/
+.bg-color-01 { background:#f2f2e2;}
+
+/* 首页 */
+#gameNav{z-index:100;position:absolute;top:0;left:-100%;width:100%;}
+#gameNav iframe{float:left;width:85%;min-width:200px;border:0;}
+
+#accountNav{display:none;z-index:100;position:absolute;top:0;right:-100%;width:100%;}
+#accountNav iframe{float:right;width:85%;min-width:200px;border:0;}
+
+
+/*banner*/
+#banner { margin:0 auto;width:100%;background:#343434;}
+#banner img{ margin:0 auto;max-width:100%;max-height:155px;display:block;}
+.pagination { position:absolute;z-index:20;bottom:5px;width:100%;text-align:center;}
+.swiper-pagination-switch { display:inline-block;margin:0 2px;cursor:pointer;text-indent:-9999em;width:20px;height:2px;background-color:rgba(255,255,255,0.5);overflow:hidden;}
+.swiper-active-switch { background:#ac670e;}
+
+.ui-main{position:relative;width:100%;overflow:hidden;}
+
+/* channel */
+.channel{width:100%;background:#f2f2e2}
+.channel-nav { margin:8px 0 0 0;padding-top:8px;width:100%;text-align:center;overflow:hidden;}
+.channel-nav li{float:left;padding-top:5px;width:20%;height:78px;overflow:hidden;}
+.channel-nav li a{width:100%;display:inline-block;overflow:hidden;}
+.channel-nav li span{display:block;margin:0 auto;width:46px;height:46px;}
+.channel-nav li span img{width:100%;height:100%;}
+.channel-nav li p{line-height:26px;font-size:12px;color:#000;}
+
+/*notice*/
+.notice{ margin-top:8px;width:100%;overflow:hidden;}
+.notice .tit{ position:relative;width:100%;height:42px;line-height:44px;background:#ac670e;display:block;}
+.notice .tit .icon { width:30px;height:100%;float:left;margin-left:10px;background:url(../images/ico-notice.png) no-repeat left center;background-size:auto 65%;}
+.notice .tit span{ display:block;font-size:18px;color:#fff;float:left;}
+.notice .tit em{ display:block;float:right;margin-right:10px;font-size:14px;color:#fff;}
+.notice ul{ margin:5px 0 5px 0;width:100%;border-top:1px solid #f5f5df;border-bottom:1px solid #ebebd2;overflow:hidden;}
+.notice ul li { position:relative;float:left;width:100%;min-height:80px;border-top:1px solid #ebebd2;border-bottom:1px solid #f5f5df;overflow:hidden;}
+.notice ul li em { border-radius:45px;position:absolute;display:block;margin:10px;width:60px;height:60px;line-height:65px;background:#999;color:#fff;font-size:40px;font-weight:50;text-align:center;}
+.notice ul li:nth-child(1) em { background:#c74343;}
+.notice ul li:nth-child(2) em { background:#e69d35;}
+.notice ul li:nth-child(3) em { background:#599535;}
+.notice ul li p{ padding:10px 10px 10px 80px;font-size:14px;color:#000;}
+

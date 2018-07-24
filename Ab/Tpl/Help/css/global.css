@@ -1,0 +1,159 @@
+﻿@font-face {font-family:futura_mdcn_btmedium;src:url(http://waptest.lebole2.com/Public/fonts/futuramc-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/futuramc-webfont.woff) format("woff"), url(../fonts/futuramc-webfont.ttf) format("truetype"), url(http://waptest.lebole2.com/Public/fonts/futuramc-webfont.svg#futura_mdcn_btmedium) format("svg");font-weight:normal;font-style:normal;}
+@font-face {font-family:futura_bdcn_btbold;src:url(http://waptest.lebole2.com/Public/fonts/futurabc-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/futurabc-webfont.woff) format("woff"), url(../fonts/futurabc-webfont.ttf) format("truetype"), url(http://waptest.lebole2.com/Public/fonts/futurabc-webfont.svg#futura_bdcn_btbold) format("svg");font-weight:normal;font-style:normal;}
+html{overflow-x:hidden;margin:0;padding:0;background:#e6e6d8; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,blockquote,th,td,label,button,p{margin:0;padding:0;color:#000;font-family:"futura_mdcn_btmedium", "Myriad Pro Cond", '微软雅黑',Lato, sans-serif; }
+body{overflow-x:hidden;font-size:12px;}
+a{outline:none;border:0;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#666;text-decoration:none; }
+table{ border-collapse:collapse;border-spacing:0; }
+img{border:0; }
+ul,ol{list-style:none; }
+em,i{margin:0;padding:0;font-style:normal; }
+input,button{outline:none;height:34px;border:1px solid #464646;background:#212121;border-radius:2px;font-size:16px; }
+input[type=text],input[type=number],input[type=password]{text-indent:10px; }
+input[type=submit]{height:36px;border:1px solid #bd1e1d;background:#bd1e1d;color:#fff;border-radius:2px;font-size:16px; }
+input[type=button],input[type=reset]{height:36px;border:1px solid #464646;background:#464646;border-radius:2px;font-size:16px; }
+input.ipt-txt{width:99%; }
+input.ipt-btn{width:49%; }
+input.ipt-btn2{width:49%; }
+input.ipt-btn3{float:right;margin-right:2px;width:49%; }
+input.ipt-small-btn{padding:0 10px;height:22px;border:0;background:#ffa800 url(../images/btn-bg.png) repeat-x;color:#fff;font-size:14px; }
+input.ipt-small-btn:hover{background-position:left -35px; }
+select{padding:5px;height:36px;border:1px solid #464646;-webkit-appearance:none;background:#212121 url(../images/ico-select.png) no-repeat center right;border-radius:2px;font-size:16px; }
+select.select2{width:99.4%; }
+
+#goTop{display:block;margin:15px auto;width:98%;height:36px;line-height:36px;background:#ca813e;color:#FFF;font-size:16px; font-weight:bold;text-align:center;border-radius:18px; }
+
+
+/* header */
+.ui-header {z-index:1;position:relative;width:100%;height:50px;background:#ac670e;overflow:hidden; }
+.ui-header a {z-index:2;position:absolute;top:0;display:block;height:100%;overflow:hidden; }
+.ui-header a#gameNavBtn {left:10px;width:40px;background:url(../images/16_03.png) no-repeat left center;background-size:auto 56%; }
+.ui-header a#gameNavBtn.sel { background:url(../images/arrow-right.png) no-repeat left center;background-size:auto 50%; }
+.ui-header a.logo {margin-left:-90px;left:50%;width:180px;background:url(../images/logo.png) no-repeat center center;background-size:auto 64%; }
+.ui-header a.login {right:10px;line-height:54px;font-size:16px;color:#fff; }
+.ui-header a.haslogin {right:0;padding:4px 15px 2px 15px;font-size:16px;color:#fff; height:100%; line-height: 22px;text-align:center;}
+.ui-header a.haslogin span { display:block;width:100%;height:24px;background:url(../images/ico-users.png) no-repeat center center;color:#ffff66;overflow:hidden;text-align:left;text-indent:-1000px; }
+.ui-header a.haslogin strong { display:block;min-width:17px;line-height:20px;color:#fff;font-weight:normal; }
+.ui-header a.haslogin.sel { right:10px;width:40px;background:url(../images/arrow-left.png) no-repeat right center;background-size:auto 50%; }
+
+/* footer */
+.ui-footer { width:100%;padding:8px 0;text-align:center;}
+.ui-footer dt { width:100%;height:24px;}
+.ui-footer dt a { color:#b50000;font-size:14px;}
+.ui-footer dd { width:100%;}
+.ui-footer dd a { margin:0 10px;color:#000;}
+
+
+#gameNav {z-index:100;position:absolute;top:0;left:-100%;width:100%; }
+#gameNav iframe {float:left;width:85%;min-width:200px;border:0; }
+
+#accountNav {display:none;z-index:100;position:absolute;top:0;right:-100%;width:100%; }
+#accountNav iframe {float:right;width:85%;min-width:200px;border:0; }
+
+.ui-main-warp{width:100%;overflow:hidden; }
+.ui-main {position:relative;width:100%;overflow:hidden; }
+
+/*----------------首页------------*/
+/*banner*/
+#banner { margin:0 auto;width:100%;background:#343434;}
+#banner img{ margin:0 auto;max-width:100%;max-height:155px;display:block;}
+.pagination { position:absolute;z-index:20;bottom:5px;width:100%;text-align:center;}
+.swiper-pagination-switch { display:inline-block;margin:0 2px;cursor:pointer;text-indent:-9999em;width:20px;height:2px;background-color:rgba(255,255,255,0.5);overflow:hidden;}
+.swiper-active-switch { background:#ac670e;}
+
+.ui-main{position:relative;width:100%;overflow:hidden;}
+
+/* channel */
+.h-channel{margin:8px 0 0 0;padding-top:8px;width:100%;background:#f2f2e2;text-align:center;overflow:hidden;}
+.h-channel li{float:left;padding-top:5px;width:20%;height:78px;overflow:hidden;}
+.h-channel li a{width:100%;display:inline-block;overflow:hidden;}
+.h-channel li span{display:block;margin:0 auto;width:46px;height:46px;}
+.h-channel li span img{width:100%;height:100%;}
+.h-channel li p{line-height:26px;font-size:12px;color:#000;}
+
+/*notice*/
+.h-notice{ margin-top:8px;width:100%;background:#f2f2e2;overflow:hidden;}
+.h-notice .tit{ position:relative;width:100%;height:42px;line-height:44px;background:#ac670e;display:block;}
+.h-notice .tit .icon { width:30px;height:100%;float:left;margin-left:10px;background:url(../images/ico-notice.png) no-repeat left center;background-size:auto 65%;}
+.h-notice .tit span{ display:block;font-size:18px;color:#fff;float:left;}
+.h-notice .tit em{ display:block;float:right;margin-right:10px;font-size:14px;color:#fff;}
+.h-notice ul{ margin:5px 0 5px 0;width:100%;border-top:1px solid #f5f5df;border-bottom:1px solid #ebebd2;overflow:hidden;}
+.h-notice ul li { position:relative;float:left;width:100%;min-height:80px;border-top:1px solid #ebebd2;border-bottom:1px solid #f5f5df;overflow:hidden;}
+.h-notice ul li em { border-radius:45px;position:absolute;display:block;margin:10px;width:60px;height:60px;line-height:65px;background:#999;color:#fff;font-size:40px;font-weight:50;text-align:center;}
+.h-notice ul li:nth-child(1) em { background:#c74343;}
+.h-notice ul li:nth-child(2) em { background:#e69d35;}
+.h-notice ul li:nth-child(3) em { background:#599535;}
+.h-notice ul li p{ padding:10px 10px 10px 80px;font-size:14px;color:#000;}
+
+.games-footer { width:100%;margin:15px 0;width:100%;height:36px;line-height:38px;text-align:center; }
+.games-footer a { display:inline-block;margin:0 1%;width:48%;height:100%;background:#ca813e;color:#fff;font-size:15px;border-radius:18px; }
+.games-footer a.full { width:98%; }
+
+.games-class {overflow-x:auto;padding:3px;width:100%;height:78px;margin-bottom:5px;border-bottom:1px solid #ddd;background:#fff;overflow:hidden; }
+.games-class a{float:left;display:block;margin-right:6px;width:49px;height:70px;position:relative;text-align:center;border-radius:3px; }
+.games-class em{display:block;z-index:2px;position:absolute;top:5px;left:3px;padding:2px 2px 0px 2px;min-width:10px;line-height:1em;border:0 solid #a33e3a;background:#cc4d48;border-radius:45px;color:#fff;font-size:8px; }
+.games-class strong{display:block;width:100%;padding-top:45px;background:url(../images/sports_menu_001.png) no-repeat;background-size:auto 40px; }
+.games-class a.game1 em{border-color:#b24c4a;background:#dc5f5c; }
+.games-class a.game1 strong{background-position:-1662px 0; }
+.games-class a.game2 em{border-color:#90342d;background:#bc433b; }
+.games-class a.game2 strong{background-position:-96px 0; }
+.games-class a.game3 em{border-color:#9c6430;background:#cb823f; }
+.games-class a.game3 strong{background-position:-144px 0; }
+.games-class a.game4 em{border-color:#90342d;background:#cc4d48; }
+.games-class a.game4 strong{background-position:0 0; }
+.games-class a.game5 em{border-color:#cd3b0e;background:#d84315; }
+.games-class a.game5 strong{background-position:-1609px 0; }
+.games-class a.game6 em{border-color:#71a862;background:#7cb16e; }
+.games-class a.game6 strong{background-position:-1559px 0; }
+
+.games-search {padding:5px;width:100%;margin-bottom:5px;border-bottom:1px solid #ddd;background:#fff;overflow:hidden;text-align:center; }
+.games-search div { margin:0 auto;width:220px; }
+.games-search div input { float:left;padding:0;height:28px; }
+.games-search div input[type="text"] { 
+	width:169px;border:1px solid #ca813e;border-right:0;
+	box-shadow: 0 0 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,.1);
+	font-size:14px;text-indent:10px;
+}
+.games-search div input[type="submit"] { width:50px;border:1px solid #ca813e;border-left:0;background:#ca813e; }
+
+.games-list{margin:5px auto;width:98%;overflow:hidden; }
+.games-list h4{width:100%;line-height:28px; }
+.on_game{background:#eee;}
+.game-list112 ul {margin:7px 0 0 0;padding: 0;}
+.game-list112 li {list-style: none;width: 48%;float: left;text-align: left;margin:1%;}
+.game-list112 li h6{padding:2px 10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+@media screen and (min-width:480px) {.game-list112 li {width: 48%;}}
+.game-list112 img{vertical-align:middle;height:62px;}
+.game-list112 a{padding: 10px 5px;border-radius:4px;display:block;color:#fff;}
+.game-list112 .goods1 {background-color:#e69826;border: 1px solid #e69826;}
+.game-list112 .goods2 {background-color:#3cb035;border: 1px solid #3cb035;}
+.game-list112 .goods3 {background-color:#2577e3;border: 1px solid #2577e3;}
+.game-list112 .goods4 {background-color:#905400;border: 1px solid #905400;}
+.game-list112 .goods5 {background-color:#bc2b26;border: 1px solid #bc2b26;}
+.game-list112 .goods6 {background-color:#666;border: 1px solid #666;}
+
+.clear{ clear:both;}
+#orderWin{display:none;width:100%;z-index:1000;position:fixed;left:0;bottom:0;border:1px solid #a56007;background:#eee;overflow:hidden; }
+#orderWin #winTit{cursor:default;position:relative;height:45px;line-height:45px;background:#ac670e;text-align:center; }
+#orderWin #winTit label{font-size:20px;font-weight:normal;color:#fff; }
+#orderWin #winTit span{cursor:pointer;z-index:5;position:absolute;right:5px;top:0;display:block;width:40px;height:45px;line-height:40px;font-size:35px;overflow:hidden;color:#fff; }
+#orderWin #winTit span:hover{color:#ffff00; }
+#orderWin #winTit em{position:absolute;left:0;top:0;display:block;width:50px;height:45px;line-height:46px;background:url(../images/ico-refresh.png) no-repeat center 8px;background-size:auto 28px;font-size:14px;overflow:hidden;color:#fff; }
+#orderWin #winTit dl dt{height:26px;line-height:24px;color:#fff;font-size:17px; }
+#orderWin #winTit dl dd{line-height:1em;color:#ffff00;font-size:14px; }
+.order-info{background:#fff;padding:10px 15px;line-height:1.5em;font-size:16px;overflow:hidden; }
+.order-info h2{line-height:2em;font-size:16px;font-weight:normal;color:#8f8f8f; }
+.order-info strong,.order-info span{color:#d64d48;font-weight:normal; }
+.bet-info{padding:15px 15px;overflow:hidden; }
+.bet-info dl{overflow:hidden;height:40px; }
+.bet-info dl dt{float:left; }
+.bet-info dl dt input{width:150px;border:0;background:#fff;box-shadow:inset 1px 1px 4px rgba(0,0,0,0.3); }
+.bet-info dl dd{float:right;line-height:20px; }
+.bet-info div{line-height:26px; }
+.bet-info div label{display:block; }
+.bet-info div input[type="checkbox"]{margin:0 0px -4px 5px;padding:0;width:22px;height:22px;border-radius:50px;background:#fff url(../images/uni_icon_001.png) no-repeat -236px -11px;background-size:auto 126px;}
+.bet-info div input[type="checkbox"]:checked{background-position: -236px -37px;}
+.bet-info strong,.bet-info span{color:#d64d48;font-weight:normal; }
+input.bet-btn{width:100%;height:50px;border:0;background:#ac670e;font-size:16px;color:#fff; }

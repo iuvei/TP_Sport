@@ -1,0 +1,833 @@
+<html>
+<head>
+	<title>早盘-欧洲冠军杯</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1, width=device-width, user-scalable=no, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="YES">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="/Public/css/boilerplate.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/in-play.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/body_tw.css" rel="stylesheet" type="text/css">
+	<script id="/Public/js/ft_early_game_r.js" src="/js/ft_early_game_r.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body style="height: 519px; " onLoad="document.body.style.height=document.documentElement.clientHeight+'px';init();"><input id="topInput" style="display: none; "><div class="FT">
+<div id="loading_league" class="loading_start" style="display: none; ">
+    <table class="load_table"><tbody><tr><td valign="middle" align="center">
+        <div id="loading_movie">
+            <div class="load_star_01" style="display: none; "></div><div class="load_star_02" style="display: none; "></div>
+            <div class="load_star_03" style="display: none; "></div><div class="load_star_04" style="display: none; "></div>
+            <div class="load_star_05" style="display: none; "></div><div class="load_star_06" style="display: none; "></div>
+            <div class="load_star_07" style="display: none; "></div><div class="load_star_08" style="display: none; "></div>
+            <div class="load_star_09" style="display: none; "></div><div class="load_star_10" style="display: none; "></div>
+            <div class="load_star_11" style="display: none; "></div><div class="load_star_12" style="display: none; "></div>
+        </div>
+    </td></tr></tbody></table>
+</div>
+
+<div id="topTag" name="topTag"></div>
+<div class="gridContainer clearfix">
+
+<!---------------- header ---------------->
+  <div id="" class="inplay_header">
+  
+  	<div class="w100">
+    
+
+    	<div id="header_back" name="header_back" class="header_inplay1">
+        	<div class="back_icon" onClick="location.href=document.referrer;"></div>
+        </div>
+
+        
+    		<div id="header_live" name="header_back" class="header_inplay2"><switch name="_sel_gt">
+    <case value="Ft">足球</case> <case value="Bk">篮球</case> </switch></div>
+    		<!--<div id="header_today" name="header_back" class="header_inplay2">今日</div>
+    		<div id="header_early" name="header_back" class="header_inplay2_selected">早盘</div> -->
+
+
+
+
+    <div class="acc" id="acc">
+    
+   
+        <div id="header_menu" name="header_menu" class="dropdown"><span class="menu_icon"> </span></div>
+        <div id="header_movie" name="header_movie" class="dropdown_sub" style="display: none; ">
+          
+          <!-- start content -->
+          <div class="subaccountform_menu">
+          
+            <div id="header_home" name="header_home" class="accordion_content_menu">
+            	<div class="menu_left">首页</div>
+           	</div>
+            
+           	<div class="accordion_content_menu">
+            	<div class="odd_btn">
+                    <div class="HK">
+                        <div class="selection_HK_box">
+                            <span class="selection_HK">
+                            <select id="header_odds" name="header_odds" class="HK_dropdown">
+                              
+                              
+                              
+                              
+                            <option value="H">香港盘</option><option value="M">马来盘</option><option value="I">印尼盘</option><option value="E">欧洲盘</option></select>
+                            </span>
+                      </div>
+                  </div>                
+              </div>
+                <div class="menu_odd_icon"> </div>
+           	</div>
+            
+						<div id="header_todaywagers" name="header_todaywagers" class="accordion_content_menu">
+            	<div class="menu_left">交易状况</div>
+           	</div>
+            
+           	<div id="header_history" name="header_history" class="accordion_content_menu">
+            	<div class="menu_right">帐户历史</div>
+           	</div>
+            
+            <div id="header_announcements" name="header_announcements" class="accordion_content_menu">
+            	<div class="menu_left">公告</div>
+           	</div>
+            
+           	<div id="header_contactus" name="header_contactus" class="accordion_content_menu">
+            	<div class="menu_right">联系我们</div>
+           	</div>
+            
+           	<div id="header_logout" name="header_logout" class="accordion_content_menu_log">
+            	<div>登出</div>
+           	</div>
+            
+          </div>
+          
+      </div>
+      
+      </div>     
+ 			<!---------------- header ---------------->
+        
+    </div>
+  </div>
+  
+<!-- inplay title -->
+  
+  <div class="LayoutDiv1_title">
+  	<div class="game_title_today"><span id="league_name" name="league_name">{$leg}</span></div>
+    <div id="refresh" class="refresh">
+    	<span id="re_second" class="refresh_btn" onClick="location.reload(true);"></span>
+    </div>
+  </div>
+
+<!------------------------ change wtype -------------------->
+<!------------------------ no data ------------------------>
+<div id="div_nodata" name="div_nodata" class="NoEvent_game" style="display: none; ">无赛程</div>
+        
+<!------------------------ change wtype ------------------------>
+  
+  <div id="div_show" name="div_show">
+		<switch name="_sel_gt">
+    <case value="Ft">
+        <if condition="$show_type eq 's'">
+            <volist name="rates" id="rate">
+				
+				<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live"><!--滚球 --></span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date"></span>
+                  	<span class="odds_early_min">{$rate.M_Time}</span>
+                  	<div id="icon_N" class="icon_N" style="display:none">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">让球</div></td>
+                <td class="ratio_headB">大小</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.MB_Team}</span></div>                </td>
+               
+                
+                <td id="h_rh_1867370" name="h_rh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"><if condition="$rate['MG_LetB'] neq ''">{$rate.MG_LetB}</if>
+                		</div>
+                		<div class="*STYLE_RH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/R/odd_f_type/H/type/H/strong/C/gid/{$rate.MID}">{$rate.MB_LetB_Rate}</a></font></div>
+                	</div>                </td>
+              
+                <td id="c_ouc_1867370" name="c_ouc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">大 {$rate.MB_Dime}</div>
+                		<div class="*STYLE_OUC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.MB_Dime_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.TG_Team}</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"><if condition="$rate['TG_LetB'] neq ''">{$rate.TG_LetB}</if>
+                			</div>
+                		    <div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/R/odd_f_type/H/type/C/strong/C/gid/{$rate.MID}">{$rate.TG_LetB_Rate}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">小 {$rate.TG_Dime}</div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.TG_Dime_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+		</tbody></table>
+		
+		
+		
+		<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live"><!--滚球 --></span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date"></span>
+                  	<span class="odds_early_min">{$rate.M_Time}</span>
+                  	<div id="icon_N" class="icon_N" style="display:none">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">独赢</div></td>
+                <td class="ratio_headB">单双</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.MB_Team}</span></div>                </td>
+               
+                
+                <td id="h_rh_1867370" name="h_rh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"></div>
+                		<div class="*STYLE_RH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/M/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.MB_Win_Rate}</a></font></div>
+                	</div>                </td>
+              
+                <td id="c_ouc_1867370" name="c_ouc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">单 <a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/ODD/gid/{$rate.MID}"></a></div>
+                		<div class="*STYLE_OUC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/ODD/gid/{$rate.MID}">{$rate.S_Single_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.TG_Team}</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"></div>
+                		<div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/M/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.TG_Win_Rate}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">双 </div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/EVEN/gid/{$rate.MID}">{$rate.S_Double_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+			<tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">和局</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"></div>
+                		<div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/M/odd_f_type/H/type/N/gid/{$rate.MID}">{$rate.M_Flat_Rate}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"></div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/H/gid/{$rate.MID}"></a></font></div>
+                	</div>                </td>
+            </tr>
+		</tbody></table>
+				
+				<br/>
+                <br/>
+            </volist>
+        </if>
+		
+		
+        <if condition="$show_type eq 'b'">
+            <volist name="rates" id="rate">
+				<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live"><!--滚球 --></span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date"></span>
+                  	<span class="odds_early_min">{$rate.M_Time}</span>
+                  	<div id="icon_N" class="icon_N" style="display:none">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">让球</div></td>
+                <td class="ratio_headB">大小</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.MB_Team}-[上半]</span></div>                </td>
+               
+                
+                <td id="h_rh_1867370" name="h_rh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"><if condition="$rate['MG_LetB'] neq ''">({$rate.MG_LetB_H})</if>
+                		</div>
+                		<div class="*STYLE_RH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HR/odd_f_type/H/type/H/strong/C/gid/{$rate.MID}">{$rate.MB_LetB_Rate_H}</a></font></div>
+                	</div>                </td>
+              
+                <td id="c_ouc_1867370" name="c_ouc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">大 {$rate.MB_Dime_H}</div>
+                		<div class="*STYLE_OUC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HOU/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.MB_Dime_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.TG_Team}-[上半]</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"><if condition="$rate['TG_LetB'] neq ''">({$rate.TG_LetB_H})</if>
+                			</div>
+                		    <div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HR/odd_f_type/H/type/C/strong/C/gid/{$rate.MID}">{$rate.TG_LetB_Rate_H}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">小 {$rate.TG_Dime_H}</div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HOU/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.TG_Dime_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+		</tbody></table>
+		
+		
+		
+		<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live"><!--滚球 --></span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date"></span>
+                  	<span class="odds_early_min">{$rate.M_Time}</span>
+                  	<div id="icon_N" class="icon_N" style="display:none">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">独赢</div></td>
+                <td class="ratio_headB">单双</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.MB_Team}-[上半]</span></div>                </td>
+               
+                
+                <td id="h_rh_1867370" name="h_rh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"></div>
+                		<div class="*STYLE_RH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HM/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.MB_Win_Rate_H}</a></font></div>
+                	</div>                </td>
+              
+                <td id="c_ouc_1867370" name="c_ouc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">单 <a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/ODD/gid/{$rate.MID}"></a></div>
+                		<div class="*STYLE_OUC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HEO/odd_f_type/H/rtype/ODD/gid/{$rate.MID}">{$rate.S_Single_Rate_H}</a></font></div>
+                	</div>                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.TG_Team}-[上半]</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"></div>
+                		<div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HM/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.TG_Win_Rate_H}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">双 </div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HEO/odd_f_type/H/rtype/EVEN/gid/{$rate.MID}">{$rate.S_Double_Rate_H}</a></font></div>
+                	</div>                </td>
+            </tr>
+			<tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">和局</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"></div>
+                		<div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/HM/odd_f_type/H/type/N/gid/{$rate.MID}">{$rate.M_Flat_Rate_H}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"></div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/H/gid/{$rate.MID}"></a></font></div>
+                	</div>                </td>
+            </tr>
+            
+	
+
+            <tr>
+                <td colspan="3">
+
+                	<div id="more_1867370" name="more_1867370" >
+					  	<br><br>
+                	</div>                </td>  
+            </tr>
+		</tbody></table>
+            </volist>
+        </if>
+
+
+
+        <if condition="$show_type eq 'r'">
+            <volist name="rates" id="rate">
+            <if condition="trim($rate['MB_LetB_Rate_RB']) neq ''">
+            开赛时间:{$rate.M_M_M}<br/>
+            当前比分:{$rate.MB_Ball}:{$rate.TG_Ball}
+                <div>{$rate.MB_Team}<if condition="$rate['MG_LetB_RB'] neq ''">({$rate.MG_LetB_RB})</if>:<a href="/index.php/{$_sel_gt}/rate/t/RE/odd_f_type/H/type/H/strong/C/gid/{$rate.MID}">{$rate.MB_LetB_Rate_RB}</a><br />{$rate.TG_Team}<if condition="$rate['TG_LetB_RB'] neq ''">{$rate.TG_LetB_RB}</if>:<a href="/index.php/{$_sel_gt}/rate/t/RE/odd_f_type/H/type/C/strong/C/gid/{$rate.MID}">{$rate.TG_LetB_Rate_RB}</a></div>
+            </if>
+                <if condition="trim($rate['MB_LetB_Rate_RB']) eq ''">
+                    <div>{$rate.MB_Team}<Br/>{$rate.TG_Team}</div>
+                </if>
+            <if condition="trim($rate['MB_Dime_Rate_RB']) neq ''">
+                <div>大({$rate.MB_Dime_RB}):<a href="/index.php/{$_sel_gt}/rate/t/ROU/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.MB_Dime_Rate_RB}</a><br />小({$rate.TG_Dime_RB}):<a href="/index.php/{$_sel_gt}/rate/t/ROU/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.TG_Dime_Rate_RB}</a></div>
+            </if>
+            <if condition="trim($rate['MB_Win_Rate_RB']) neq ''">
+                <div>主胜:<a href="/index.php/{$_sel_gt}/rate/t/RM/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.MB_Win_Rate_RB}</a><br />客胜:<a href="/index.php/{$_sel_gt}/rate/t/RM/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.TG_Win_Rate_RB}</a><br/>平手:<a href="/index.php/{$_sel_gt}/rate/t/RM/odd_f_type/H/type/N/gid/{$rate.MID}">{$rate.M_Flat_Rate_RB}</a></div>
+            </if>
+
+            <if condition="trim($rate['MB_LetB_Rate_RB_H']) neq ''">
+                <div>{$rate.MB_Team} - [上半]<if condition="$rate['MG_LetB_RB_H'] neq ''">({$rate.MG_LetB_RB_H})</if>:<a href="/index.php/{$_sel_gt}/rate/t/HRE/odd_f_type/H/type/H/strong/C/gid/{$rate.MID}">{$rate.MB_LetB_Rate_RB_H}</a><br />{$rate.TG_Team} - [上半]<if condition="$rate['TG_LetB_RB_H'] neq ''">{$rate.TG_LetB_RB_H}</if>:<a href="/index.php/{$_sel_gt}/rate/t/HRE/odd_f_type/H/type/C/strong/C/gid/{$rate.MID}">{$rate.TG_LetB_Rate_RB_H}</a></div>
+            </if>
+            <if condition="trim($rate['MB_Dime_Rate_RB_H']) neq ''">
+                <div>大 - [上半]({$rate.MB_Dime_RB_H}):<a href="/index.php/{$_sel_gt}/rate/t/HROU/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.MB_Dime_Rate_RB_H}</a><br />小 - [上半]({$rate.TG_Dime_RB_H}):<a href="/index.php/{$_sel_gt}/rate/t/HROU/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.TG_Dime_Rate_RB_H}</a></div>
+            </if>
+            <if condition="trim($rate['MB_Win_Rate_RB_H']) neq ''">
+                <div>主胜 - [上半]:<a href="/index.php/{$_sel_gt}/rate/t/HRM/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.MB_Win_Rate_RB_H}</a><br />客胜 - [上半]:<a href="/index.php/{$_sel_gt}/rate/t/HRM/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.TG_Win_Rate_RB_H}</a><br/>平手 - [上半]:<a href="/index.php/{$_sel_gt}/rate/t/HRM/odd_f_type/H/type/N/gid/{$rate.MID}">{$rate.M_Flat_Rate_RB_H}</a></div>
+            </if>
+                <br/>
+            </volist>
+        </if>
+    </case>
+
+
+
+
+    <case value="Bk">
+        <if condition="$show_type neq 'r'">
+            <volist name="rates" id="rate">
+				
+			<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live"><!--滚球 --></span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date"></span>
+                  	<span class="odds_early_min">{$rate.M_Time}</span>
+                  	<div id="icon_N" class="icon_N" style="display:none">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">让分</div></td>
+                <td class="ratio_headB">大小</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.MB_Team}</span></div>                </td>
+               
+                
+                <td id="h_rh_1867370" name="h_rh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"><if condition="$rate['MG_LetB'] neq ''">{$rate.MG_LetB}</if>
+                		</div>
+                		<div class="*STYLE_RH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/R/odd_f_type/H/type/H/strong/C/gid/{$rate.MID}">{$rate.MB_LetB_Rate}</a></font></div>
+                	</div>                </td>
+              
+                <td id="c_ouc_1867370" name="c_ouc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">大 {$rate.MB_Dime}</div>
+                		<div class="*STYLE_OUC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.MB_Dime_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.TG_Team}</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"><if condition="$rate['TG_LetB'] neq ''">{$rate.TG_LetB}</if>
+                			</div>
+                		    <div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/R/odd_f_type/H/type/C/strong/C/gid/{$rate.MID}">{$rate.TG_LetB_Rate}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">小 {$rate.TG_Dime}</div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.TG_Dime_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+		</tbody></table>
+		
+		
+		
+		<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live"><!--滚球 --></span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date"></span>
+                  	<span class="odds_early_min">{$rate.M_Time}</span>
+                  	<div id="icon_N" class="icon_N" style="display:none">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">独赢</div></td>
+                <td class="ratio_headB">单双</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.MB_Team}</span></div>                </td>
+               
+                
+                <td id="h_rh_1867370" name="h_rh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"></div>
+                		<div class="*STYLE_RH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/M/odd_f_type/H/type/H/gid/{$rate.MID}">{$rate.MB_Win_Rate}</a></font></div>
+                	</div>                </td>
+              
+                <td id="c_ouc_1867370" name="c_ouc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">单 <a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/ODD/gid/{$rate.MID}"></a></div>
+                		<div class="*STYLE_OUC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/ODD/gid/{$rate.MID}">{$rate.S_Single_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">{$rate.TG_Team}</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"></div>
+                		<div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/M/odd_f_type/H/type/C/gid/{$rate.MID}">{$rate.TG_Win_Rate}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">双 </div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/EO/odd_f_type/H/rtype/EVEN/gid/{$rate.MID}">{$rate.S_Double_Rate}</a></font></div>
+                	</div>                </td>
+            </tr>
+			<tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">和局</span></div>                </td>
+
+                <td id="c_rc_1867370" name="c_rc_1867370" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con"></div>
+                		<div class="*STYLE_RC*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/M/odd_f_type/H/type/N/gid/{$rate.MID}">{$rate.M_Flat_Rate}</a></font></div>
+                	</div>                </td>
+
+                <td id="h_ouh_1867370" name="h_ouh_1867370" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con"></div>
+                		<div class="*STYLE_OUH*"><font class="ratio"><a href="/index.php/{$_sel_gt}/rate/t/OU/odd_f_type/H/type/H/gid/{$rate.MID}"></a></font></div>
+                	</div>                </td>
+            </tr>
+			<tr class="oddsdetails">
+			  <td colspan="3" class="team_box">&nbsp;</td>
+			  </tr>
+		</tbody></table>
+			
+			
+			
+			
+
+              
+            </volist>
+           <!-- <volist name="rates" id="rate"><if condition="$rate['MB_Dime_Rate_RB'] neq ''"><div></div>
+                </if>
+                <br/>
+            </volist> -->
+        </if>
+    </case>
+    </switch>
+  </div>
+  <!------------------------ game model ------------------------>  
+<div id="div_model" name="div_model" style="display:none;">
+  
+  
+		<table border="0" cellspacing="0" cellpadding="0" class="game_tab">
+            <!-- odds header -->    
+            <tbody><tr class="oddstitle">
+                <td class="odds_bg">
+                  
+                  <div class="odds_score"><span class="odds_live">*RE_TIME_STATUS*</span></div>
+                  <div class="odds_re_time">
+                  	<span class="odds_early_date">*RE_TIME_DATE*</span>
+                  	<span class="odds_early_min">*RE_TIME_MINUTE*</span>
+                  	<div id="icon_N" class="icon_N" style="display:*MIDFIELD_SHOW*">
+                    	<div class="odds_mid"> <!--N--></div>
+                  	</div>
+                  </div>
+                </td>
+                
+                <td class="ratio_headA"><div class="headA_line">让球</div></td>
+                <td class="ratio_headB">大小</td> 
+            </tr>
+            
+
+            <!-- odds details -->        
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">*TEAM_H*</span></div>
+                    
+                </td>
+               
+                
+                <td id="h_rh_*GID*" name="h_rh_*GID*" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">*RATIO*</div>
+                		<div class="*STYLE_RH*">*IOR_RH*</div>
+                	</div>
+                </td>
+              
+                <td id="c_ouc_*GID*" name="c_ouc_*GID*" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">*RATIO_O*</div>
+                		<div class="*STYLE_OUC*">*IOR_OUC*</div>
+                	</div>
+                </td>
+            </tr>
+          
+            <tr class="oddsdetails">
+                <td class="team_box">
+                	<div name="dynamicFont" class="team_name" style="overflow: hidden; width: 173px; "><span style="font-size: 15px; ">*TEAM_C*</span></div>
+                    
+                </td>
+
+                <td id="c_rc_*GID*" name="c_rc_*GID*" class="odds_box">
+                	<div class="ratio_box">
+                			<div class="con">*RATIO_RC*</div>
+                		<div class="*STYLE_RC*">*IOR_RC*</div>
+                	</div>
+                </td>
+
+                <td id="h_ouh_*GID*" name="h_ouh_*GID*" class="odds_box">
+                	<div class="ratio_box">
+                		<div class="con">*RATIO_U*</div>
+                		<div class="*STYLE_OUH*">*IOR_OUH*</div>
+                	</div>
+                </td>
+            </tr>
+            
+	
+
+            <tr>
+                <td colspan="3">
+
+                	<div id="more_*GID*" name="more_*GID*" class="bet">
+					  	<span>*MORE_COUNT*</span> 玩法
+    					<div class="list_arr_cen"> </div>
+                	</div>
+                </td>  
+            </tr>
+		</tbody></table>
+</div>
+<!------------------------ game model ------------------------>  
+
+
+
+  
+
+  
+  
+<!-- back to top button -->
+
+  
+   <div id="bottom_top" name="bottom_top" class="LayoutDiv5" style=""><a href="/index.php/User">回到首页</a></div>
+  
+
+</div>
+
+
+<!-- finish -->
+<div id="div_finish" name="div_finish" style="-webkit-animation-name:Alpha;display:none;" class="modal">
+<div id="div_finish_order" name="div_finish_order" style="-webkit-animation-name:Zoom;display:none" class="betplace">
+
+            	<div class="betslip_header">
+                    <div class="finish_head">
+                    	<div class="finish_title">提交成功</div>
+                        <div id="finish_tid" name="finish_tid" class="ord_uid">OU4752879919</div>
+                	</div>
+        	</div>
+        
+        	<div class="finish_main">
+            	<div id="finish_menutype" name="finish_menutype" class="ord_gametype">In-Play Asian Handicap</div> <div id="finish_score" name="finish_score" class="ord_score"><!--(1 - 0)--></div>
+                <div id="finish_league" name="finish_league" class="ord_leag">英格兰超级联赛</div>
+                <div class="ord_team_box">
+                    <span id="finish_team_h" name="finish_team_h" class="team_h">Everton</span>
+                    <span id="finish_con" name="finish_con" class="ord_con">1</span><em>v</em><span id="finish_team_c" name="finish_team_c" class="team_c">Liverpool</span>
+                    <span id="finish_con_c" name="finish_con_c" class="ord_con_c">1</span>
+                </div>
+                <div id="finish_chose_team" name="finish_chose_team" class="team_chose_h">Everton </div>
+                <div id="finish_chose_con" name="finish_chose_con" class="ord_chose_con">1</div> 
+                <div class="ord_at">@ </div>
+                <div id="finish_ior" name="finish_ior" class="ord_ior">0.96</div><br>
+            </div>
+            
+            <div class="result_data">
+            	<div>
+                	<div class="finish_stake">投注额: <span id="finish_gold" name="finish_gold">100,000</span></div>
+                    <div class="finish_winBox">
+                      <div class="win_txt">可赢金额:</div>
+                      <div id="finish_win_gold" class="finish_win_gold">100,000</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div id="finish_continue" name="finish_continue" class="cont_but">
+                	<div class="con_box">继续交易</div>
+            </div>
+            
+            
+            
+            <div id="finish_view" name="finish_view" class="view_open">
+                	<div>显示交易状况</div>
+            </div>
+                        
+
+                    
+</div>
+</div>
+<!-- finish -->
+    
+    
+<!-- bet -->
+<div id="div_bet" style="-webkit-animation-name:Alpha;display:none;" class="modal">
+<div id="div_bet_order" style="-webkit-animation-name:Zoom;display:none" class="betslip">
+            	<div class="betslip_header">
+                
+                	<div id="order_close" name="order_close" class="ord_close"> </div>
+                    
+                    <div class="ord_head">
+                    	<div class="ord_title">交易单</div>
+                        <div class="ord_credit">目前余额: <span id="order_credit" name="order_credit">5,000,000</span></div>
+                	</div>
+                	
+                	
+                    <div id="order_reload_btn" name="order_reload_btn" class="ord_refresh">
+                    	<div id="order_reload_sec" name="order_reload_sec" class="ord_sec">90</div>
+                   	</div>
+                    
+                   
+								    
+								    
+        	</div>
+        	
+        	
+        
+        	<div class="ord_main">
+                <div id="order_menutype" name="order_menutype" class="ord_gametype">In-Play Asian Handicap</div> 
+                <div id="order_score" name="order_score" class="ord_score"><!--(1 - 0)--></div>
+                <div id="order_league" name="order_league" class="ord_leag">英格兰超级联赛</div>
+                <div class="ord_team_box">
+                    <span id="order_team_h" name="order_team_h" class="team_h">Everton</span>
+                    <span id="order_con" name="order_con" class="ord_con">1</span><em>v</em><span id="order_team_c" name="order_team_c" class="team_c">Liverpool</span>
+                    <span id="order_con_c" name="order_con_c" class="ord_con_c">1</span>
+                </div>
+                <div id="order_chose_team" name="order_chose_team" class="team_chose">Everton</div>
+                <div id="order_chose_con" name="order_chose_con" class="ord_chose_con">1</div> 
+                <div class="team_at">@</div>
+                <div id="order_ior" name="order_ior" class="ord_ior">0.96</div><br>
+            </div>
+            
+            
+            
+            
+            <div class="bet_data">
+            	
+            		<div>
+                	<div class="bet_inp"><input type="number" pattern="[0-9]*" placeholder="投注额" id="order_gold"></div>
+                    <div class="ord_payout">可赢金额:<br>
+                    	<div id="order_win_gold" name="order_win_gold" class="ord_win_gold">5,000</div>
+                   	  </div>
+                </div>
+                
+                
+                
+            
+            		
+            		
+                	<div class="ord_limit">单注最低: <span id="order_min_bet" name="order_min_bet">50</span> <br> 单注最高: <span id="order_max_bet" name="order_max_bet">50,000</span></div>
+                    <div class="betterOdds"><br><label>自动接受较佳赔率 <input id="order_better_odds" name="order_better_odds" type="checkbox" value="" checked=""><span></span> </label></div>
+      </div>
+                
+                
+   
+                
+           
+            
+            
+            <div id="div_error" name="div_error" class="bet_error_div" style="display:none">
+            	<div id="error_msg" class="bet_error">赔率已更改</div>
+            </div>
+            
+            <div id="order_bet" name="order_bet" class="placebet_but">确定交易</div>
+	</div>
+    			
+</div>
+<!-- bet -->
+
+
+
+</div></body></html>

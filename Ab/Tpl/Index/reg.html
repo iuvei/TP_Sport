@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+        #name_span {
+            background-image: url(/Public/css/images/icon_notice.png);
+            background-size: 14px;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+
+            color: red;
+            display: block;
+            margin-top: 8px;
+            text-align: left;
+        }
+
+        .field-validation-error {
+            line-height: 15px;
+            height: 20px;
+        }
+        .ui-input-text input.input-c {
+            font-size: 14px;
+        }
+    </style>
+</head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/Public/css/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a"  href="javascript:void(0)" onclick="history.go(-1)"></a>
+                <h1 class="h3">新建帐号</h1>
+                <div class="header-right-user">
+                    <a href="__APP__/Index/" data-ajax="false" class="color-1">登录</a>
+                </div>
+            </div>
+            <script src="/Public/js/login/AccountBase.js"></script>
+            <script src="/Public/js/login/AccountIndex.js"></script>
+            <script src="/Public/js/jquery.validationEngine-zh_CN.js"></script>
+            <script src="/Public/js/login/yanzheng.js" type="text/javascript" charset="utf-8"></script>
+            <link href="/Public/css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+            <form id="goReg" action="/index.php/Index/reg_ok" method="post">
+            <div data-role="content" role="main">
+                <input type="hidden" name="keys" value="add">
+                <div class="category-icon"><span class="icon65 icon-common-5"></span></div>
+                <div data-role="fieldcontain">
+                    <span class="icon34  icon-common2-1"></span>
+                    <input class="input-a required" data-theme="d" data-val="true" data-val-regex="请输入6-15位数字和字母的组合" data-val-regex-pattern="^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{6,15}$" maxlength="15" data-val-required="必填" id="username" name="username" placeholder="会员帐号(使用6-15位数字和字母！)" type="text" value="" onblur="Verityname();" />
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="username" data-valmsg-replace="true"></span>
+                <span id="name_span"></span>
+                <div data-role="fieldcontain">
+                    <span class="icon34  icon-common2-2"></span>
+                    <input class="input-a required" onkeyup="passwordStrength(this.value)" id="password"  data-theme="d" data-val="true" data-val-regex="请输入6-15位数字和字母！" data-val-regex-pattern="^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{6,15}$" maxlength="15" data-val-required="必填" id="password" name="password" placeholder="会员密码(密码长度6-15个数字和字母！)" type="password" />
+                    <a href="#" class="eye eye_close">
+                        <span class="input_icon"></span>
+                    </a>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+                <div id="passqiang" style="display: none;float:left;">
+                    <span  style="width:50px;height:5px;background-color: #eeeeee;display: inline-block;text-align: center;" id="passwordStrength00"><br />弱</span>
+                    <span style="width:50px;height: 5px;background-color: #eeeeee;display: inline-block;text-align: center;" id="passwordStrength01"><br />中</span>
+                    <span style="width:50px;height:5px;background-color: #eeeeee;display: inline-block;text-align: center;" id="passwordStrength02"><br />强</span>
+                </div>
+                <div data-role="fieldcontain">
+                    <span class="icon34  icon-common2-2"></span>
+                     <input class="input-a required" data-theme="d" data-val="true" data-val-regex="两次密码需要一致" data-val-regex-pattern="^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{6,15}$" maxlength="15" data-val-required="必填" id="password2" name="password2" placeholder="确认密码(同上)" type="password" />
+                    <a href="#" class="eye eye_close">
+                        <span class="input_icon"></span>
+                    </a>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="password2" data-valmsg-replace="true"></span>
+                <div data-role="fieldcontain">
+
+                    <span class="input_no-icon2" id="spanAreaCode22Number">真实姓名：</span>
+                    <input class="input-c" data-theme="d" data-val="true" data-val-regex="请输入2-5位中文字符的真实姓名" data-val-regex-pattern="^[\u4e00-\u9fa5]{2,5}$" data-val-required="必填" id="alias" name="alias" placeholder="与提款帐号一致，否则无法提款." type="text" value="" />
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="alias" data-valmsg-replace="true"></span>
+            <!--     <div data-role="fieldcontain">
+                    <span class="input_no-icon2" id="spanisex">性            别：</span>
+                    <select data-corners="false" data-native-menu="true" data-theme="d" data-val="false" data-val-number="TTT" data-val-required="必填" id="intSEXCode" name="intSEXCode">
+                    <option value="3">　　　　保密</option>
+                    <option value="1">　　　　男</option>
+                    <option value="2">　　　　女</option></select>
+                 </div> -->
+                <!-- <div data-role="fieldcontain">
+                    <span class="input_no-icon2" id="spanicon">首选货币：</span>
+                    <select data-corners="false" data-native-menu="true" data-theme="d" data-val="false" data-val-number="TTT" data-val-required="必填" id="intRMBCode" name="intRMBCode"><option value="RMB">　　　　RMB</option></select>
+                </div> -->
+               <div data-role="fieldcontain">
+                    <span class="input_no-icon2" id="spanAreaCode44Number">取款密码：</span>
+                    <input class="input-c required" data-val-regex-pattern="^\d{6}$" data-theme="d" data-val="true"  data-val-regex="取款密码必须为6位数字" data-val-required="必填" maxlength="6" id="strCell4" name="strCell4" placeholder="格式：000000，提款认证，务必记住" type="password" value=""/>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="strCell4" data-valmsg-replace="true"></span>
+               <div data-role="fieldcontain">
+                    <span class="input_no-icon3" id="spanquestionid">密码提示问题：</span>
+                <select class="input_no-icon31" data-corners="false" data-native-menu="true" data-theme="d" data-val="true"  data-val-required="必填" id="questionid" name="questionid">
+                      <option value="" selected>---请选择密码问题---</option>
+                        <option value="您的车牌号码">您的车牌号码</option>
+                        <option value="您所在的城市">您所在的城市</option>
+                        <option value="您的生日">您的生日</option>
+                        <option value="您的名字">您的名字</option>
+                        <option value="您父亲的名字">您父亲的名字</option>
+                        <option value="您母亲的名字">您母亲的名字</option>
+                        <option value="您儿女的名字">您儿女的名字</option>
+                        <option value="您妻子的名字">您妻子的名字</option>
+                        <option value="您喜欢的数字">您喜欢的数字</option>
+                        <option value="您喜欢的品牌">您喜欢的品牌</option>
+                        <option value="您喜欢的运动">您喜欢的运动</option>
+                        <option value="您喜欢的颜色">您喜欢的颜色</option>
+                        <option value="您喜欢的球队">您喜欢的球队</option>
+                        <option value="您喜欢的球星">您喜欢的球星</option>
+                </select>
+                </div>
+                 <span class="field-validation-valid" data-valmsg-for="questionid" data-valmsg-replace="true"></span>
+                <div data-role="fieldcontain">
+                    <span class="input_no-icon3" id="spanquestionid">密码提示答案：</span>
+                        <input class="input-c required" data-theme="d" data-val="true" data-val-required="必填" maxlength="10" id="question" name="question" placeholder="用于找回取款密码的答案，需谨记！" type="text" value="" style="padding-left:90px;" />
+                     </div>
+                      <span class="field-validation-valid" data-valmsg-for="question" data-valmsg-replace="true"></span>
+                <div data-role="fieldcontain">
+                    <span class="input_no-icon2" id="spanAreaCode55Number">出生日期：</span>
+                    <input style="padding-left:91px;" class="input-c required" onkeyup="value=value.replace(/[^\d-]/g,'')" data-theme="d" data-val="true" data-val-required="必填" id="strCell5" name="strCell5" placeholder="请写上您的出生日期" type="text" value="" data-val-required="必填" maxlength="10" minlength="8" value="1980-02-02" />
+
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="strCell5" data-valmsg-replace="true"></span>
+                <div data-role="fieldcontain" class="select_1">
+                    <span class="icon34" id="spanAreaCodeFlag"></span>
+                    <select data-corners="false" data-native-menu="true" data-theme="d" data-val="true" data-val-number="The field intAreaCode must be a number." data-val-required="必填" id="intAreaCode" name="intAreaCode"><option value="86">中国</option>
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <span class="input_no-icon2" id="spanAreaCode6Number">居住城市：</span>
+                    <input class="input-c required" data-theme="d" data-val="true" data-val-regex="11"  data-val-required="必填" id="strCell6" name="strCell6" placeholder="请填写居住城市" type="text" value=""  />
+
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="strCell6" data-valmsg-replace="true"></span>
+                <div data-role="fieldcontain">
+                    <span class="input_no-icon3" id="spanAreaCode67Number">如何得知本站：</span>
+                    <select class="input_no-icon31" data-corners="false" data-native-menu="true" data-theme="d" data-val="true" data-val-number="The field intAreaCode must be a number." data-val-required="必填" id="strCell7" name="strCell7"><option value="3">网络广告</option><option value="4">论坛</option><option value="2">比分网</option><option value="1">朋友推荐</option>
+                    </select>
+
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="strCell7" data-valmsg-replace="true"></span>
+                <div class="clear mgbt20"></div>
+                <div class="ui-block-b mgrt20">
+                    <label id="checkbox_0" for="checkbox_0" class="ui-checkbox-on">我确认我已年满18岁，并已阅读和接受本网站的策略、隐私声明，<a href="/System/TermsOfUse">条款及条件</a>。</label>
+                    <input type="checkbox" name="checkbox" checked id="checkbox_0"  data-theme="a"  checked="checked"/>
+                    <input data-val="true" data-val-required="The bCheckButton field is required." id="bCheckButton" name="bCheckButton" type="hidden" value="true" />
+                </div>
+                <div class="clear mgbt20"></div>
+                <span class="field-validation-valid" data-valmsg-for="bCheckButton" data-valmsg-replace="true"></span>
+                <span class="field-validation-valid" data-valmsg-for="TempMsg" data-valmsg-replace="true"></span>
+                <input type="submit" data-ajax="false" data-role="button" data-theme="b" value="确认提交" />
+            </div>
+            <!--显示日期-->
+            <div id="datePlugin"></div>
+            </form>
+            <script type="text/javascript">
+                $(function () {
+                    //生日
+                    var d = new Date();
+                    // var sY = d.getFullYear();
+                    var sY = "1940";
+                    var eY = d.getFullYear();//结束年份
+                    // sY = sY-56;//开始年份
+                    $('#strCell5').date({ curdate: true, beginyear: sY, endyear: eY,text:'1980',value:'1980'});
+                    //去掉select错误的匡红
+                    $("select").on('change',function () {
+                        $(this).prev().removeClass("input-validation-error");
+                    });
+                });
+            </script>
+            <include file="./Ab/Tpl/Layout/footer.html" />
+            <div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+                <div role="main" class="ui-content">
+                    <p class="sz18"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function Verityname(){
+            $("#username").bind('input propertychange blur',function(){
+                var regname = $.trim($("#username").val());
+                $.ajax({
+                    type:"get", 
+                    url:"/index.php/Index/chkname",
+                    dataType:'json',
+                    data:{'regname':regname},
+                        success:function(reg){
+                            if(reg.errno == 0){
+                                $("#name_span").text("该会员已被注册，请更换账号名称");
+                                return false;
+                            }else{
+                                $("#name_span").text("");
+                            }
+                        },
+                        error:function(reg){
+                    }
+                });
+            });
+        }
+      //通过调用新浪IP地址库接口查询用户当前所在国家、省份、城市、运营商信息
+        $.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',function(){
+           var country = remote_ip_info.country;
+           var province = remote_ip_info.province;
+           var city = remote_ip_info.city;
+           if (city != "") {
+               $("#strCell6").val(city);
+           } else if ((city == "") && (province != "")) {
+               $("#strCell6").val(province);
+           }else if ((city == "") && (province == "")) {
+               $("#strCell6").val(country);
+           } else {
+               $("#strCell6").val("未知");
+           }
+        });
+
+        document.ready = function() {
+            $('#goReg').submit(function(){
+                if($('#password').val() != $('#password2').val()) {
+                    alert('两次输入的密码不一致！');
+                    return false;
+                }
+                if($('#checkbox_0').attr('class') == 'ui-btn ui-corner-all ui-btn-a ui-btn-icon-left ui-checkbox-off'){
+                    alert("请确认勾选是否接受本网站的隐私声明")
+                    return false;
+                }
+            })
+        }
+    </script>
+</html>

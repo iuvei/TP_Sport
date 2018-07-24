@@ -1,0 +1,48 @@
+<?php
+$mcd = new Memcached();
+            $mcd->addServer('192.168.10.101', 11211, 100);
+            $row = $mcd->get("le2_website_info");
+
+?>
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+<input data-val="true" data-val-required="The bLogin field is required." id="bLogin" name="bLogin" type="hidden" value="False" />
+        <input id="strControllerName" name="strControllerName" type="hidden" value="" />
+        <div data-role="page">
+            <div data-role="header" data-theme="b" style="position:absolute;width: 100%;">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/Public/css/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="javascript:void(0)" onclick="history.go(-1)"></a>
+                <h1 class="h3">HG8868</h1>
+        
+        </div>
+            <div id="ppindex2" class="ppindex2" style="padding:0px;height:100%;position:absolute;left:0;bottom:0;width:100%;">
+                <iframe id="kefu" src="{$row['online_kefu']}" height="100%"  width="100%"></iframe>
+             </div>
+           
+    </body>
+    <script>
+        var height = document.documentElement.clientHeight;
+        console.log(height);
+        var kefu = document.getElementById("kefu");
+        var  ppindex2  = document.getElementById("ppindex2");
+
+    if(height<=568){
+       ppindex2.style.height = "562px"
+     }else if(height<=667&&height>568){
+            ppindex2.style.height = "660px"
+    }else if(height<=736&&height>667){
+     ppindex2.style.height = "729px";
+     }
+
+    </script>
+</html>

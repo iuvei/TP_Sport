@@ -1,0 +1,410 @@
+.LBD_CaptchaDiv {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.LBD_CaptchaImageDiv {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: -moz-inline-stack;
+  display: inline-block !important;
+  vertical-align: top !important;
+  zoom: 1 !important;
+  *display: inline !important;
+}
+
+.LBD_CaptchaIconsDiv {
+  text-align: left !important;
+  margin: 0 2px -4px 2px !important;
+  padding: 0 !important;
+  display: -moz-inline-stack;
+  display: inline-block !important;
+  vertical-align: top !important;
+  zoom: 1 !important;
+  *display: inline !important;
+}
+
+.LBD_CaptchaDiv a:link, .LBD_CaptchaDiv a:visited, .LBD_CaptchaDiv a:focus, .LBD_CaptchaDiv a:hover, .LBD_CaptchaDiv a:active {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  -moz-outline-style: none !important;
+  display: -moz-inline-stack;
+  display: inline-block !important;
+  vertical-align: top !important;
+  zoom: 1 !important;
+  *display: inline !important;
+}
+
+.LBD_CaptchaDiv a:focus, .LBD_CaptchaDiv a:active {
+  outline: 1px dotted #333 !important;
+}
+
+.LBD_CaptchaIconsDiv a:link, .LBD_CaptchaIconsDiv a:visited, .LBD_CaptchaIconsDiv a:focus, .LBD_CaptchaIconsDiv a:hover, .LBD_CaptchaIconsDiv a:active {
+  margin: 1px 2px 4px 2px !important;
+}
+
+.LBD_CaptchaDiv a img {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+.LBD_CaptchaIconsDiv a.LBD_ReloadLink {
+  display: none !important;
+}
+
+.LBD_Placeholder {
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+*:first-child+html .LBD_Placeholder {
+  display: none !important;
+}
+
+.LBD_Warning {
+  font-size: 12px !important;
+  color: red !important;
+}
+
+.LBD_CaptchaDiv a.LBD_DisabledLink {
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 24 !important;
+}
+
+.LBD_CaptchaDiv a.LBD_DisabledLink span {
+  display: none !important;
+}
+
+.LBD_CaptchaDiv a.LBD_DisabledLink:hover, .LBD_CaptchaDiv a.LBD_DisabledLink:focus {
+  z-index: 25 !important;
+  cursor: help !important;
+  font-size: 100% !important;
+}
+
+.LBD_CaptchaDiv a.LBD_DisabledLink:hover span {
+  display: block !important;
+  z-index: 9999 !important;
+  position: absolute !important;
+  top: 0 !important;
+  background-color: #f0f0f0 !important;
+  border: 1px solid #ddd !important;
+  color: #f00 !important;
+  left: 30px !important;
+  width: 250px !important;
+  padding: 9px 6px 6px 11px !important;
+  font-size: 11px !important;
+  filter: alpha(opacity=90) !important;
+  KHTMLOpacity: 0.90 !important;
+  MozOpacity: 0.90 !important;
+  opacity: 0.90 !important;
+}
+
+.LBD_CaptchaDiv a.LBD_DisabledLink:focus img {
+  border: 1px solid transparent !important;
+}
+
+.LBD_CaptchaDiv a.LBD_DisabledLink span em {
+  display: block !important;
+  padding: 0 5px 5px 0 !important;
+  margin: 0 !important;
+  font-style: normal !important;
+}
+
+.LBD_CaptchaDiv .LBD_CaptchaImageDiv span.LBD_ProgressIndicator {
+  color: black;
+}
+
+/*银行选择弹窗*/
+.overlay,
+.overlay2 {
+    display: none;
+    position: fixed;
+    z-index:1000;
+    top: 98px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity:80);
+}
+.modal_box {
+    display: none;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1111;
+    top: 30%;
+    width: 85%;
+    margin: 0 5%;
+    height: 150px;
+    background: #fff;
+    padding: 30px 10px 20px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.modal_box h2  {
+    font-size: 1.6em;
+    text-align: center;
+}
+/*bankChoose页面样式*/
+/*.bank_choose .content {
+    position: relative;
+    width: 845px;
+    padding: 50px 30px 30px;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #eeeeee;
+}*/
+.bank_choose .bank {
+    text-align: center;
+    font-family: 'microsoft Yahei';
+}
+.bank li {
+    float: left;
+}
+.bank h2 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+.modal_box2 .bank p {
+    color: red;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 5px 0 50px 0;
+    text-align: center;
+}
+/*.bank ul {
+    padding-left: 15px;
+}*/
+.modal_box .bank li {
+    background: url(images/ico-bank.png) no-repeat;
+    height: 50px;
+    width: 16%;
+    text-align: center;
+    padding-top: 50px;
+    /*margin: 0 15px;*/
+    list-style: none;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-block;
+
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,0);
+    -o-box-shadow: 0 0 1px rgba(0,0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.modal_box2 .bank li:first-child {
+    margin-left: 8px;
+}
+.modal_box .bank li:hover {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+.modal_box .bank li:active {
+    -webkit-transform: translateY(-7px);
+    transform: translateY(-7px);
+    font-weight: bold;
+}
+.bank #ICBC{
+    background: url(images/ico-icbc.png) no-repeat top center;
+}
+.bank #BCM {
+    background: url(images/ico-bcm.png) no-repeat top center;
+}
+.bank #ABC  {
+    background: url(images/ico-abc.png) no-repeat top center;
+}
+.bank #CCB {
+    background: url(images/ico-ccb.png) no-repeat top center;
+}
+.bank #CMB {
+    background: url(images/ico-cmb.png) no-repeat top center;
+}
+.bank #BOC {
+    background: url(images/ico-boc.png) no-repeat top center;
+}
+
+/*在线支付页面弹窗*/
+
+.modal_box2 {
+    /*display: none;*/
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    right: -500px;
+    margin-left: -10px;
+    width: 80%;
+    height: auto;
+    background: #fff;
+    padding: 10% 10%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    transition:  all 0.5s ease;
+    -webkit-transition:  all 0.5s ease;
+    -o-transition:  all 0.5s ease;
+    -moz-transition:  all 0.5s ease;
+}
+.modal_box2 .bank li {
+    width: 93%;
+    text-align: left;
+    padding-top: 0;
+    font-size: 16px;
+    line-height: 50px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    height: 50px;
+    border-bottom: 1px solid #cfcfcf;
+    cursor: pointer;
+}
+.modal_box2 h2{
+    font-size: 20px;
+    margin: 0 0 20px 20px;
+}
+.modal_box2 .bank li:first-child {
+    margin-left: 0;
+}
+.modal_box2 .bank li:active {
+  font-weight: bold;
+}
+.ico-r  {
+    background: url(../images/arrow-rt.png) no-repeat right center;
+    background-size: 11px 19px;
+    position: absolute;
+    width: 22px;
+    height: 38px;
+    right: 20px;
+    top: 8px;
+    cursor: pointer;
+}
+.modal_box2 h2 {
+    text-align: left;
+}
+.modal_box2 .bank li img {
+  vertical-align: middle;
+    margin-right: 15px;
+}
+.ui-input-text input.input-c {
+    color: #999;
+}
+#IntoBank {
+    position: relative;
+    z-index: 1;
+}
+#IntoBank:active {
+
+}
+
+
+
+
+/*微信支付 2016-10-31*/
+.icon-common-wechat {
+    background-image: url(../images/icon-common-wechat.png);
+}
+.icon-common-wyrk {
+    background-image: url(../images/icon-common-wyrk.png);
+}
+.icon-common-gsrk {
+    background-image: url(../images/icon-common-gsrk.png);
+}
+.icon-common-alipay {
+    background-image: url(../images/icon-common-alipay.png);
+}
+.betAmount {
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.betAmount li {
+    width: 32%;
+    height: 30px;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+    line-height: 34px;
+    text-align: center;
+    color: #666;
+    float: left;
+    margin: 1% 1% 1% 0;
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+}
+.betAmount li:hover {
+    color: #95f70f;
+    background-color: #644e3d;
+}
+.betAmount li:active {
+    color: #ffffff;
+    background-color: #644e3d;
+}
+.betAmount .mr0 {
+    margin-right: 0;
+}
+.ord_delBTN {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/ico-close.png) no-repeat top;
+    cursor: pointer;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+/*金额选择*/
+#moneyList { width:100%;text-align:center; }
+#moneyList li { display:inline-block;margin:5px 1%;width:30%;height:34px;line-height:36px;border:1px solid #fff;background:#ddd;border-radius:5px }
+
+
+
+@media screen and (max-width: 321px) {
+    .modal_box {
+        width: 90%;
+        padding: 30px 2px 20px 2px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .bank li {
+        background: url(images/ico-bank-m.png) no-repeat;
+        width: 16%;
+        height: 40px;
+        color: #000;
+    }
+}

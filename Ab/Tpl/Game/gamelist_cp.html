@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+        <base target="_top" />
+        <title>Sports</title>
+        <link href="/Public/css/gamenav.css" rel="stylesheet" />
+        <script src="/Public/js/jquery.js"></script>
+    </head>
+    <body>
+<div id="gameNavMask"></div>
+        <div class="game-nav">
+            <h1>导航栏</h1>
+            <ul id="gameList">
+                <li><a href="__APP__/Sport/slist/tt/FT"><i class="ico-002"></i><span>足球（单式）</span><em></em><b>{$ft['S_Show']}</b></a></li>
+                <li><a href="__APP__/Sport/slist/tt/FT/sr/1"><i class="ico-001"></i><span>足球（滚球）</span><em></em><b>{$ft['RB_Show']}</b></a></li>
+                <li><a href="__APP__/Sport/slist/tt/BK"><i class="ico-003"></i><span>篮球（单式）</span><em></em><b>{$bk['S_Show']}</b></a></li>
+                <li><a href="__APP__/Sport/slist/tt/BK/sr/1"><i class="ico-003"></i><span>篮球（滚球）</span><em></em><b>{$bk['RB_Show']}</b></a></li>
+            </ul>
+        </div>
+       
+        </div>
+        <script>
+            $(document).ready(function (){$("#gameNavMask").css({height: $(window).height()});});
+        </script>
+    </body>
+</html>

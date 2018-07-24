@@ -1,0 +1,1 @@
+var TemplateModel=Backbone.Model.extend({defaults:{strContentGroup:"",strCurrencyID:"",strLanguageCode:"",strLoginType:"",ResultData:""}}),CommonCollection=Backbone.Collection.extend({model:TemplateModel,initialize:function(){}})

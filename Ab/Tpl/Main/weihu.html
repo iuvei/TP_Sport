@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+        <title>8868</title>
+        <link href="/Public/css/global.css" rel="stylesheet" />
+        <style>
+        .weihu {
+             background: #172027;
+                 height: 100%;
+                text-align: center;
+                padding: 50px 0;
+        }
+        .tip_top1 {
+            margin: -21px auto;
+            text-align: center;
+            color: #aaa;
+            font-size: 18px;
+            padding: 0 0 10px;
+        }
+        .tip_bottom {
+            margin: 0 auto;
+            text-align: center;
+            color: #aaa;
+            font-size: 18px;
+        }
+        .tip_bottom span {
+            color: #f3cf0b;
+            font-size: 20px;
+            padding: 3px 10px;
+            border: 1px solid #f3cf0b;
+            padding: 10px 20px;
+            line-height: 40px;
+            height: 40px;
+        }
+        .ui-header a.logo{
+            left:52%;
+        }
+        </style>
+
+        <script src="/Public/js/jquery.js"></script>
+        <script src="/Public/js/jquery.touchSlider.js"></script>
+        <script src="/Public/js/global.js"></script>
+        <script src="/Public/js/home.js"></script>
+    </head>
+    <body>
+        <div id="gameNav">
+          <iframe src="__APP__/Game/gamelist" frameborder="0"></iframe>
+        </div>
+        <div class="ui-main" id="Main">
+
+            <!--维护内容开始 -->
+            <div class="weihu">
+                <center><img src="/Public/images/ico.png"></center>
+                 <ul>
+                        <li class="tip_top1" style="color:#6b737b;margin-top:0px;">非常抱歉，造成您的不便.</li>
+                        <li class="tip_top1" style="color:#6b737b;margin-top:12px;">如有疑问, 请联系<a href="/index.php/Index/kefu" class="ui-link" style="text-decoration:underline">在线客服</a>咨询.</li>
+
+                    </ul>
+                <div class="tip_top1" style="color:#6b737b; margin-top:20px;">{$weihu_row['sport_msg']}</div>
+            </div>
+            <!--维护内容结束 -->
+            <div class="weihu" style=" background: #172027;">
+
+                    <ul class="" style="color:#c8c4b0;" >
+                        <li class="tip_top1" style="line-height:23px;color:#6b737b;margin-top:20px;">电话:<tt style= "font-size:16px; font-weight:bold;">+{$row['kefu_tel']}</tt></li>
+                        <li class="tip_top1" style="line-height:23px;left:101px;color:#6b737b;margin-top:20px;"><tt class="show_space" style= "font-size:16px; font-weight:bold;"></tt></li>
+                        <li class="tip_top1" style="line-height:23px;color:#6b737b;margin-top:20px;">电子邮件:<tt style= "font-size:16px; font-weight:bold;">{$row['email']}</tt></li>
+                        <li class="tip_top1" style="line-height:80px;color:#172027;margin-top:20px;">电子邮件<tt style= "font-size:16px; font-weight:bold;"></tt></li>
+                    </ul>
+
+        </div>
+    </div>
+
+    </body>
+    <script type="text/javascript">
+
+/*$(function(){
+    setInterval(function(){
+           $.ajax({
+        type:'POST',
+        url:"__APP__/Main/ajax_wh",
+        success:function(data){
+            if(data==0){
+                window.top.location="__APP__/Main/index";
+            }else{
+                return false;
+            }
+        }
+    });
+    },30000)
+})*/
+
+
+
+    </script>
+</html>

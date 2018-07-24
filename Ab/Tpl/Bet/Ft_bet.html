@@ -1,0 +1,25 @@
+<div id="topContener">
+<div id="winTit"><dl><dt>交易成功</dt></dl><span onclick='hide();'>×</span></div>
+<form name="orderForm" id="orderForm" onsubmit="return false;">
+    <div class="order-info">
+        <h2>单号：{$ft_ouid}</h2>
+        {$s_sleague}
+        <br />{$s_mb_team} <strong>{$Sign}</strong> {$s_tg_team}
+        <br />{$s_m_place} @ <strong>{$w_m_rate}</strong>
+    </div>
+    <div class="bet-info">
+        <dl>
+            <dt>交易金额：{$gold}</dt>
+        </dl>
+        <dl>
+            <dt>可赢：<strong>{$gwin}</strong></dt>
+        </dl>
+        <div class="left">账号余额： <strong id="ymoney">{$havemoney}</strong></div>
+    </div>
+    <input type="button" value="交易成功" name="betBtn" id="betBtn" class="bet-btn"/>
+</form>
+</div>
+<script>
+    parent.document.getElementById("dqje").innerHTML=document.getElementById("ymoney").innerHTML;
+    parent.document.getElementById("orderWin").innerHTML=document.getElementById("topContener").innerHTML;
+</script>

@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>帐户历史</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="maximum-scale=1, width=device-width, user-scalable=no, minimum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="YES">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link href="/Public/css/boilerplate.css" rel="stylesheet" type="text/css">
+        <link href="/Public/css/in-play.css" rel="stylesheet" type="text/css">
+        <link href="/Public/css/body_tw.css" rel="stylesheet" type="text/css">
+        <link href="/Public/css/SpryAccordion.css" rel="stylesheet" type="text/css">
+        <script id="/Public/js/history_data.js" src="/Public/js/history_data.js"></script>
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+    <body style="height: 519px; " onLoad="document.body.style.height = document.documentElement.clientHeight + 'px';init();"><input id="topInput" style="display: none; "><div lang="zh" id="STATEM">
+<div id="topTag" name="topTag"></div>
+            <div class="gridContainer clearfix">
+                <!---------------- header ---------------->
+                <div id="LayoutDiv1" class="LayoutDiv1">
+                    <div class="header">
+                        <div class="wel">您好<br></div>
+                        <div id="acc_username" name="acc_username" class="user">{$money.UserName}</div>
+                    </div>
+                    <div class="curr_box">
+                        <div id="acc_currency" name="acc_currency" class="curr_value">RMB</div> 
+                        <div id="acc_credit" name="acc_credit" class="curr_amount">{$money.Money}</div>
+                    </div>
+                </div>
+                <!---------------- header ---------------->
+                <!-- HDP Label -->
+                <!-- inplay title -->
+                <!-- <div id="LayoutDiv1_contact" class="LayoutDiv1_contact">
+                                              <div class="open_bet">帐户历史摘要</div>
+                                              
+                                              
+                                </div>
+                                
+                -->
+                <div id="LayoutDiv1_contact" class="AccordionPanelTab"></div>
+
+                <!-- drop down -->
+                <!--<div class="selection">
+                        <select name="sportsdropdown" class="sportsdropdown" id="sportsdropdown">
+                        <option value="ALL">所有球类</option><option value="FT">足球</option><option value="BK">篮球 / 美式足球</option><option value="TN">网球</option><option value="VB">排球</option><option value="BM">羽毛球</option><option value="TT">兵乓球</option><option value="BS">棒球</option><option value="OP">其他</option><option value="FS">冠军</option></select>
+                </div> -->
+
+                <div id="div_show" name="div_show">
+
+
+
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody><tr class="his_title">
+                                <td class="his_title_date">日期</td>
+                                <td class="his_title_am">投注额</td>
+                                <td class="his_title_stake">有效金额</td>
+                                <td class="his_title_wl">输 / 赢</td>
+                            </tr>
+                        <div>
+
+                            <!--<b style="display:block;">下注金额：{$table.sum}<br />结果：{$table.rsum}<br />输赢结果：{$table.vgold}</b>						</div> -->
+                            <volist name="tables" id="table">
+                                <tr id="tr_2015-03-09" class="his_tr">
+                                    <td >
+                                        <span><a href="{$table.link}">{$table.today}</a></span>
+                                    </td>
+                                    <td class="his_gold">{$table.sum}</td>
+                                    <td class="his_gold">{$table.vgold}</td>
+                                    <td class="his_gold"><div class="winloss_black">{$table.rsum}</div></td>
+                                </tr>
+                            </volist>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!--
+                            <tr>
+                                    <td height="50" bgcolor="#e8e5e1">
+                                            <div align="center" style="height: 50px; padding-top: 10px">
+                                                    10-09<br>Wed
+                                            </div>
+                                    </td>
+                                    <td height="50" bgcolor="#e8e5e1" style="line-height: 50px"><div align="center">-</div></td>
+                                    <td height="50" bgcolor="#e8e5e1" style="line-height: 50px"><div align="center">-</div></td>
+                                    <td height="50" bgcolor="#e8e5e1" style="line-height: 50px"><div align="center">-</div></td>
+                            </tr>
+                            
+                            <tr style="line-height: 50px" onClick="DoNav('statement_betdetails_positive.html');">
+                                    <td height="50" style="line-height: 20px">
+                                            <div align="center" style="height: 50px; padding-top: 10px">
+                                                    <strong>10-10<br>Tues</strong>
+                                            </div>
+                                    </td>
+                                    <td height="50"><div align="center">1,000,000</div></td>
+                                    <td height="50"><div align="center">700,000</div></td>
+                                    <td height="50" style="color: #127920"><div align="center">650,000</div></td>
+                            </tr>
+                            -->
+
+                        </tbody></table>
+
+
+
+
+                </div>
+
+                <!-- template model -->
+                <div id="template_model" name="template_model" style="display:none;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody><tr class="his_title">
+                                <td class="his_title_date">日期</td>
+                                <td class="his_title_am">投注额</td>
+                                <td class="his_title_stake">有效金额</td>
+                                <td class="his_title_wl">输 / 赢</td>
+                            </tr>
+
+                            <!-- START DYNAMIC BLOCK: tr -->
+                            <tr id="tr_*DATE*" class="his_tr">
+                                <td class="his_date">
+                                    <div class="*DATE_CLASS*">*DATE_NAME*</div>
+                                    <div class="*DATE_CLASS*">*WEEK_NAME*</div>
+                                </td>
+                                <td class="his_gold">*GOLD*</td>
+                                <td class="his_gold">*VGOLD*</td>
+                                <td class="his_gold"><div class="*WINLOSS_CLASS*">*WINLOSS*</div></td>
+                            </tr>
+                            <!-- END DYNAMIC BLOCK: tr -->
+                            <!--
+                            <tr>
+                                    <td height="50" bgcolor="#e8e5e1">
+                                            <div align="center" style="height: 50px; padding-top: 10px">
+                                                    10-09<br>Wed
+                                            </div>
+                                    </td>
+                                    <td height="50" bgcolor="#e8e5e1" style="line-height: 50px"><div align="center">-</div></td>
+                                    <td height="50" bgcolor="#e8e5e1" style="line-height: 50px"><div align="center">-</div></td>
+                                    <td height="50" bgcolor="#e8e5e1" style="line-height: 50px"><div align="center">-</div></td>
+                            </tr>
+                            
+                            <tr style="line-height: 50px" onClick="DoNav('statement_betdetails_positive.html');">
+                                    <td height="50" style="line-height: 20px">
+                                            <div align="center" style="height: 50px; padding-top: 10px">
+                                                    <strong>10-10<br>Tues</strong>
+                                            </div>
+                                    </td>
+                                    <td height="50"><div align="center">1,000,000</div></td>
+                                    <td height="50"><div align="center">700,000</div></td>
+                                    <td height="50" style="color: #127920"><div align="center">650,000</div></td>
+                            </tr>
+                            -->
+                            <tr class="his_foot">
+                                <td><div><strong>总计</strong></div></td>
+                                <td><div>*TOTAL_GOLD*</div></td>
+                                <td><div>*TOTAL_VGOLD*</div></td>
+                                <td><div class="*TOTAL_WINLOSS_CLASS*">*TOTAL_WINLOSS*</div></td>
+                            </tr>
+                        </tbody></table>
+                </div>
+                <!-- template model -->
+
+                <div id="bottom_top" name="bottom_top" class="LayoutDiv5" style=""><a href="/index.php/User">回到首页</a></div>
+            </div>
+        </div></body></html>

@@ -1,0 +1,280 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+<meta name="screen-orientation" content="portrait"><!-- UC浏览器强制竖屏 -->
+<meta name="x5-orientation" content="portrait"><!-- QQ浏览器强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+        <title>8868</title>
+        <link href="/Public/images/114.png" rel="apple-touch-icon-precomposed">
+        <link href="/Public/images/57.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+        <link href="/Public/css/global.css?a=123456" rel="stylesheet" />
+        <style>button,input,optgroup,select,textarea { color:inherit;font:inherit;margin:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;}
+button { overflow:visible;}
+button,select { text-transform:none;}
+button,html input[type="button"],input[type="reset"],input[type="submit"] { -webkit-appearance:button;cursor:pointer;}
+button[disabled],html input[disabled] { cursor:default;}
+button::-moz-focus-inner,input::-moz-focus-inner { border:0;padding:0;}
+#tagWin { position:fixed;z-index:2000;left:65px;bottom:15px;padding:6px 8px 0px 8px;width:164px;height:54px;border:1px solid #dadcd9;background:#fff;box-shadow:1px 1px 5px rgba(0,0,0,0.2); }
+#tagWin dl { width:100%;margin:0px; }
+#tagWin dl dt { float:left;margin:0px;width:60px;height:52px; }
+#tagWin dl dt img { float:left;width:48px;height:48px;border-radius:10px; }
+#tagWin dl dd { float:left;margin:0px; }
+#tagWin dl dd p { margin:0px;font-size:12px; }
+#tagWin a { display:block;position:absolute;right:10px;top:8px;z-index:2001;width:11px;height:11px;background:url(/Public/images/ico-close.png) no-repeat;overflow:hidden;text-indent:-100px; }
+#tagWin em { display:block;position:absolute;left:110px;bottom:-28px;z-index:2001;font-size:0;line-height:0;border-width:14px;border-style:solid dashed dashed;border-color:#dadcd9 transparent transparent;}
+#tagWin span { display:block;position:absolute;bottom:-24px;left:112px;z-index:2002;font-size:0;line-height:0;border-width:12px;border-style:solid dashed dashed;border-color:#FFF transparent transparent;}
+#fullWindows { display:none;position:absolute;z-index:1000;top:0px;left:0px;width:100%;overflow:hidden;}
+#fullWindows iframe { float:left;width:100%;border:0px;}
+#fullWindows #fullWinBtn { display:block;width:45px;height:45px;line-height:45px;background:url(images/close-btn-bg.png) no-repeat;position:absolute;z-index:1002;top:5px;right:5px;font-size:38px;color:#fff;text-decoration:none;overflow:hidden;text-align:center;}
+#fullWindows #fullWinBtn:hover {color:#ffff00;}
+    #edzh{position: absolute;
+    z-index: 1;
+    width: 90%;
+    box-sizing: border-box;
+    outline: 0;
+    background-color: white;
+   /* height: 30%;*/
+    left: 5%;
+    top: 25%;}
+    #footer{width:100%;height: 52px;background-color:#ad2e0e;z-index:100;position: absolute;left:0;}
+#footer ul li{float:left;width:25%;text-align:center;margin-top:6px;}
+#footer ul li a{display: inline-block;}
+#footer ul li a span{width:25px;height:25px;}
+#footer ul li a span img{width:25px;height:25px;}
+#footer ul li a p{font-size:14px;color:white;padding-top:3px;}
+@media screen and (max-width: 320px){
+    
+}
+</style>
+        <script src="/Public/js/jquery.js"></script>
+        <script src="/Public/js/jquery.touchSlider.js"></script>
+        <script src="/Public/js/global.js"></script>
+        <script src="/Public/js/home.js"></script>
+    </head>
+    <body>
+        <div id="gameNav">
+          <iframe src="__APP__/Game/gamelist" frameborder="0"></iframe>
+        </div>
+        <?php
+        if(session('username')){
+        ?>
+        <div id="accountNav">
+            <iframe src="__APP__/Money/Index" frameborder="0"></iframe>
+        </div>
+        <?php }?>
+        <div class="ui-main" id="Main" style="height: 100%">
+            <div class="ui-header" id="Header">
+                <a id="gameNavBtn" href="javascript:showGameMenu();"></a>
+                <a class="logo" href="__APP__/Main"></a>
+                <include file="./Ab/Tpl/Layout/haslogin.html" />
+            </div>
+            <div class="touchslider">
+                <div class="touchslider-viewport">
+                    <ul>
+                        <li><a  href="#" /><img id="sh" src="/Public/images/shouji1.png" style="width:100%;height:100%;position:absolute;left:50%;margin-left:-206px;" onclick="location.href='__APP__/Help/promotion11'"/></a></li>
+                        <li><a  href="#" /><img id="shoo" src="/Public/images/shouji3.png"  style="width:100%;height:100%;position:absolute;left:50%;margin-left:-206px;" onclick="location.href='__APP__/Help/promotionDetail-1'"/></a></li>
+                        <li><a  href="#" /><img  id="shooo"  src="/Public/images/shouji2.png"  style="width:100%;height:100%;position:absolute;left:50%;margin-left:-206px;"  onclick="location.href='__APP__/Help/promotion31'"/></a></li>
+                    </ul>
+                </div>
+
+                <div class="touchslider-nav">
+                <a class="touchslider-nav-item touchslider-nav-item-current" href="#" onclick="location.href='__APP__/Help/aghuodong'"></a>
+                <a class="touchslider-nav-item" href="#"  onclick="location.href='__APP__/Help/promotion11'"></a>
+                <a class="touchslider-nav-item" href="#"  onclick="location.href='__APP__/Help/promotionDetail-1'"></a>
+                <!-- <a class="touchslider-nav-item" href="#" onclick="location.href='__APP__/Help/promotion31'"></a> -->
+            </div>
+            </div>
+            <!-- 公告栏 -->
+              <div class="channel" style="width:100%;height: 30px;background: url(/Public/images/audio.png) no-repeat;background-size: 30px;">
+                <marquee width="80%" style="margin-left:8%;margin-top:5px;font-size: 14px;}"  direction="left">{$marquee.Message}</marquee>
+              <a href="#" style="float: right; float: right; background-color: red; color: white; display: inline-block; height: 20px; line-height: 22px;  margin-top: 1%;margin-right: 1%;border-radius: 2px; font-size: 14; width: 33px;text-align: center;"  onclick="location.href='__APP__/Help/notice'">更多</a>
+            <!--     <ul class="promo-list">
+                    <li>
+                            <div class="img68"><img src="/Public/images/ico_notice1.png"></div>
+                            <div class="promo-info">
+                                <p>{$marquee.Message}</p>
+                            </div>
+                    </li>
+                </ul> -->
+            </div>
+
+            <div class="channel style2" id="scroll" style="height:285px;overflow-y: scroll;">
+                <ul class="channel-nav">
+                    <li><a href="__APP__/Sport/slist" onclick="location.href='__APP__/Sport/slist'"><span><img src="/Public/images/icon-channel-1.png" /></span><p>体育投注</p></a></li>
+                    <li><a href="#" onclick="location.href='__APP__/Ag'"><span><img src="/Public/images/icon-channel-2.png" /></span><p>真人视讯</p></a></li>
+                    <li><a href="#" onclick="location.href='__APP__/Mg'"><span><img src="/Public/images/mgdz.png" /></span><p>MG电子</p></a></li>
+                    <li><a href="#"  onclick="location.href='__APP__/Lottery/index'"><span><img src="/Public/images/icon-channel-12.png" /></span><p>彩票游戏</p></a></li>
+                    <li><a href="#" onclick="location.href='__APP__/Bank/pay_list'"><span><img src="/Public/images/icon-channel-5.png" /></span><p>在线存款</p></a></li>
+                    <li><a href="#"  onclick="location.href='__APP__/Bank/withdraw'"><span><img src="/Public/images/icon-channel-6.png" /></span><p>在线提款</p></a></li>
+                    <li><a href="#"  onclick="location.href='__APP__/Help'"><span><img src="/Public/images/icon-channel-7.png" /></span><p>存取帮助</p></a></li>
+                    <li><a href="#"  onclick="location.href='__APP__/Help/promotion'"><span><img src="/Public/images/icon-channel-9.png"></span><p>优惠活动</p></a></li>
+                    <li><a href="#"  onclick="location.href='__APP__/Bank/live'"><span><img src="/Public/images/icon-channel-8.png"/></span><p>联系我们</p></a></li>
+                      <li><a href="#" id="qwe" class="jiathis_style_m"><span><img src="/Public/images/icon-channel-share.png" /></span><p>分享</p></a></li>
+
+                    <li><a href="https://8868hh.net/app/member/login_wap.php?username={$money.UserName}&password={$money.md5psw}&langx=zh-cn&mac=&ver=&JE=1&uid={$_SESSION['uid']}"><span><img src="/Public/images/icon-channel-pc.png"></span><p>电脑版</p></a></li>
+                    <li><a href="#" onclick="javascript:location.href = '/index.php/User/password';" ><span><img src="/Public/images/icon-channel-psword.png"/></span><p>修改密码</p></a></li>
+                </ul>
+            </div>
+
+<div id="footer" class="footer">
+        <ul>
+            <li>
+
+             <a href="__APP__/Proxy/index">
+            <span>
+                <img src="/Public/images/agent.png" alt="">
+            </span>
+            <p>代理联盟</p>
+            </a>
+            </li>
+            <li>
+                <a href="#" onclick="location.href='/index.php/Moneychange/index'">
+            <span>
+                <img src="/Public/images/exchange.png" alt="" style="width:33px">
+            </span>
+            <p>额度转换</p>
+            </a>
+            </li>
+           <li>
+             <a href="#"   onclick="location.href='/index.php/Message/index'">
+                    <span>
+                        <img src="/Public/images/msg.png" alt="" >
+                    </span>
+                    <p>消息中心</p>
+                </a>
+            </li>
+            <li>
+                 <a href="#"  onclick="location.href='__APP__/Index/kefu'">
+                    <span>
+                        <img src="/Public/images/csservice.png" alt="">
+                    </span>
+                    <p>在线客服</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+        <include file="./Ab/Tpl/Bet/tybet.html" />
+
+        <div id="fullWindows">
+            <a id="fullWinBtn" href="javascript:closeFullWin();">&nbsp;</a>
+            <iframe src="" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" id="winIframe" name="winIframe"></iframe>
+        </div>
+
+
+
+<style>
+    .jiathis_style_32x32 a img{
+        width:19%;
+    }
+</style>
+
+    <script>
+
+    var wdwidth = $(window).width();
+if(wdwidth<="414"){
+    $("#sh").css({'left':'0','margin-left':'0'});
+    $("#sho").css({'left':'0','margin-left':'0'});
+      $("#shoo").css({'left':'0','margin-left':'0'});
+        $("#shooo").css({'left':'0','margin-left':'0'});
+    console.log($("#sho"));
+}else{
+    $("#sh").css({'width':'412px','left':'50%','margin-left':'-206px'});
+      $("#sho").css({'width':'412px','left':'50%','margin-left':'-206px'});
+        $("#shoo").css({'width':'412px','left':'50%','margin-left':'-206px'});
+          $("#shooo").css({'width':'412px','left':'50%','margin-left':'-206px'});
+}
+//显示全屏窗口
+    function closeFullWin(){
+            $("#winIframe").attr('src','');
+            $("#fullWindows").hide();
+    }
+        var nav = navigator,
+    isIDevice = (/iphone|ipod|ipad/gi).test(nav.platform),
+    isIPad = (/ipad/gi).test(nav.platform),
+    isRetina = 'devicePixelRatio' in window && window.devicePixelRatio > 1,
+    isSafari = nav.appVersion.match(/Safari/gi),
+    hasHomescreen = 'standalone' in nav && isIDevice,
+    isStandalone = hasHomescreen && nav.standalone,
+    OSVersion = nav.appVersion.match(/OS \d+_\d+/g),
+    platform = nav.platform.split(' ')[0],
+    language = nav.language.replace('-', '_');
+    if (hasHomescreen && !isStandalone && isSafari) {document.getElementById("tagWin").style.display="block";}
+        function closeTagWin(){
+            document.getElementById("tagWin").style.display="none";
+        }
+    </script>
+    <div style="display:none">
+<script type="text/javascript">
+/*var sc_project=11020006;
+var sc_invisible=0;
+var sc_security="9001cbb3";
+var scJsHost = (("https:" == document.location.protocol) ?"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +scJsHost+"statcounter.com/counter/counter.js'></"+"script>");*/
+
+</script>
+        </div></div>
+        <div id="motai" style="position: absolute;left:0;top: 0;width: 100%;height: 100%; display: none;z-index: 100">
+    <div style="position: absolute;left:0;top: 0;width: 100%;height: 100%;background-color: black;opacity: 0.5;"></div>
+    <div id="edzh" style="height: 25%;border-radius: 20px;">
+         <span style="font-size: 20px; float: left; margin-top:40px; margin-left: 40px;">分享到:</span>
+       <div class="jiathis_style_32x32" style="float: left;margin:5px 20px;">
+           
+        </div>
+            <div id="closechange" style="right:5%;top:0%;position: absolute;width: 25px;font-size: 45px; text-align: center;">
+        </div>
+        </div>
+</div>
+ <script type="text/javascript" src="/Public/js/NativeShare.js"></script>
+<script>
+
+
+var jiathis_config={
+    summary:"",
+    shortUrl:false,
+    hideMore:false
+}
+var qwe = document.getElementById("qwe");
+qwe.onclick=  function(){
+    $("#motai").show();
+}
+var closechange = document.getElementById("closechange");
+closechange.onclick = function(){
+     $("#motai").hide();
+}
+        var height = document.documentElement.clientHeight;
+        var scroll = document.getElementById("scroll");
+    if(height<=568){
+        scroll.style.height = "285px";
+        // document.getElementById('footer').style.position = "fixed";
+        // document.getElementById('footer').style.bottom = "2px";
+     }else if(height<=667&&height>568){
+            scroll.style.height = "383px"
+    }else if(height<=736&&height>667){
+     scroll.style.height = "452px";
+     }else if(height>736){
+         scroll.style.height = "490px";
+     }
+    window.addEventListener("orientationchange", function() {
+        // alert(window.orientation);
+        if(window.orientation==-90|| window.orientation==90){
+              // scroll.style.height = "430px";
+            $(".footer").css({
+                'position':'fixed',
+            });
+        }
+        if(window.orientation==180||window.orientation==0){
+               $(".footer").css({
+                'position':'absolute',
+            });
+                }
+        console.log(window.orientation);
+        }, false);
+
+  
+    </script>
+    </body>
+</html>

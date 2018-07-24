@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>消息中心</title>
+    <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="refresh" content="120">
+    <style type="text/css" media="screen">
+        .change{margin:0 auto;width:100%;display: table; width: 100%;table-layout: fixed;position: fixed;top: 50px;z-index: 10;}
+        .change div{display: table-cell;border-right:2px solid red;text-align:center;}
+        .change div a{display:inline-block;width:100%;font-family: fantasy;font-size: 18px;background-color: ivory;line-height: 28px;}
+        .change div a:hover{background-color:#ccc;color:white;}   
+        .wen{position: absolute; top: 10%;}
+        .wen .notice li {
+             border-bottom: 1px dashed red;
+             min-height: 30px;
+        }
+        .wen .notice li div:nth-child(1){
+            float:left;
+        }
+         .wen .notice li div:nth-child(1) input{
+            display: inline-block;width:15px;margin-top:0px;
+        }
+        .wen .notice li div:nth-child(1) span{
+            margin-left:32px;
+            color:red;
+        }
+        .wen .notice li div:nth-child(2){
+            float:right;margin-top: 6px; margin-right: 2%;
+        }
+        .wen .notice li p{width: 90%;margin-top: 20px; padding: 2% 5%; color: #000;  font-size: inherit;font-family: sans-serif;word-break: break-all;}
+        .wen .notice li a{float: right; margin-right: 2%; margin-top: -2%; padding: 2px 5px;background-color: indianred;border-radius: 3%;color: white;margin-bottom: 2%;}
+    #select-7-button{margin-top: -30px;width: 123px; }
+    </style>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" data-theme="b" style="position: fixed;width: 100%;">
+            <div class="pageMasker" style="display:none">
+                <div style="text-align:center; margin-top:50%">
+                    <img src="/CSS/images/ajax-loader.gif"/>
+                </div>
+                <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+            </div>
+            <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="/index.php/Main"></a>
+            <h1 class="h3">消息中心</h1>
+            <div class="header-right-user"></div>
+        </div>
+        <div class="change">
+                <div>
+                    <a href="#" >收件箱 <i style="color:red;"> <?php echo "$data" ?></i></a>
+                </div>
+                <div>
+                    <a href="#">发件箱 <i style="color:red;"> <?php echo "$data2" ?></i></a>
+                </div>
+                <div>
+                    <a href="#">发送新消息</a>
+                </div>
+                
+        </div>
+  <div data-role="content" role="main"  class="wen" style="margin-bottom:100px;">
+                <ul class="notice">
+                  <?php 
+                    foreach($message1 as $val){
+                           $is_read = $val['user_read'];//0未读，1已读
+                           $fun = $is_read?'':'read_msg('.$val['id'].')';
+                  ?>
+                   <li>
+                    <div>
+                     <!--    <input type="checkbox"> -->
+                        <span id="msg<?=$val['id']?>" onclick="<?=$fun?>" style="<?=$is_read?'':'color:blue';?>">
+                            <?php echo $val['title']; ?>
+                        </span>
+                    </div>
+                      <div>
+                          <span>
+                            <?php echo date('Y-m-d H:i:s',$val['addtime']); ?>
+                          </span>
+                      </div>
+                        <p id="msg_cont<?=$val['id']?>" style="<?=$is_read?'':'display:none';?>"> 
+                            <?php echo $val['content']; ?>
+                        </p>
+                   <!--   <a href="#" onclick="return delete_msg(<?=$val['id']?>);$(this).parent('li').remove();">删除</a> -->
+                    </li> 
+              <?php 
+                    }
+              ?>
+                </ul>  
+        </div> 
+      <div data-role="content" role="main"  class="wen" style="margin-bottom:100px;display: none">
+               <ul class="notice">
+                  <?php 
+                    foreach($message2 as $val){
+                  ?>
+                   <li>
+                    <div>
+                      <!--   <input type="checkbox"> -->
+                        <span>
+                            <?php echo $val['title']; ?>
+                        </span>
+                    </div>
+                      <div>
+                          <span>
+                            <?php echo date('Y-m-d H:i:s',$val['addtime']); ?>
+                          </span>
+                      </div>
+                        <p> 
+                            <?php echo $val['content']; ?>
+                        </p>
+                  <!--    <a href="#" onclick="return delete_msg(<?=$val['id']?>);$(this).parent('li').remove();">删除</a> -->
+                    </li> 
+              <?php 
+                    }
+              ?>
+                </ul>  
+        </div>
+        <input type="hidden" id="user_id" name="user_id" value="<?php echo $userid;?>">
+        <style>
+          #lj{
+                width:300px !important;
+                height:150px !important;
+                font-size:14px !important;
+                padding:10px !important;
+          }
+        </style>
+        <div data-role="content" role="main" class="wen" style="margin-bottom:100px;display: none">
+                <p style="margin-left:10px; ">发送至:
+                    <select name="qwe" >
+                        <option value="财务问题">财务问题</option>
+                        <option value="技术问题">技术问题</option>
+                        <option value="业务咨询">业务咨询</option>
+                        <option value="意见建议">意见建议</option>
+                        <option value="其他问题">其他问题</option>
+                    </select>
+                </p>
+                <p style="margin:10px;color:red;">存款未到账者请留下转账姓名，转账时间和转账金额，我们会尽快为您办理。</p>
+                <p style="margin:10px;">标题:
+                        <input id="title" style="height: 15px" type="text" name="" maxlength="50" placeholder="最长50个字符">
+                </p>
+                <p  style="margin:10px;">内容:
+                <textarea id="lj"  style="height:156px;width: 80%;margin-left: 10%;background-color: white" id="msgContent" maxlength="1000" placeholder="请详细描述您要咨询的问题,我们的客服人员会及时的回复您的消息谢谢!(限1000个中文字符)"></textarea>
+                </p>
+                 <a href="#" id="send" style="padding: 5px 10px;background-color: indianred;color:white;margin-top: 10px;margin-left:10px;">发送</a>
+        </div>
+   
+
+        <div data-role="footer" data-theme="a" class="tcolor-4">
+            <div class="clear mgbt10"><a href="/" data-ajax="false"><span class="head-logo-1" style="float:none"></span></a></div>
+            <p>&#169; 2007-2017 hg8868.com</p>
+            <p>由皇冠8868有限公司版权所有</p>
+            <div class="clear mgbt10"></div>
+        </div>
+    </div>
+    <div id="mengban" style="width: 100%;height: 100%;position: relative;background: #000;opacity: 0.5;z-index: 101;display: none;"> </div>
+    <div class="qkpasscw" style="width: 200px; height: 100px; position: absolute;color: white; margin-left: -100px; margin-top: -162px;top: 50%;z-index: 102;display: none;">
+
+    <p id="tishi" style="text-align: center; line-height: 75px;">标题不能为空</p>
+    <a href="#" id="shanchu" style="padding: 10px 32px; position: absolute; right: 17px; bottom: 10px;" onclick="$('#mengban').hide();$('.qkpasscw').hide();"></a>
+    </div>
+   
+    <include file="./Ab/Tpl/Layout/foot.html" />
+</body>
+<script type="text/javascript" charset="utf-8">
+var wens  = document.querySelectorAll(".wen");
+var titles = document.querySelectorAll(".change>div>a");
+var index=0;
+
+for(var i=0;i<wens.length;i++){
+    titles[i].index=i;
+    titles[i].onclick =function(){
+        for(var j=0;j<wens.length;j++){
+            wens[j].style.display = "none";
+        }
+        wens[this.index].style.display="block";
+    }
+}
+
+function read_msg(id){
+    $.ajax({
+         type: 'post',
+         url: '__APP__/Message/read',
+         dataType: 'json',
+         async:true,
+         data:{
+                msgid:id,
+            },
+         success:function(res){
+            if(res.code==0){
+              $('#msg'+id).css('color','red');
+              $('#msg_cont'+id).css('display','block'); 
+            }
+         }
+
+    });
+}
+
+$("#send").click(function(){
+    var user_id = $('#user_id').val();
+    var typel = $("#select-5-button span").html();
+    var title= $("#title").val();
+    var center = $("#lj").val();
+    
+      if(title==''){
+            $('#mengban').show();
+            $('.qkpasscw').show();
+            $("#tishi").html('标题不能为空');
+        }
+      if(center==''){
+            $('#mengban').show();
+            $('.qkpasscw').show();
+            $("#tishi").html('内容不能为空');
+        }
+    $.ajax({
+         type: 'post',
+         url: '__APP__/Message/add',
+         dataType: 'json',
+         async:true,
+         data:{
+                user_id:user_id,
+                typel:typel,
+                title:title,
+                center:center
+            },
+         success:function(msg){
+          console.log(msg);
+              $('#mengban').show();
+              $('.qkpasscw').show();
+              $("#tishi").html(msg.msg);
+              $("#title").val('');
+              $("#lj").val('');
+              $("#shanchu").click(function(){
+              window.location.reload();
+            })
+        }
+
+    });
+    
+})
+
+</script>
+</html>

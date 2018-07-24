@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<include file="./Ab/Tpl/Help/header.html" />
+	<script src="/Public/money.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<div class="pageMasker" style="display:none">
+			<div style="text-align:center; margin-top:50%">
+				<img src="/CSS/images/ajax-loader.gif" />
+			</div>
+			<p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+		</div>
+		<a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="javascript:history.back();"></a>
+		<h1 class="h3">额度转换</h1>
+		<div class="header-right-user">
+		</div>
+	</div>
+
+	<link href="css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+
+
+	<div data-role="content" role="main">
+		<style>
+			.moneyname{
+				width: 80px;
+			}
+			.moneychange{
+				font-size:18px;
+				width:100%;
+			}
+			.moneychange tr{
+				border-bottom: 1px solid #666666;
+			}
+			.moneyv{
+				text-align: left;
+			}
+			.moneychange td{
+				line-height: 40px;
+				height: 40px;
+			}
+
+			.moneychange input{
+				background-color:#EEEED5 ;
+				height: 30px;
+				line-height: 30px;
+			}
+			.forcp{
+				background-color: #E20000;
+				color: white;
+				float: left;
+				width: 140px;
+				height: 35px;
+				text-align: center;
+				line-height:35px ;
+			}
+			.forty{
+				background-color: #545454;
+				color: white;
+				float: right;
+				width: 140px;
+				height: 35px;
+				text-align: center;
+				line-height: 35px;
+			}
+			.tycpall{
+				margin-top: 20px;
+			}
+		</style>
+		<table class="moneychange">
+			<tr>
+				<td class="moneyname">体育额度:</td>
+				<td class="moneyv">&nbsp;{$money.money}</td>
+			</tr>
+			<tr>
+				<td class="moneyname">彩票额度1:</td>
+				<td class="moneyv" id="cp_money" >&nbsp;{$cp_money}</td>
+			</tr>
+			<tr>
+				<td class="moneyname">转换金额1:</td>
+				<td class="moneyv">
+					<input value="" name=""  placeholder="请输入所要转换金额" id="cmoney">
+				</td>
+			</tr>
+		</table>
+		<div class="tycpall">
+			<span class="forcp" onclick="reloadmoney(cp)">转换至彩票</span>
+			<span class="forty" onclick="reloadmoney(ty)">转换至体育</span>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<!--<include file="./Ab/Tpl/Layout/footer.html" />-->
+
+	<div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+		<div role="main" class="ui-content">
+			<p class="sz18">dddd
+			</p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+	var reloadmoney=function ($type){
+		var cmoney = $("#cmoney").val();
+		var type = $type;
+			$.ajax({
+				url: "/index.php/Money/change",
+				type: "POST",
+				data: {cmoney: cmoney,type: type} ,
+				dataType: "json",
+				success: function (data) {
+					console.log(data);
+				},
+				error: function () {
+					jQuery('#nonegame').empty();
+					alert('转换失败');
+				}
+
+			});
+		}
+	})
+</script>
+
+</body>
+</html>

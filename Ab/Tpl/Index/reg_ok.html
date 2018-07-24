@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <base target="_top" />
+  <title>account</title>
+  <link href="/Public/css/mobileCss.css" rel="stylesheet" type="text/css" />
+  <link href="/Public/css/css.css" rel="stylesheet" type="text/css" />
+  <link href="/Public/css/custim-theme.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/Public/js/jquery.js" ></script>
+  <script type="text/javascript">$(document).on("mobileinit", function () {$.mobile.ajaxEnabled = false;});</script>
+  <script src="/Public/js/login/jquerymobile.js"></script>
+</head>
+<body>
+<div data-role="page">
+  <div data-role="header" data-theme="b">
+    <h1 class="h3">温馨提示</h1>
+  </div>
+
+  <dl style="margin:20px auto;width:90%;border:1px solid #d6d6d6;border-bottom:2px solid #d6d6d6;background:#fff;">
+    <dt style="padding:20px 50px 0px 50px;font-size:16px;">
+    <p style="font-size:18px;color:#a4050f;">欢迎您的加入！</p>
+    <p style="margin-top:20px;">客服电话：0063-9155777333<br/><br/><span id="CountdownTime" style="color:#e9000f;font-size:18px;">5</span>秒后返回首页。</p>
+    </dt>
+    <dd style="padding:30px 50px 20px 50px;overflow:hidden;">
+      <script>
+        setInterval('clock()',5000);
+        function clock()
+        {
+          document.getElementById('kkll').submit();
+        }
+        //倒计时
+        setInterval('Countdown()',1000);
+        function Countdown(){ var CountdownTime=$("#CountdownTime");CountdownTime.text(CountdownTime.text()-1); }
+      </script>
+      <form action="/index.php/Login/login_check" id="kkll" method="post">
+        <input type="hidden" name="strAccount" value="{$username}" />
+        <input type="hidden" name="strPassword" value="{$password}" />
+        <input type="submit" name="loginBtn" id="loginBtn" data-ajax="false" data-role="button" data-theme="b" value="快速登入" style="width:100%;" />
+      </form>
+    </dd>
+  </dl>
+
+  <div data-role="footer" data-theme="a" class="tcolor-4">
+    <div class="clear mgbt10">
+      <a href="/" data-ajax="false">
+        <span class="head-logo-1" style="float:none"></span>
+      </a>
+    </div>
+    <p>&#169; 2007-2017 hg8868.com</p>
+    <p>由皇冠8868有限公司版权所有</p>
+    <div class="clear mgbt10"></div>
+  </div>
+</div>
+</body>
+</html>

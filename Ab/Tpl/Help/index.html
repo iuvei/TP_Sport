@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/CSS/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="__APP__/Main"></a>
+                <h1 class="h3">存取款帮助</h1>
+                <div class="header-right-user">
+                </div>
+            </div>
+
+            <div class="help-main">
+                <h2>存款注意事项</h2>
+                <div style="display:none;">
+                    1.公司银行帐号随时更换! 请每次存款都至 [公司入款] 进行操作。 入款至已过期帐号，公司无法查收，恕不负责!
+                    <br />2.同行转帐才能立即到帐。
+                    <br />3.单笔最低存款金额 100 元以上。
+                    <br />4.单笔最高存款金额 9,999,999,999 元以下。
+                    <br />5.请勿存入整数金额，以免延误财务查收。
+                </div>
+                <h2>存款方式</h2>
+                <div style="display:none;">
+                    1.网银转帐
+                    <br />以网路银行完成转帐，点击银行名称前往网银登入页面。
+                    <br />2.ATM自动柜员机
+                    <br />到ATM将款项转入所选银行帐号。
+                    <br />3.ATM现金入款
+                    <br />到ATM以现金存入所选银行帐号。
+                    <br />4.银行柜台转帐
+                    <br />到银行将存款项转到所选银行帐号。
+                    <br />5.手机银行转帐
+                    <br />透过您手机验证转入所选银行帐号。
+                </div>
+                <h2>存款提交说明</h2>
+                <div style="display:none;">
+                    1.长按银行帐号可进行复制。
+                    <br />2.请备份订单号并复制进您工作汇款备注栏。
+                    <br />3.为加快入帐速度，请务必转帐后再提交转帐资料。
+                    <br />4.每笔转帐请提交一次。
+                </div>
+                <h2 class="sel">公司入款流程解说</h2>
+                <div>
+                    利用转帐方式将款项从自己的帐号转到本公司指定的银行帐号。
+                    <dl class="box">
+                        <dt>1.选择使用银行</dt>
+                        <dd>◆ 选择要使用银行，建议与转入帐号之银行相同，同行转帐可以立即到帐。</dd>
+                    </dl>
+                    <p class="arrow"></p>
+                    <dl>
+                        <dt>2.选择欲转入银行帐号</dt>
+                        <dd>
+                            ◆ 本页选择可存入的银行帐号，银行帐号不定期更换请务必每次查看。
+                            <br />◆ 建议选择与您使用银行相同之银行帐号加快到帐速度。
+                            <br />◆ 核对并记下选择银行帐号进行转帐。
+                        </dd>
+                    </dl>
+                    <p class="arrow"></p>
+                    <dl>
+                        <dt>3.输入欲转入金额</dt>
+                        <dd>
+                            ◆ 输入金额与实际汇款提交金额必须完全一致。
+                            <br />◆ 建议存入有尾数金额方便系统辨别缩短到帐速度。
+                        </dd>
+                    </dl>
+                    <p class="arrow"></p>
+                    <dl>
+                        <dt>4.完成转帐</dt>
+                        <dd>◆ 自行选择存款方式进行存款，并请妥善保留存款证明。</dd>
+                    </dl>
+                    <p class="arrow"></p>
+                    <dl>
+                        <dt>5.填写并提交申请</dt>
+                        <dd>
+                            ◆ 实际汇款与提交金额必须完全一致。
+                            <br />◆ 每笔转帐请提交一次。
+                            <br />◆ 使用ATM存款请务必填写所属分行加快到帐。
+                        </dd>
+                    </dl>
+                    <p class="arrow"></p>
+                    <dl>
+                        <dt>6.等后系统加款</dt>
+                        <dd>
+                            ◆ 系统收到款项后进行比对，如金额、时间相符会将款项加到您游戏帐号中。
+                            <br />◆ 处理时间通常为5-30分钟。
+                            <br />◆ 跨行转帐时间可能超过30分。
+                        </dd>
+                    </dl>
+                    <p class="arrow"></p>
+                    <dl>
+                        <dt>7.30分钟内是否到帐?</dt>
+                        <dd>
+                            ◆ 是：存款成功，请享受游戏乐趣。
+                            <br />◆ 否：请联系线上客服人员，客服人员会与您核对您的存款资料，必要时需要您提供截图资料等相关证明。
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <script type="text/javascript">
+  $(function () {
+      var helpMain = $(".help-main");
+      helpMain.children("h2").click(function () {
+          helpMain.children("div").slideUp(150);
+          helpMain.children("h2").removeClass("sel");
+          $(this).addClass("sel").next().slideDown(250)
+      });
+  });
+            </script>
+            <include file="./Ab/Tpl/Layout/footer.html" />
+        </div>    
+    </body>
+</html>

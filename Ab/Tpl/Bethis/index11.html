@@ -1,0 +1,185 @@
+<html>
+<head>
+	<title>交易状况</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1, width=device-width, user-scalable=no, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="YES">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="/Public/css/boilerplate.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/in-play.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/body_tw.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/SpryAccordion.css" rel="stylesheet" type="text/css">
+	<link href="/Public/css/home_2.css" rel="stylesheet" type="text/css">
+	
+	<script id="/Public/js/todaywagers.js" src="/js/todaywagers.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body style="height: 519px; " onLoad="document.body.style.height=document.documentElement.clientHeight+'px';init();"><input id="topInput" style="display: none; "><div id="WAGER">
+<div id="topTag" name="topTag"></div>
+		<div class="gridContainer clearfix">
+			<!---------------- header ---------------->
+			<div id="LayoutDiv1" class="LayoutDiv1">
+				<div class="header">
+					<div class="wel">您好<br></div>
+					<div id="acc_username" name="acc_username" class="user">{$money.UserName}</div>
+				</div>
+				<div class="curr_box">
+					<div id="acc_currency" name="acc_currency" class="curr_value">RMB</div> 
+					<div id="acc_credit" name="acc_credit" class="curr_amount">{$money.Money}</div>
+				</div>
+    </div>
+			<!-- HDP Label -->
+            <!-- inplay title -->
+<div id="LayoutDiv1_contact" class="LayoutDiv1_contact">
+				<div class="open_bet">交易状况</div>
+		  </div>
+			<!-- drop down -->
+			
+			{$rrr}
+			<div id="bottom_top" name="bottom_top" class="LayoutDiv5" style=""><a href="/index.php/User">回到首页</a></div>
+            
+  </div>
+		<div id="div_show" name="div_show"></div>
+		
+		<!------------------------ normal model ------------------------>
+		<div id="normal_model" name="normal_model" style="display:none;">
+			<xmp>
+			<!-- title game -->
+			<div class="oddstitle_outrights_longtitle">
+				<div class="game_title_his">
+					<div class="his_league">*LEAGUE*</div>
+					<div class="his_team">*TEAM_H_SHOW*<span class="score">*TEAM_RATIO*</span><span style="*TEAM_ACT*"><em>v</em></span>*TEAM_C_SHOW*</div>
+				</div>
+			</div>
+			<!-- title game details -->
+			<div id="div_*TID*" class="*ANNOUCEMENT*">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wager_table">
+					<tr>
+						<td colspan="2">
+							<div class="ord_gametype">*GTYPE* *W_MS* *WTYPE*</div>
+							<div class="ord_score">*ORG_SCORE**SCORE*</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="ord_chose_con">*RESULT*</div>
+							<div class="team_h">*PNAME*</div>
+							<div class="team_at">@</div>
+							<div class="ord_ior">*IORATIO*</div><br>
+						</td>
+					</tr>
+					<tr>
+						<td width="39%">
+							<div class="ord_gametype">投注额:</div>
+							<div class="stake_gold">*GOLD*</div>
+						</td>
+						<td width="61%">
+							<div class="right">
+								<div class="ord_gametype">可赢金额:</div>
+								<div class="wager_win_gold">*WIN_GOLD*</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>*W_ID*</td>
+						<td><div class="right">*ADDTIME* *ODDF_TYPE*</div></td>
+					</tr>
+					<tr class="*BALL_ACT*">
+						<td colspan="2"><strong><div class="*BALL_ACT_CLASS*">*BALL_ACT_RET*</div></strong></td>
+					</tr>
+				</table>
+			</div>
+		</xmp>
+		</div>
+		<!------------------------ normal model ------------------------>
+		
+		<!------------------------ p model ------------------------>
+		<div id="p_model" name="p_model" style="display:none;">
+			<div id="p_title_model" name="p_title_model">
+				<xmp>
+				<!-- title game -->
+				<div class="oddstitle_parlay_longtitle">
+					<div class="game_title_wager">综合过关</div>
+					<div class="icon_3in1">*NUM*串1</div>
+				</div>
+			</xmp>
+			</div>
+			
+			<div id="p_details_model" name="p_details_model">
+				<xmp>
+				<!-- title game details -->
+				<div id="div_*TID*" class="*ANNOUCEMENT*" style="border-bottom: 1px solid #cebbaa">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wager_table">
+						<tr>
+							<td width="100%" colspan="2">
+								<div  class="ord_gametype">*GTYPE* *W_MS* *WTYPE*</div>
+								<div class="ord_score"></div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">*LEAGUE*</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+                            	<div class="team_h">*TEAM_H_SHOW*</div>
+								<div class="ord_con">*TEAM_RATIO*</div>
+								<div class="*TEAM_ACT* team_h">v</div>
+								<div class="team_h">*TEAM_C_SHOW*</div>
+								<div class="ord_con"></div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div class="ord_chose_con">*RESULT*</div>
+								<div class="team_h">*PNAME*</div>
+								<div class="team_at">@</div>
+								<div class="ord_ior">*IORATIO*</div><br>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</xmp>
+			</div>
+			
+			<div id="p_bottom_model" name="p_bottom_model">
+				<xmp>
+				<!-- title game -->
+				<div class="annoucement_1">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wager_table">
+						<tr>
+							<td width="39%">
+								<div  class="ord_gametype">投注额:</div>
+								<div class="stake_gold">*GOLD*</div>
+							</td>
+							<td width="61%">
+								<div class="right">
+									<div class="ord_gametype">可赢金额:</div>
+									<div class="wager_win_gold">*WIN_GOLD*</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>*W_ID*</td>
+							<td><div class="right">*ADDTIME* *ODDF_TYPE*</div></td>
+						</tr>
+						<tr class="*BALL_ACT*">
+							<td colspan="2"><strong><div class="*BALL_ACT_CLASS*">*BALL_ACT_RET*</div></strong></td>
+						</tr>
+					</table>
+				</div>
+			</xmp>
+			</div>
+		</div>
+		<!------------------------ p model ------------------------>
+		
+		
+		
+		<!-- english premiere league button -->
+		<div id="allsports" style="display: none; " class="allsports">更多资料</div>
+		<!-- total -->
+		<div id="total_accounts" class="total_accounts" style="display: none; ">
+			<div class="wager_total">总计:</div>
+			<div id="amout_gold" class="wager_amout">0</div>
+		</div>
+		<!-- back to top button -->
+		<div id="bottom_top" name="bottom_top" class="LayoutDiv5" style="display: none; ">回到首页</div>
+	</div></body></html>

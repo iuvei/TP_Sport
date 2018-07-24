@@ -1,0 +1,37 @@
+<div id="winTit"><em id="Countdown">60</em><dl><dt>交易单</dt><dd>目前余额:{$credit}</dd></dl><span onclick='hide();'>×</span></div>
+<form name="orderForm" id="orderForm" method="post" action="/index.php/Bet/Ft_bet" target="betorderform">
+    <div class="order-info">
+        <h2>足球 让球</h2>
+        {$M_League}
+        <br />{$MB_Team} <strong><if condition="$Sign neq ''">{$Sign}<else/> V.S. </if></strong> {$TG_Team}
+        <br />{$M_Place} @ <strong>{$M_Rate}</strong>
+    </div>
+    <div class="bet-info">
+        <dl>
+            <dt><input type="text" name="gold" id="placeholder" value="" pattern="[0-9]*" placeholder="投注额" /></dt>
+            <dd>可赢金额:<br /><strong>0</strong></dd>
+        </dl><div class="left">单注最低: <strong>{$GMIN_SINGLE}</strong></div>
+        <div><div>单注最高: <strong>500000</strong></div><label class="right">自动接受较佳赔率<input type="checkbox" value="" class="order" checked /></label></div>
+    </div>
+    <input type="button" value="确认交易" name="betBtn" id="betBtn" class="bet-btn" onclick="bet();" />
+    <input type="hidden" name="uid" value="{$uid}">
+    <input type="hidden" name="active" value="{$active}">
+    <input type="hidden" name="strong" value="{$strong}">
+    <input type="hidden" name="line_type" value="2">
+    <input type="hidden" name="gid" value="{$gid}">
+    <input type="hidden" name="type" value="{$type}">
+    <input type="hidden" name="gnum" value="{$gnum}">
+    <input type="hidden" name="concede_r" value="-1">
+    <input type="hidden" name="radio_r" value="-50">
+    <input type="hidden" id="ioradio_r_h" name="ioradio_r_h" value="{$M_Rate}">
+    <input type="hidden" name="gmax_single" value="{$bettop_money}">
+    <input type="hidden" name="gmin_single" value="{$GMIN_SINGLE}">
+    <input type="hidden" name="singlecredit" value="{$GMAX_SINGLE}">
+    <input type="hidden" name="singleorder" value="{$GSINGLE_CREDIT}">
+    <input type="hidden" name="restsinglecredit" id="restsinglecredit" value="{$have_bet}">
+    <input type="hidden" name="wagerstotal" value="{$GMAX_SINGLE}">
+    <input type="hidden" name="restcredit" id="restcredit" value="{$credit}">
+    <input type="hidden" name="pay_type" value="{$pay_type}">
+    <input type="hidden" name="odd_f_type" value="H">
+</form>
+<iframe name="betorderform" id="betorderform" style=" margin: 0px; padding: 0px; display: none;"></iframe>

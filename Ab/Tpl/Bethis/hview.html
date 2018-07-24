@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+        <div data-role="page">
+      <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/CSS/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="__APP__/Bethis/history"></a>
+                <h1 class="h3">注单列表</h1>
+                <div class="header-right-user">
+                </div>
+            </div>
+            <link href="css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+            <div data-role="content" role="main">
+                <ul class="list-transaction">
+                    <volist name="tbls" id="tbl">
+                    <li>
+                        {$tbl}
+                    </li>
+                    </volist>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <include file="./Ab/Tpl/Layout/footer.html" />
+            <div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+                <div role="main" class="ui-content">
+                    <p class="sz18"></p>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>

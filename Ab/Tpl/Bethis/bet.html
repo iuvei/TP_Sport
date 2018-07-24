@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"> 
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+        <div data-role="page">
+      <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/CSS/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="__APP__/Main"></a>
+                <h1 class="h3">投注记录</h1>
+                <div class="header-right-user">
+                </div>
+            </div>
+            <link href="/Public/css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+            <div data-role="content" role="main">
+                <div data-role="controlgroup" data-type="horizontal" data-theme="g" class="ui-controlgroup ui-controlgroup-horizontal ui-group-theme-g ui-corner-all">
+                    <div class="ui-controlgroup-controls">
+                        <div ><a href="__APP__/Bethis/" data-ajax="false" data-role="button" class="ui-btn-active ui-link ui-btn ui-shadow ui-corner-all ui-first-child" role="button">交易状况</a></div>
+                        
+                    </div>
+                </div>
+                <ul class="list-class" style="margin-top:10px;">
+                    <li onClick="javascript:location.href = '__APP__/Bethis/index/qt/1';">足球注单({$ft})<i></i></li>
+                    <li onClick="javascript:location.href = '__APP__/Bethis/index/qt/2';">篮球注单({$bk})<i></i></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+                <div role="main" class="ui-content">
+                    <p class="sz18">
+                    </p>
+                </div>
+            </div>
+
+        </div>    
+    </body>
+</html>

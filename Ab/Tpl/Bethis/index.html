@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <include file="./Ab/Tpl/Help/header.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+        <div data-role="page">
+      <div data-role="header" data-theme="b">
+                <div class="pageMasker" style="display:none">
+                    <div style="text-align:center; margin-top:50%">
+                        <img src="/CSS/images/ajax-loader.gif" />
+                    </div>
+                    <p class="tcolor-5" style="text-align:center">读取平台数据中, 请稍后......</p>
+                </div>
+                <a data-iconpos="notext" data-role="buton" data-icon="flat-back" data-theme="a" href="__APP__/Bethis/"></a>
+                <h1 class="h3">注单列表</h1>
+                <div class="header-right-user">
+                </div>
+            </div>
+            <link href="css/BotDetectCaptcha.css" rel="stylesheet" type="text/css" />
+            <div data-role="content" role="main">
+                <div data-role="controlgroup" data-type="horizontal" data-theme="g" class="ui-controlgroup ui-controlgroup-horizontal ui-group-theme-g ui-corner-all">
+                    <div class="ui-controlgroup-controls">
+                        <div class="col-6"><a href="__APP__/Bethis/index/qt/1" data-ajax="false" data-role="button" class="<?php if($qt==1){echo 'ui-btn-active ';} ?>ui-link ui-btn ui-shadow ui-corner-all ui-first-child" role="button">足球注单1</a></div>
+                        <div class="col-6"><a href="__APP__/Bethis/index/qt/2" data-ajax="false" data-role="button" class="<?php if($qt==2){echo 'ui-btn-active ';} ?>ui-link ui-btn ui-shadow ui-corner-all ui-last-child" role="button">篮球注单</a></div>
+                    </div>
+                </div>
+
+                <ul class="list-transaction">
+                    <volist name="rrr" id="r">
+                    <li>
+                        {$r}
+                    </li>
+                    </volist>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <include file="./Ab/Tpl/Layout/footer.html" />
+            <div data-role="popup" id="popupMessage" data-theme="b" style="width:210px; -webkit-backface-visibility:hidden;">
+                <div role="main" class="ui-content">
+                    <p class="sz18"></p>
+                </div>
+            </div>
+
+        </div>    
+    </body>
+</html>

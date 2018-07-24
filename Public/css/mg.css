@@ -1,0 +1,822 @@
+*{
+margin:0;
+padding:0;
+}
+a{
+border:0;
+text-decoration:none;
+cursor:pointer;
+}
+img{
+border:0;
+}
+body{
+
+line-height:2;
+overflow-y:scroll;
+}
+.logo{
+display:block;
+width:471x;
+height:73px;
+float:left;
+overflow:hidden;
+margin-bottom:2px;
+}
+#nav ul.sub-nav{
+display:none;
+}
+#nav ul.visible{
+display:block;
+}
+.toppt{
+float:left;
+width:500px;
+}
+.topm .nav{
+width:500px;
+height:55px;
+float:left;
+margin-top:25px;
+margin-left:15px;
+}
+.topm .nav ul li{
+list-style:none;
+float:left;
+width:85px;
+height:55px;
+margin-right:20px;
+}
+.topm .nav ul li a{
+display:block;
+list-style:none;
+float:left;
+width:85px;
+height:55px;
+line-height:55px;
+margin-right:20px;
+color:#ff0000;
+font-size:16px;
+text-align:center;
+text-shadow:0 1px 1px #FFF;
+}
+.topm .nav ul li a:hover{
+color:#fff;
+text-shadow:0 1px 1px #e81111;
+background:url(/pt/images/pt/nav01.png) center top no-repeat;
+}
+.topm .nav ul li a.hover{
+color:#fff;
+text-shadow:0 1px 1px #e81111;
+background:url(/pt/images/pt/nav01.png) center top no-repeat;
+}
+.search{
+margin-bottom:20px;
+overflow:hidden;
+}
+.search .searchbtn{
+text-indent:-9999px;
+background:url(/pt/images/pt/searchbtn.jpg);
+height:25px;
+width:45px;
+border:0;
+float:left;
+}
+.pagenav a{
+color:#969696;
+}
+.pagenav a:hover{
+color:#AE1310;
+}
+.txt_info{
+color:#ae894a;
+margin:0 25px;
+font-size:13px;
+}
+li{
+list-style:none;
+}
+.clear{
+clear:both
+}
+input{
+outline:none;
+}
+button{
+border:1px solid #3B3B3B;
+padding:2px 4px;
+cursor:pointer;
+background:#DFDFDF;
+}
+.hdeng{
+width:100%;
+height:388px;
+margin:0px auto;
+position:relative;
+}
+#div1{
+height:45px;
+line-height:45px;
+overflow:hidden;
+}
+#div1 a{
+display:block;
+color:#fff;
+}
+.main{
+width:1210px;
+margin:0px auto;
+margin-top:10px;
+margin-bottom:60px
+}
+.maintop{
+width:1210px;
+height:56px;
+margin:0px auto;
+background:url(/pt/images/pt/body_011.png) no-repeat;
+position:relative;
+}
+.cs_top{
+width:1202px;
+height:132px;
+margin:0px auto;
+background:url(/pt/images/pt/casino_top.png) no-repeat;
+position:relative;
+}
+.mainm{
+width:1210px;
+background:url(/pt/images/pt/body_02.png) repeat-y;
+}
+.cs_m{
+width:1200px;
+height:1900px;
+margin:0px auto;
+background:#eee;
+border:1px solid #d90000;
+border-top:none;
+border-radius:0px 0px 10px 10px;
+}
+.cs_left{
+float:left;
+width:280px;
+padding-bottom:30px;
+}
+.cs_right{
+float:left;
+width:875px;
+padding-left:3px;
+overflow:hidden;
+padding-bottom:30px;
+background:url(/pt/images/pt/shu_hen.png) left top repeat-y;
+}
+.member_t{
+width:360px;
+height:85px;
+background:url(/pt/images/pt/member_t.png) no-repeat;
+position:absolute;
+top:-15px;
+left:420px;
+}
+.cnbox{
+width:415px;
+height:37px;
+float:left;
+background:url(/pt/images/pt/cs_tiao.png);
+}
+.cnbox p{
+text-indent:30px;
+height:38px;
+line-height:38px;
+font-size:18px;
+color:#fff;
+font-weight:900;
+}
+a.webb{
+display:block;
+float:right;
+width:98px;
+height:36px;
+background:url(/pt/images/pt/web_button.png) center no-repeat;
+}
+a.downb{
+display:block;
+float:right;
+margin:0px 5px;
+width:98px;
+height:36px;
+background:url(/pt/images/pt/down_button.png) center no-repeat;
+margin-right:25px;
+}
+.cs_ks2{
+width:170px;
+height:92px;
+margin:20px auto;
+}
+.cs_ks2 a{
+display:block;
+width:170px;
+height:92px;
+}
+.kf_88{
+float:left;
+width:280px;
+height:260px;
+background:url(/pt/images/pt/88kfbt.png) center top no-repeat;
+}
+.kf_88 ul{
+padding-top:51px;
+}
+.kf_88 ul li{
+width:235px;
+padding-left:25px;
+height:45px;
+line-height:45px;
+color:#d90000;
+font-size:14px;
+background:url(/pt/images/pt/casino_hen.png) center bottom no-repeat;
+}
+.kf_88 ul li img{
+padding-right:10px;
+}
+.kf_88 ul li a{
+color:#d90000;
+}
+.lhj_bt{
+float:left;
+width:275px;
+padding-left:5px;
+height:41px;
+background:url(/pt/images/pt/lhj_bt.png) center top no-repeat;
+}
+.lhj_list{
+float:left;
+width:243px;
+background:#e5e5e5;
+border:1px solid #fff;
+border-top:none;
+margin-left:20px;
+}
+.mobile_down{
+width:280px;
+height:190px;
+margin-top:-30px;
+background:url(/pt/images/pt/erweima.png) center top no-repeat;
+}
+.mobile_down p{
+height:40px;
+line-height:40px;
+padding-top:150px;
+color:#d90000;
+text-align:center;
+}
+.t_slots{
+width:100%;
+height:50px;
+background:url(/pt/images/pt/t_slots.png) 35px center no-repeat;
+padding-top:15px;
+}
+.j_slots{
+width:100%;
+padding:0px 5px;
+margin:5px 0px;
+padding-left:40px;
+}
+.t_casino{
+width:100%;
+height:50px;
+background:url(/pt/images/pt/t_casino.png) 35px center no-repeat;
+}
+.slotsp{
+width:100%;
+margin:0px auto;
+margin-top:5px;
+}
+.slotsp span{
+float:left;
+}
+span.slotspt{
+width:130px;
+text-align:center;
+height:45px;
+line-height:45px;
+}
+span.slotspb{
+margin-left:5px;
+}
+a.ks_slots{
+display:block;
+width:106px;
+height:40px;
+background:url(/pt/images/pt/ks_slots.png) center no-repeat;
+}
+a.ks_slots{
+display:block;
+width:73%;
+height:30px;
+line-height:34px;
+border-radius:5px;
+background:#ffbe68;
+color:#d90000;
+font-size:15px;
+text-shadow:1px 1px 2px #eee;
+margin:3px auto;
+}
+
+a.ks_slots2{
+	float:right;
+	margin-right:5%;
+}
+.slot_b2_big .slot_jc{
+margin:5px 10px 5px 9px;
+width:400px;
+text-indent:45px;
+}
+.slot_b2_big .slot_kk span{
+line-height:37px;
+margin-left:3px;
+}
+.hen_w{
+margin:15px auto;
+width:1200px;
+height:2px;
+background:url(/pt/images/pt/hen1.png) repeat;
+margin-bottom:5px;
+}
+.mainb{
+width:1210px;
+height:15px;
+margin:0px auto;
+background:url(/pt/images/pt/body_03.png)
+}
+.mouse{background: #bf0500;}
+.bq{
+width:1200px;
+height:135px;
+margin:0px auto;
+padding-top:40px;
+background:url(/pt/images/pt/dihz.png) center 110px no-repeat;
+}
+.link{
+float:left;
+width:500px;
+height:47px;
+line-height:47px;
+margin-left:30px;
+color:#eee;
+}
+.link a{
+color:#eee;
+}
+.pr_bt{
+position:absolute;
+top:-10px;
+left:425px;
+width:350px;
+height:64px;
+background:url(/pt/images/pt/pr_bt.png);
+}
+.pr_up{
+position:relative;
+bottom:0px;
+left:0px;
+height:29px;
+width:825px;
+background:url(/pt/images/pt/pr_up.png)
+}
+.pr_up a{
+display:block;
+height:29px;
+width:825px;
+}
+prt{
+font-weight:900;
+color:#dd0000;
+font-size:15px;
+line-height:28px;
+}
+.slots_bt{
+width:280px;
+height:68px;
+background:url(/pt/images/pt/slots_bt.png);
+position:absolute;
+top:-15px;
+left:460px;
+}
+.slots_menu{
+float:left;
+width:280px;
+margin:30px 0px;
+}
+.slots_menu ul li{
+float:left;
+width:180px;
+height:42px;
+line-height:42px;
+background:url(/pt/images/pt/casino_hen.png) center bottom no-repeat;
+padding-left:100px;
+}
+.slots_menu ul li a{
+color:#666;
+font-family:"黑体";
+font-size:16px;
+}
+.slots_menu ul li a:hover{
+color:#d90000;
+}
+.slots_down2{
+float:left;
+width:230px;
+height:51px;
+background:url(/pt/images/pt/slots_down2.png) center no-repeat;
+margin-bottom:20px;
+}
+.slots_down2 a{
+display:block;
+width:230px;
+height:51px;
+line-height:51px;
+}
+.slot_box{
+float:left;
+width:204px;
+margin-left:17px;
+background:#fff;
+color:#d90000;
+margin-top:15px;
+border:1px solid #ddd;
+}
+.slot_box:hover{
+background:#d90000;
+color:#fff;
+cursor:pointer;
+}
+.slot_box_big{
+float:left;
+width:424px;
+margin-left:20px;
+background:#fff;
+color:#d90000;
+margin-top:15px;
+border:1px solid #ddd;
+}
+.slot_box_big:hover{
+background:#d90000;
+color:#fff;
+cursor:pointer;
+}
+.slot_b1_big{
+padding:2px;
+width:420px;
+height:150px;
+overflow:hidden;
+}
+.slot_b2_big{
+height:80px;
+line-height:40px;
+overflow:hidden;
+}
+.slot_b1{
+padding:2px;
+width:200px;
+height:139px;
+}
+.slot_kk{
+height:100px
+}
+.slot_kk span{
+height:25px;
+line-height:25px;
+float:left;
+}
+span.slot_tt{
+width:205px;
+text-align:center;
+font-family:'DS-DIGIB', '微软雅黑';
+font-size:14px;
+overflow:hidden;
+font-size:12px;
+}
+span.slot_bb{
+width:205px;
+text-align:center;
+}
+.slot_hen{
+width:100%;
+height:2px;
+background:url(/pt/images/pt/reg_hen.png) center no-repeat;
+float:left;
+margin-top:30px;
+}
+#slot-1{
+width:100%;
+float:left;
+}
+.mover{
+display:none
+}
+.ui-tabs-panel{
+display:block;
+border:0;
+background:none;
+position:relative;
+height:auto !important;
+}
+.ui-tabs-hide{
+display:none !important;
+}
+td.tbt{
+text-align:right;
+padding-right:15px;
+}
+wz{
+color:#dd0000;
+}
+span.slotspt{
+width:255px;
+text-align:center;
+height:45px;
+line-height:45px;
+}
+span.slotspb{
+margin-left:5px;
+}
+
+a.ks_try{
+background:url(/pt/images/pt/ks_try.png) center;
+width:106px;
+height:35px;
+display:block;
+float:left;
+margin-left:5px;
+}
+.swControls{
+position:absolute;
+margin-top:10px;
+}
+#main{
+position:relative;
+margin:10px auto;
+width:915px;
+float:left;
+}
+#holder{
+width:915px;
+overflow:hidden;
+position:relative;
+}
+.swControls{
+position:absolute;
+margin-top:10px;
+}
+a.swShowPage{
+background-color:#444444;
+float:left;
+height:15px;
+margin:4px 3px;
+text-indent:-9999px;
+width:15px;
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+}
+a.swShowPage:hover, a.swShowPage.active{
+background-color:#2993dd;
+-moz-box-shadow:0 0 7px #1e435d inset;
+box-shadow:0 0 7px #1e435d inset;
+}
+#holder li{
+list-style:none outside none;
+float:left;
+}
+.mainc{
+width:1210px;
+height:15px;
+margin:0px auto;
+background:url(/pt/images/pt/body_04.png);
+}
+.ui-header{
+margin:0 auto;
+width:100%;
+overflow:hidden;
+}
+.ui-header dt{
+float:left;
+width:278px;
+height:80px;
+background:url(/pt/images/le2/logo.png) no-repeat center bottom;
+}
+.ui-header dd{
+float:right;
+width:780px;
+overflow:hidden;
+}
+.ljcj{
+background:url(/pt/images/pt/ljcj.png);
+width:582px;
+height:55px;
+padding-top:35px;
+}
+.ljcj .num{
+overflow:hidden;
+margin:0 auto;
+width:482px;
+height:48px;
+line-height:50px;
+font-size:28px;
+color:#d5031e;
+letter-spacing:24.7px;
+text-indent:14px;
+font-family:Arial;
+font-weight:bold;
+}
+#LayerWindowMask{
+display:none;
+position:absolute;
+z-index:999;
+width:100%;
+height:1277px;
+background:#000;
+filter:alpha(opacity=50);
+-moz-opacity:0.5;
+-khtml-opacity:0.5;
+opacity:0.5;
+}
+#LayerWindow{
+display:none;
+position:absolute;
+z-index:1000;
+width:560px;
+height:277px;
+box-shadow:1px 1px 30px rgba(0,0,0,0.5);
+}
+#LayerWindow #winBtn{
+cursor:pointer;
+position:absolute;
+z-index:1001;
+top:-15px;
+right:-15px;
+width:34px;
+height:34px;
+background:url(/pt/images/btn-close.png) no-repeat;
+overflow:hidden;
+text-indent:-100px;
+}
+#LayerWindow #winContent{
+overflow:hidden;
+}
+.pr_up{
+position:relative;
+bottom:0px;
+left:0px;
+height:29px;
+width:878px;
+background:url(/pt/images/pt/pr_up.png)
+}
+.pr_up a{
+display:block;
+height:29px;
+width:930px;
+}
+.yh1{
+width:880px;
+margin:0 0 12px 0;
+float:left;
+background:url(/pt/images/pt/reg_hen.png) center bottom no-repeat;
+}
+.yh_yy{
+width:880px;
+height:28px;
+float:left;
+margin-left:0px;
+background:url(/pt/images/pt/pr_yy.png) center top no-repeat;
+}
+prt{
+font-weight:900;
+color:#dd0000;
+font-size:15px;
+line-height:28px;
+}
+.slots_bt{
+width:280px;
+height:68px;
+background:url(/pt/images/pt/slots_bt.png);
+position:absolute;
+top:-15px;
+left:460px;
+}
+.slot_box{
+float:left;
+width:48%;
+margin-left:1%;
+background:#fff;
+color:#d90000;
+margin-top:15px;
+border:1px solid #ddd;
+
+}
+.slot_box:hover{
+background:#d90000;
+color:#fff;
+cursor:pointer;
+}
+}
+.slot_box_big{
+float:left;
+width:424px;
+margin-left:20px;
+background:#fff;
+color:#d90000;
+margin-top:15px;
+border:1px solid #ddd;
+}
+.slot_box_big:hover{
+background:#d90000;
+color:#fff;
+cursor:pointer;
+}
+.slot_b1_big{
+padding:2px;
+width:420px;
+height:150px;
+overflow:hidden;
+}
+.slot_b2_big{
+height:80px;
+line-height:40px;
+overflow:hidden;
+}
+.slot_b1{
+
+padding:2px;
+width:151px;
+height:139px;
+}
+.slot_kk{
+height:70px
+}
+.slot_kk span{
+height:25px;
+line-height:25px;
+float:left;
+}
+span.slot_tt{
+width:100%;
+text-align:center;
+overflow:hidden;
+font-size:12px;
+}
+span.slot_bb{
+width:100%;
+text-align:center;
+}
+.slot_box:hover{
+cursor:pointer;
+}
+.slot_box:hover .slot_kk{
+	background:#dbaa3e;
+}
+.slot_box:hover span.slot_tt{
+	color:white;
+}
+span.slot_bb a:hover{
+	color:black;background:#feff04;
+}
+.slot_hen{
+width:100%;
+height:2px;
+background:url(/pt/images/pt/reg_hen.png) center no-repeat;
+float:left;
+margin-top:30px;
+}
+#slot-1{
+width:100%;
+float:left;
+}
+.mover{
+display:none
+}
+.ui-tabs-panel{
+display:block;
+border:0;
+background:none;
+position:relative;
+height:auto !important;
+}
+.ui-tabs-hide{
+display:none !important;
+}
+.ui-tabs .ui-tabs-nav li{
+position:relative;
+float:left;
+}
+.ed_left a{
+display:block;
+width:80px;
+height:36px;
+font-size:0px;
+}
+.ed_left{
+margin:63px 0 0 56px;
+color:#fff;
+padding-right:10px;
+}

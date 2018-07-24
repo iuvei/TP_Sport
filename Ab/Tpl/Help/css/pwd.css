@@ -1,0 +1,41 @@
+@charset "utf-8";
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_menu ul li {
+	float: left;
+	width: 50%;
+	text-align:center;
+	height:3em;
+	line-height:3em;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+}
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_menu ul .li_login {
+	background-color: #a7393c;
+}
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_menu ul .li_withdraw {
+	background-color: #b39058;
+}
+
+
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_menu ul .li_login.hover {
+	filter:alpha(opccity:80);
+	opacity:0.8;
+}
+
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_menu ul .li_withdraw.hover {
+	filter:alpha(opccity:80);
+	opacity:0.8;
+}.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content #form2 {
+	display: none;
+}
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_con {
+	margin-top: 20px;
+}
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_con {
+	margin-top: 65px;
+}
+.ui-mobile .ui-mobile-viewport.ui-overlay-a .ui-page.ui-page-theme-a.ui-page-active .ui-content .pwd_con div .tikuan_p.ui-btn.ui-input-btn.ui-btn-b.ui-corner-all.ui-shadow {
+	font-size: 1.2em;
+	line-height: 2.8em;
+	height: 2.8em;
+}

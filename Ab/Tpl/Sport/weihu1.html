@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+        <title>8868</title>
+        <link href="/Public/css/global.css" rel="stylesheet" />
+        <style>
+        .weihu {
+             background: #172027;
+                 height: 100%;
+                text-align: center;
+                padding: 50px 0;
+        }
+        .tip_top1 {
+            margin: -21px auto;
+            text-align: center;
+            color: #aaa;
+            font-size: 18px;
+            padding: 0 0 10px;
+        }
+        .tip_bottom {
+            margin: 0 auto;
+            text-align: center;
+            color: #aaa;
+            font-size: 18px;
+        }
+        .tip_bottom span {
+            color: #f3cf0b;
+            font-size: 20px;
+            padding: 3px 10px;
+            border: 1px solid #f3cf0b;
+            padding: 10px 20px;
+            line-height: 40px;
+            height: 40px;
+        }
+        .ui-header a.logo{
+            left:52%;
+        }
+        .go_back{
+            font-size:30px;
+            position:absolute;
+            left:20px;
+            top:10px;
+            z-index:100;
+            color:#fff;
+        }
+        .go_back img{
+            width:15px;
+        }
+        </style>
+
+        <script src="/Public/js/jquery.js"></script>
+        <script src="/Public/js/jquery.touchSlider.js"></script>
+        <script src="/Public/js/global.js"></script>
+        <script src="/Public/js/home.js"></script>
+    </head>
+    <body>
+        <div id="gameNav">
+          <iframe src="__APP__/Game/gamelist" frameborder="0"></iframe>
+        </div>
+        <div class="ui-main" id="Main">
+            <span class="go_back" onclick="history.go(-1)"> 
+                <img src="/Public/images/arrow-lft.png" alt="">
+            </span>
+            <div class="ui-header" id="Header">
+                <a class="logoa" href="__APP__/Main"></a>
+            </div>
+            <!--维护内容开始 -->
+            <div class="weihu">
+                <center><img src="/Public/images/ico.png"></center>
+                 <ul>
+                        <li class="tip_top1" style="color:#6b737b;margin-top:0px;">正在紧急维护中，请稍后.</li>
+                        <li class="tip_top1" style="color:#6b737b;margin-top:12px;">非常抱歉，造成您的不便.</li>
+                    </ul>
+                    <div class="weihu" style=" background: #172027;">
+
+                    <ul class="" style="color:#c8c4b0;" >
+                        <li class="tip_top1" style="line-height:23px;color:#6b737b;margin-top:20px;"></li>
+                        <li class="tip_top1" style="line-height:23px;left:101px;color:#6b737b;margin-top:20px;"></li>
+                        <li class="tip_top1" style="line-height:23px;color:#6b737b;margin-top:20px;"></li>
+                        <li class="tip_top1" style="line-height:80px;color:#172027;margin-top:20px;">></li>
+                        <li class="tip_top1" style="line-height:80px;color:#172027;margin-top:20px;">></li>
+                        <li class="tip_top1" style="line-height:80px;color:#172027;margin-top:20px;">></li>
+                    </ul>
+
+        </div>
+            </div>
+    </div>
+
+    </body>
+    <script type="text/javascript">
+$(function(){
+    setInterval(function(){
+           $.ajax({
+        type:'POST',
+         url:"__APP__/Sport/ajax_weihu",
+         data:{
+            type:"gq",
+        },
+    });
+    },3000)
+})
+</script>
+</html>

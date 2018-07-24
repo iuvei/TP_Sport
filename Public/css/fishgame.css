@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei",Arial,Verdana;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -moz-tap-highlight-color: rgba(255, 255, 255, 0);
+    -ms-tap-highlight-color: rgba(255, 255, 255, 0);
+    tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+#mainContainer {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+#topImage {
+    width: 100%;
+    height: 65vh;
+    background-image: url('/Public/images/fish/topImage.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    -webkit-transition: height 1s ease-in-out;
+    -moz-transition: height 1s ease-in-out;
+    -ms-transition: height 1s ease-in-out;
+    transition: height 1s ease-in-out;
+}
+
+#header {
+    font-size: 30px;
+    /* font-weight: bold; */
+    color: #333;
+    margin: 0px 0 30px 0;
+}
+
+#details {
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    padding: 0 0 40px 0;
+}
+
+#details .text {
+    display: block;
+}
+
+#button1 {
+    width: 269px;
+    height: 83px;
+    background-image: url('/Public/images/fish/button1.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: initial;
+    display: inline-block;
+    margin: 40px 0 20px 0;
+}
+
+#button2 {
+    width: 269px;
+    height: 83px;
+    background-image: url('/Public/images/fish/button2.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: initial;
+    display: inline-block;
+    margin: 0 0 20px 0;
+}
+
+.hotspot {
+    width: 210px;
+    height: 65px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#jbox-main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 362px;
+    height: 250px;
+    border: 5px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: none;
+}
+
+#jbox-container {
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid #b98e2f;
+    box-shadow: 1px 1px 50px rgba(0,0,0,0.3);
+    font-size: 12px;
+    color: #292929;
+    font-family: "Microsoft Yahei",Arial,Verdana;
+}
+
+#jbox-close {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 6px;
+    right: 6px;
+    width: 15px;
+    height: 15px;
+    background-image: url('/Public/images/fish/jbox-close1.jpg');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#jbox-close:hover {
+    background-position: -16px 0;
+}
+
+#jbox-title-panel {
+    height: 25px;
+    background: #b98e2f;
+    border-bottom: 1px solid #b98e2f;
+}
+
+#jbox-title-icon {
+    font-weight: bold;
+    color: #ffffff;
+    background-image: url('/Public/images/fish/jbox-title-icon.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+    float: left;
+    width: 300px;
+    line-height: 25px;
+    padding-left: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+#creditsChangeBox {
+    padding-top: 15px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#creditsChangeBox p {
+    margin: 0px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    overflow: hidden;
+}
+
+#creditsChangeBox p span {
+    color: #b10000;
+    font-size: 16px;
+}
+
+#creditsChangeBox p select {
+    padding: 3px;
+    height: 28px;
+    width: 113px;
+    text-indent: 5px;
+    border: 1px solid #c6c6c6;
+    font-size: 14px;
+    box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+#creditsChangeBox p input {
+    width: 50%;
+    height: 26px;
+    text-indent: 5px;
+    border: 1px solid #c6c6c6;
+    font-size: 18px;
+    box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+#creditsChangeBox p input:hover {
+    border-color: #b10000;
+}
+
+#creditsChangeBox #btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #f2eedd;
+    overflow: hidden;
+}
+
+#creditsChangeBox #btn input {
+    transition: background 0.3s ease;
+    float: left;
+    cursor: pointer;
+    border: 0px;
+    width: 48%;
+    height: 34px;
+    background: #b98e2f;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.3);
+    border-radius: 35px;
+}
+
+#creditsChangeBox #btn #btnClose{
+    float: right;
+    background: #676767;
+}
+
+#creditsChangeBox #btn input:hover {
+    background: #b10000 !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 1205px) {
+    #topImage {
+        height: 55vh;
+    }
+
+    #details {
+        padding: 0 30px 40px 30px;
+    }
+
+    #details .text {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 1005px) {
+    #topImage {
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    #topImage {
+        height: 35vh;
+    }
+
+    #button1 {
+        display: block;
+        margin: 40px auto 0 auto;
+    }
+
+    #button2 {
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #mainContainer {
+        margin: 0 0 30px 0;
+        overflow: hidden;
+    }
+
+    #topImage {
+        height: 25vh;
+    }
+
+    #header {
+        text-align: left;
+        font-size: 24px;
+        margin: 30px;
+    }
+
+    #details {
+        text-align: justify;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 0 30px 20px 30px;
+    }
+
+    #details .text {
+        display: block;
+    }
+
+    #button1, #button2 {
+        width: 140px;
+        height: 46px;
+    }
+
+    #button1 {
+        display: inline-block;
+        background-size: 154px 50px;
+        margin: 40px 0 0 0;
+    }
+
+    #button2 {
+        display: inline-block;
+        background-size: 118px 38px;
+        margin: 40px 0 0 0;
+    }
+
+    .hotspot {
+        width: 120px;
+        height: 38px;
+    }
+}
